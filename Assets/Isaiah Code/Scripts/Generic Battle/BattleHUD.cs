@@ -1,0 +1,96 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class BattleHUD : MonoBehaviour
+{
+
+    public Slider hpSlider;
+    public GameObject hp;
+
+    public BattleSystemFossil battleSystemFossil;
+
+    public Image affinity;
+
+    public Sprite cursed;
+    public Sprite blessed;
+    public Sprite soma;
+
+
+    public void FixedUpdate()
+    {
+
+        for(int i = 0; i < battleSystemFossil.currentEnemies.Length; i++)
+        {
+            if(this.gameObject.tag == "EnemyHUD" + i)
+            {
+                if(battleSystemFossil.currentEnemies[i] != null)
+                {
+                    if (battleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        hp.SetActive(false);
+                    }
+
+                    hp.SetActive(true);
+
+                    hp.transform.position = battleSystemFossil.currentEnemies[i].transform.position;
+
+                    hp.transform.position = new Vector3(hp.transform.position.x, hp.transform.position.y + 2, hp.transform.position.z);
+
+                    if (battleSystemFossil.currentEnemies[i].CompareTag("Enemy1"))
+                    {
+                        hp.transform.position = new Vector3(hp.transform.position.x, hp.transform.position.y + 2.2f, hp.transform.position.z);
+                        affinity.sprite = soma;
+
+                    }//Sets the mummy affinity to soma and moves the health bar;
+                    else if (battleSystemFossil.currentEnemies[i].CompareTag("Enemy2"))
+                    {
+                        hp.transform.position = new Vector3(hp.transform.position.x + .2f, hp.transform.position.y, hp.transform.position.z);
+                        affinity.sprite = cursed;
+
+                    }//Sets the dinosaur affinity to cursed and moves the health bar
+                    else if (battleSystemFossil.currentEnemies[i].CompareTag("Enemy0"))
+                    {
+                        affinity.sprite = blessed;
+
+                    }//Sets the scarab affinity to blessed and moves the health bar
+
+                }
+                else
+                {
+                    hp.SetActive(false);
+                }
+               
+                //moves the hp bar ontop of the enemy
+
+            }//checks the tag of the hud so it can move the proper health bar
+
+        }//for all the current enemies, runs the code
+    }
+
+    public void SetHUD(UnitStats unit)
+    {
+        hpSlider.maxValue = unit.maxHP;
+        hpSlider.value = unit.currentHP;
+    }
+
+    public void SetHP(float hp)
+    {
+        hpSlider.value = hp;
+    }
+
+    public void Update()
+    {
+        if (hpSlider.value <= 0)
+        {
+            hp.SetActive(false);
+        }
+
+        if (this.gameObject.CompareTag("Player"))
+        {
+            hp.SetActive(true);
+        }
+        
+    }
+}

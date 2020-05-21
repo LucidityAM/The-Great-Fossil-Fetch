@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class VisualizeWeaponStats : MonoBehaviour
 {
-    public Transform spawnLocation;
-    public GameObject inventoryUI;
-    public bool instantiated;
 
-    //public bool queriesHitTriggers = true;
+    public GameObject fossilInfoText;
+
     public void Awake()
     {
-        inventoryUI = GameObject.FindWithTag("InventoryUI");
-        if(spawnLocation == null)
-        {
-            spawnLocation = inventoryUI.transform;
-        }
-        
+        fossilInfoText = GameObject.FindGameObjectWithTag("FossilInfoText");
     }
-
 
     public float[,] fossilStats = new float[18, 2]
    {
@@ -56,6 +48,7 @@ public class VisualizeWeaponStats : MonoBehaviour
 
     public void InstantiateInfo()
     {
+        fossilInfoText.SetActive(true);
 
         if (this.gameObject.CompareTag("skull1"))
         {
@@ -121,11 +114,11 @@ public class VisualizeWeaponStats : MonoBehaviour
         {
             StatString.attack = fossilStats[6, 0];
             StatString.defense = fossilStats[6, 1];
-            StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
-            StatString.fossilPart = "PlacementPlacement";
-            StatString.flavorText = "PlacementPlacement";
-            StatString.affinity = "PlacementPlacement";
+            StatString.fossilName = "Blazing Inferno";
+            StatString.durability = "Durability: XX/XX";
+            StatString.fossilPart = "Ribs";
+            StatString.flavorText = "PlacementPlacementPlacementPlacementPlacementPlacementPlacementPlacementPlacementPlacement";
+            StatString.affinity = "cursed";
         }
         else if (this.gameObject.CompareTag("ribs2"))
         {
@@ -243,6 +236,8 @@ public class VisualizeWeaponStats : MonoBehaviour
 
     public void DestroyInfo()
     {
+        fossilInfoText.SetActive(false);
+
         StatString.fossilName = null;
         StatString.durability = null;
         StatString.fossilPart = null;

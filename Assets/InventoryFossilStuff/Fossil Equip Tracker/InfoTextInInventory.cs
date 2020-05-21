@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InfoTextStats : MonoBehaviour
+public class InfoTextInInventory : MonoBehaviour
 {
     public Text attack;
     public Text defense;
@@ -22,20 +22,27 @@ public class InfoTextStats : MonoBehaviour
         fossilName.text = StatString.fossilName;
         durability.text = StatString.durability;
         flavorText.text = StatString.flavorText;
-        attack.text = StatString.fossilName;
-        defense.text = StatString.durability;
+        fossilPart.text = StatString.fossilPart;
+        durability.text = StatString.durability;
 
         if(StatString.affinity == "blessed")
         {
+            affinity.enabled = true;
             affinity.sprite = blessed;
         }
         else if (StatString.affinity == "cursed")
         {
+            affinity.enabled = true;
             affinity.sprite = cursed;
         }
         else if (StatString.affinity == "soma")
         {
+            affinity.enabled = true;
             affinity.sprite = soma;
+        }
+        else
+        {
+            affinity.enabled = false;
         }
     }
 }

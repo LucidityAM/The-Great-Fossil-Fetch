@@ -24,6 +24,25 @@ TagManager:
   - StatText
   - FossilBattle
   - EnemyStuff
+  - FossilInfoText
+  - skull1
+  - skull2
+  - skull3
+  - neck1
+  - neck2
+  - neck3
+  - ribs1
+  - ribs2
+  - ribs3
+  - arms1
+  - arms2
+  - arms3
+  - legs1
+  - legs2
+  - legs3
+  - tail1
+  - tail2
+  - tail3
   layers:
   - Default
   - TransparentFX

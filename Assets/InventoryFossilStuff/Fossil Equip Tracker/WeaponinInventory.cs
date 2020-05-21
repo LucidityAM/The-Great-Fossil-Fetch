@@ -46,25 +46,58 @@ public class WeaponinInventory : MonoBehaviour
         {
             skull.enabled = true;
         }
-        else if (gameObject.tag == ("neck" + WeaponStats.skull))
+        else if (gameObject.tag == ("neck" + WeaponStats.neck))
         {
             neck.enabled = true;
         }
-        else if (gameObject.tag == ("ribs" + WeaponStats.skull))
+        else if (gameObject.tag == ("ribs" + WeaponStats.ribs))
         {
             ribs.enabled = true;
         }
-        else if (gameObject.tag == ("arms" + WeaponStats.skull))
+        else if (gameObject.tag == ("arms" + WeaponStats.arms))
         {
             arms.enabled = true;
         }
-        else if (gameObject.tag == ("legs" + WeaponStats.skull))
+        else if (gameObject.tag == ("legs" + WeaponStats.legs))
         {
             legs.enabled = true;
         }
-        else if (gameObject.tag == ("tail" + WeaponStats.skull))
+        else if (gameObject.tag == ("tail" + WeaponStats.tail))
         {
             tail.enabled = true;
+        }
+        else
+        {
+            if(skull != null)
+            {
+                skull.enabled = false;
+            }
+
+            if(neck != null)
+            {
+                neck.enabled = false;
+            }
+
+            if(ribs != null)
+            {
+                ribs.enabled = false;
+            }
+
+            if(arms != null)
+            {
+                arms.enabled = false;
+            }
+
+            if(legs != null)
+            {
+                legs.enabled = false;
+            }
+
+            if(tail != null)
+            {
+                tail.enabled = false;
+            }
+           
         }
 
     }

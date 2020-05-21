@@ -85,6 +85,8 @@ public class BattleSystemFossil : MonoBehaviour
     {
         MenuManager.enabled = false;
 
+        MusicManager.normalBattleMusic = true;
+
         System.Random rnd = new System.Random();
 
         EnemyHolder.enemyAmount = 3;
@@ -507,6 +509,7 @@ public class BattleSystemFossil : MonoBehaviour
             worldPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             MenuManager.enabled = true;
             enemiesKilled = 0;
+            MusicManager.normalBattleMusic = false;
             battle.SetActive(false);
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
         else if (state == BattleStateFossil.LOST)
@@ -522,6 +525,7 @@ public class BattleSystemFossil : MonoBehaviour
             worldPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             MenuManager.enabled = true;
             enemiesKilled = 0;
+            MusicManager.normalBattleMusic = false;
             battle.SetActive(false);
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
 

@@ -129,7 +129,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[0], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 0;
                     WeaponStats.objectsInSpaces[i] = fossils[0];
@@ -145,7 +145,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[1], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 1;
                     WeaponStats.objectsInSpaces[i] = fossils[1];
@@ -161,7 +161,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[2], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 2;
                     WeaponStats.objectsInSpaces[i] = fossils[2];
@@ -177,7 +177,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[3], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 3;
                     WeaponStats.objectsInSpaces[i] = fossils[3];
@@ -193,7 +193,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[4], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 4;
                     WeaponStats.objectsInSpaces[i] = fossils[4];
@@ -209,7 +209,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[5], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 5;
                     WeaponStats.objectsInSpaces[i] = fossils[5];
@@ -225,7 +225,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[6], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 6;
                     WeaponStats.objectsInSpaces[i] = fossils[6];
@@ -241,7 +241,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[7], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 7;
                     WeaponStats.objectsInSpaces[i] = fossils[7];
@@ -257,7 +257,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[8], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 8;
                     WeaponStats.objectsInSpaces[i] = fossils[8];
@@ -273,7 +273,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[9], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 9;
                     WeaponStats.objectsInSpaces[i] = fossils[9];
@@ -289,7 +289,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[10], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 10;
                     WeaponStats.objectsInSpaces[i] = fossils[10];
@@ -305,7 +305,7 @@ public class WeaponWatcher : MonoBehaviour
             {
                 if (isFilled[i] == false)
                 {
-                    pickup.Play();
+                    //pickup.Play();
                     Instantiate(fossils[11], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                     WeaponStats.fossilsInSpaces[i] = 11;
                     WeaponStats.objectsInSpaces[i] = fossils[11];
@@ -320,7 +320,7 @@ public class WeaponWatcher : MonoBehaviour
                 {
                     if (isFilled[i] == false)
                     {
-                        pickup.Play();
+                        //pickup.Play();
                         Instantiate(fossils[12], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                         WeaponStats.fossilsInSpaces[i] = 12;
                         WeaponStats.objectsInSpaces[i] = fossils[12];
@@ -336,7 +336,7 @@ public class WeaponWatcher : MonoBehaviour
                 {
                     if (isFilled[i] == false)
                     {
-                        pickup.Play();
+                        //pickup.Play();
                         Instantiate(fossils[13], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                         WeaponStats.fossilsInSpaces[i] = 13;
                         WeaponStats.objectsInSpaces[i] = fossils[13];
@@ -352,7 +352,7 @@ public class WeaponWatcher : MonoBehaviour
                 {
                     if (isFilled[i] == false)
                     {
-                        pickup.Play();
+                        //pickup.Play();
                         Instantiate(fossils[14], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                         WeaponStats.fossilsInSpaces[i] = 14;
                         WeaponStats.objectsInSpaces[i] = fossils[14];
@@ -368,7 +368,7 @@ public class WeaponWatcher : MonoBehaviour
                 {
                     if (isFilled[i] == false)
                     {
-                        pickup.Play();
+                        //pickup.Play();
                         Instantiate(fossils[15], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                         WeaponStats.fossilsInSpaces[i] = 15;
                         WeaponStats.objectsInSpaces[i] = fossils[15];
@@ -384,7 +384,7 @@ public class WeaponWatcher : MonoBehaviour
                 {
                     if (isFilled[i] == false)
                     {
-                        pickup.Play();
+                        //pickup.Play();
                         Instantiate(fossils[16], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                         WeaponStats.fossilsInSpaces[i] = 16;
                         WeaponStats.objectsInSpaces[i] = fossils[16];
@@ -400,7 +400,7 @@ public class WeaponWatcher : MonoBehaviour
                 {
                     if (isFilled[i] == false)
                     {
-                        pickup.Play();
+                        //pickup.Play();
                         Instantiate(fossils[17], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
                         WeaponStats.fossilsInSpaces[i] = 17;
                         WeaponStats.objectsInSpaces[i] = fossils[17];

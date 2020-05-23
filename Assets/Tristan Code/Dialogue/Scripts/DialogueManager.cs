@@ -32,12 +32,14 @@ public class DialogueManager : MonoBehaviour
     
     public Image CharacterSprite;
     public Image BGSprite;
-   
+
+    public Tutorial tutorial;
 
     //checks if ur in a convo
     private bool isActive;
     //checks if the text has ended
     private bool endText;
+    private bool tutorialTrigger;
 
     public static DialogueManager Instance;
     void Start()
@@ -49,12 +51,15 @@ public class DialogueManager : MonoBehaviour
         voices = new Queue<AudioClip>();
         sprites = new Queue<Sprite>();
         //BGSprites = new Queue<Sprite>();
+        tutorialTrigger = false;
+
         CharacterFrameObject.SetActive(false);
     }
     public IEnumerator StartDialogue(Dialogue dialogue)
     {
         endText = false;
-
+        tutorialTrigger = dialogue.tutorialTrigger;
+        tutorial = dialogue.tutorial;
         if (Player != null)
         {
             Player.GetComponent<PlayerMovementFinal>().enabled = false;
@@ -199,6 +204,12 @@ public class DialogueManager : MonoBehaviour
         textBox.SetBool("isOpen", false);
         CharacterFrameObject.SetActive(false);
         //Menu.SetActive(true);
+
+        if(tutorialTrigger == true && tutorial != null)
+        {
+            Debug.Log("Hello ");
+            FindObjectOfType<TutorialManager>().StartTutorial(tutorial);
+        }
 
     }
 

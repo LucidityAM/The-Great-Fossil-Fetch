@@ -2038,6 +2038,7 @@ GameObject:
   - component: {fileID: 860815693}
   - component: {fileID: 860815692}
   - component: {fileID: 860815691}
+  - component: {fileID: 860815694}
   m_Layer: 0
   m_Name: Start Trigger
   m_TagString: Untagged
@@ -2092,6 +2093,8 @@ MonoBehaviour:
     BGsprites: []
     bossTrigger: 0
     sceneTransition: 0
+    tutorialTrigger: 1
+    tutorial: {fileID: 860815694}
 --- !u!61 &860815692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2168,6 +2171,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &860815694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860815689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db2581f1db325247a1bbec8f4714024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - yu
+  - uyg
+  - asddas
+  - asdasddsadsad
+  headerText: Overworld
 --- !u!1 &881546642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4379,6 +4400,8 @@ MonoBehaviour:
     BGsprites: []
     bossTrigger: 0
     sceneTransition: 0
+    tutorialTrigger: 0
+    tutorial: {fileID: 0}
 --- !u!61 &1705300217
 BoxCollider2D:
   m_ObjectHideFlags: 0

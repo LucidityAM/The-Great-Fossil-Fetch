@@ -16,6 +16,8 @@ public class Dialogue
     public Sprite[] BGsprites;
     public bool bossTrigger;
     public bool sceneTransition;
+    public bool tutorialTrigger;
+    public Tutorial tutorial;
 
 
 }

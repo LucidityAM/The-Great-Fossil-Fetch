@@ -12,7 +12,7 @@ public class InventoryWeapons : MonoBehaviour
         for (int i = 0; i < inventorySpace.Length; i++)
         {
             inventorySpace[i] = InventoryBlocks[i].GetComponent<RectTransform>();
-            inventorySpace[i].anchoredPosition = new Vector2(inventorySpace[i].anchoredPosition.x + 444f, inventorySpace[i].position.y);
+            inventorySpace[i].anchoredPosition = new Vector2(inventorySpace[i].anchoredPosition.x + 444f, inventorySpace[i].anchoredPosition.y);
         }
     }
 }

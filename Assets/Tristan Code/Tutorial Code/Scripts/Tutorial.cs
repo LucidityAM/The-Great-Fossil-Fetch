@@ -9,4 +9,6 @@ public class Tutorial : MonoBehaviour
     [TextArea(3, 10)]
     public string[] sentences;
     public string headerText;
+    public bool[] hasPictures;
+    public Sprite[] images;
 }

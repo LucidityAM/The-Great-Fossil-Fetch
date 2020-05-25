@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
     public Image CharacterSprite;
     public Image BGSprite;
 
-    public Tutorial tutorial;
+    private Tutorial tutorial;
 
     //checks if ur in a convo
     private bool isActive;

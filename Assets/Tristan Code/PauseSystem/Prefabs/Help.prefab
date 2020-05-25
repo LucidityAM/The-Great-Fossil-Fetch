@@ -229,6 +229,12 @@ MonoBehaviour:
   - tutorial tutorial tutorial
   - yuh
   headerText: BATTLE
+  hasPictures: 00010001
+  images:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1775129014251944945
 GameObject:
   m_ObjectHideFlags: 0

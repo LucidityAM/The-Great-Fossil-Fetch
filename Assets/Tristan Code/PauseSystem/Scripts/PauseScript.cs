@@ -8,7 +8,10 @@ public class PauseScript : MonoBehaviour
     public PlayerMovementFinal playerMovement;
     public LoadBattle battleTrigger;
     public GameObject player;
+    public MenuSoundManager menuSound;
 
+    public AudioClip openSound;
+    public AudioClip backSound;
     //check if paused 
     private bool isPaused;
 
@@ -60,15 +63,22 @@ public class PauseScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //Menu States: 0 = Main Menu, 1 = Inventory, 2 = Status, 3 = Fossils, 4 = System
-            if (!isPaused) StartCoroutine("OpenMenu");
+            if (!isPaused)
+            {
+                StartCoroutine("OpenMenu");
+                menuSound.PlaySound(openSound);
+            }
             else if (menuState != 0 && menuState != 5)
             {
                 mainMenuAnim.SetBool("isClosed2", false);
                 StartCoroutine("CloseAllSubMenus");
-            } else if (menuState == 5) { StartCoroutine("CloseIntoSystem"); }
+                menuSound.PlaySound(backSound);
+            }
+            else if (menuState == 5) { StartCoroutine("CloseIntoSystem"); }
             else
             {
                 StartCoroutine("CloseMenu");
+                menuSound.PlaySound(backSound);
             }
         }
 

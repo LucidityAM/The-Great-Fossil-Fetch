@@ -61,6 +61,7 @@ public class TutorialManager : MonoBehaviour
 
     public void StartTutorial(Tutorial tutorial)
     {
+        currentSentence = 0;
         Movement.enabled = false;
         battleTrigger.enabled = false;
         header.text = "";

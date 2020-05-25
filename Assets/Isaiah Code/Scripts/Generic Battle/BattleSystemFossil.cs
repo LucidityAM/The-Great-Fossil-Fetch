@@ -83,6 +83,8 @@ public class BattleSystemFossil : MonoBehaviour
 
     public void BattleStart()
     {
+        BattleCount.battleCount++;
+
         MenuManager.enabled = false;
 
         MusicManager.normalBattleMusic = true;

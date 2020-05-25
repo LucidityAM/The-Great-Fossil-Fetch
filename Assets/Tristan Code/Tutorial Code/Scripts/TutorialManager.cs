@@ -13,6 +13,9 @@ public class TutorialManager : MonoBehaviour
     //Visual Stuff: Sprites, Backgrounds, Actual Box for text
     public GameObject textBox;
     public GameObject Background;
+    public GameObject tutorialImage;
+    public Image tutorialSprite;
+    private Animator tutorialImageAnim;
     private Animator textBoxAnim;
     private Animator backgroundAnim;
 
@@ -25,6 +28,8 @@ public class TutorialManager : MonoBehaviour
     //Pulbic arrays that represent the text
     private string headerText;
     private string[] sentences;
+    private bool[] hasPictures;
+    private Sprite[] images;
 
     //checks if ur in a convo
     private bool isActive;
@@ -41,26 +46,43 @@ public class TutorialManager : MonoBehaviour
     {
         textBox.SetActive(false);
         Background.SetActive(false);
+        tutorialImage.SetActive(false);
         endText = false;
         isActive = false;
         textBoxAnim = textBox.GetComponent<Animator>();
         backgroundAnim = Background.GetComponent<Animator>();
         Movement = Player.GetComponent<PlayerMovementFinal>();
         battleTrigger = Player.GetComponent<LoadBattle>();
+
+        tutorialImageAnim = tutorialImage.GetComponent<Animator>();
+
         currentSentence = 0;
     }
 
     public void StartTutorial(Tutorial tutorial)
     {
+        Movement.enabled = false;
+        battleTrigger.enabled = false;
         header.text = "";
         endText = false;
 
         if(Pause != null) { Pause.enabled = false; }
 
         sentences = new string[tutorial.sentences.Length];
+        hasPictures = new bool[tutorial.hasPictures.Length];
+        images = new Sprite[tutorial.images.Length];
+        //creating arrays that can be accessed everywhere
         for(int i = 0; i < tutorial.sentences.Length; i++)
         {
             sentences[i] = tutorial.sentences[i];
+        }
+        for (int j = 0; j < tutorial.hasPictures.Length; j++)
+        {
+            hasPictures[j] = tutorial.hasPictures[j];
+        }
+        for (int k = 0; k < tutorial.images.Length; k++)
+        {
+            images[k] = tutorial.images[k];
         }
         headerText = tutorial.headerText;
         header.text = headerText;
@@ -78,13 +100,24 @@ public class TutorialManager : MonoBehaviour
     //Displays the next sentence according to int CurrentSentence
     public void DisplayNextSentence()
     {
-        if(currentSentence <= 0) { currentSentence = 0; }
-        body.text = "";
         if (currentSentence == sentences.Length)
         {
             EndTutorial();
             return;
         }
+        if (hasPictures[currentSentence] == true)
+        {
+            tutorialImage.SetActive(true);
+            tutorialImageAnim.SetBool("isOpen", true);
+            tutorialSprite.sprite = images[currentSentence];
+        } else
+        {
+            tutorialImage.SetActive(false);
+            tutorialImageAnim.SetBool("isOpen", false);
+            tutorialSprite.sprite = null;
+        }
+        if(currentSentence <= 0) { currentSentence = 0; }
+        body.text = "";
 
         string sentence = sentences[currentSentence];
         string name = sentences[currentSentence];
@@ -121,6 +154,9 @@ public class TutorialManager : MonoBehaviour
 
     public void EndTutorial()
     {
+        Movement.enabled = true;
+        battleTrigger.enabled = true;
+
         if (Pause != null) { Pause.enabled = true; }
         currentSentence = 0;
         endText = true;

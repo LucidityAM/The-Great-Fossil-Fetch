@@ -503,6 +503,7 @@ public class BattleSystemFossil : MonoBehaviour
             {
                 Destroy(currentEnemies[i]);
             }
+            buttons.SetActive(true);
             enemyTurnAttack = false;
             Array.Clear(currentEnemies,0,currentEnemies.Length);
             worldPlayer.SetActive(true);
@@ -520,6 +521,8 @@ public class BattleSystemFossil : MonoBehaviour
             {
                 Destroy(currentEnemies[i]);
             }
+            buttons.SetActive(true);
+            enemyTurnAttack = false;
             Array.Clear(currentEnemies, 0, currentEnemies.Length);
             worldPlayer.SetActive(true);
             worldPlayer.GetComponent<SpriteRenderer>().enabled = true;

@@ -13,8 +13,6 @@ public class WeaponWatcher : MonoBehaviour
 
     public AudioSource pickup;
 
-
-
     private void Start()
     {
 
@@ -134,7 +132,8 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 0;
-                    WeaponStats.objectsInSpaces[i] = fossils[0];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[0] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -152,7 +151,8 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 1;
-                    WeaponStats.objectsInSpaces[i] = fossils[1];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[1] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -170,7 +170,8 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 2;
-                    WeaponStats.objectsInSpaces[i] = fossils[2];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[2] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -188,7 +189,8 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 3;
-                    WeaponStats.objectsInSpaces[i] = fossils[3];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[3] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -206,7 +208,8 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 4;
-                    WeaponStats.objectsInSpaces[i] = fossils[4];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[4] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -224,7 +227,8 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 5;
-                    WeaponStats.objectsInSpaces[i] = fossils[5];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[5] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -242,7 +246,8 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 6;
-                    WeaponStats.objectsInSpaces[i] = fossils[6];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[6] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -260,7 +265,7 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 7;
-                    WeaponStats.objectsInSpaces[i] = fossils[7];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -278,7 +283,7 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 8;
-                    WeaponStats.objectsInSpaces[i] = fossils[8];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -296,7 +301,7 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 9;
-                    WeaponStats.objectsInSpaces[i] = fossils[9];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -314,7 +319,7 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 10;
-                    WeaponStats.objectsInSpaces[i] = fossils[10];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -332,7 +337,7 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                     WeaponStats.fossilsInSpaces[i] = 11;
-                    WeaponStats.objectsInSpaces[i] = fossils[11];
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -349,7 +354,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                         WeaponStats.fossilsInSpaces[i] = 12;
-                        WeaponStats.objectsInSpaces[i] = fossils[12];
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                         break;
                     }
@@ -367,7 +372,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                         WeaponStats.fossilsInSpaces[i] = 13;
-                        WeaponStats.objectsInSpaces[i] = fossils[13];
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                         break;
                     }
@@ -385,7 +390,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                         WeaponStats.fossilsInSpaces[i] = 14;
-                        WeaponStats.objectsInSpaces[i] = fossils[14];
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                         break;
                     }
@@ -403,7 +408,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                         WeaponStats.fossilsInSpaces[i] = 15;
-                        WeaponStats.objectsInSpaces[i] = fossils[15];
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                         break;
                     }
@@ -421,7 +426,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                         WeaponStats.fossilsInSpaces[i] = 16;
-                        WeaponStats.objectsInSpaces[i] = fossils[16];
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                         break;
                     }
@@ -439,8 +444,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
                         WeaponStats.fossilsInSpaces[i] = 17;
-                        WeaponStats.objectsInSpaces[i] = fossils[17];
-                        WeaponStats.objectsInSpaces[i] = fossils[17];
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                         break;
                     }

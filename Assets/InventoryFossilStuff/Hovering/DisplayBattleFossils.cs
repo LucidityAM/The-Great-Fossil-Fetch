@@ -45,19 +45,19 @@ public class DisplayBattleFossils : MonoBehaviour
                 case 1:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[0] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[1] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[2] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
@@ -86,19 +86,19 @@ public class DisplayBattleFossils : MonoBehaviour
                 case 1:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[3] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[4] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[5] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
@@ -127,19 +127,19 @@ public class DisplayBattleFossils : MonoBehaviour
                 case 1:
                     name.text = "Blazing Inferno";
                     affinity.sprite = cursed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[6] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[7] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[8] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
@@ -168,19 +168,19 @@ public class DisplayBattleFossils : MonoBehaviour
                 case 1:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[9] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[10] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[11] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
@@ -209,19 +209,19 @@ public class DisplayBattleFossils : MonoBehaviour
                 case 1:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[12] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[13] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[14] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
@@ -250,19 +250,19 @@ public class DisplayBattleFossils : MonoBehaviour
                 case 1:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[15] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[16] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = "XX/XX";
+                    durability.text = WeaponStats.fossilDurability[17] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 

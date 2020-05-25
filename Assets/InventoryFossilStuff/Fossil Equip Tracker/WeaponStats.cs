@@ -15,5 +15,7 @@ public static class WeaponStats
     public static GameObject[] objectsInSpaces = new GameObject[18];
 
     public static int[] fossilDurability = new int [18];
+
+    public static GameObject[] fossilsOutOfSpaces = new GameObject[18];
 }
 

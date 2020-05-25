@@ -12,6 +12,8 @@ public class FossilAttacks : MonoBehaviour
 
     private bool isDead;
 
+    public bool blazingInfernoEnabled = false;
+
     void Start()
     {
         BattleSystemFossil = GameObject.FindGameObjectWithTag("BattleSystem").GetComponent<BattleSystemFossil>();
@@ -29,8 +31,13 @@ public class FossilAttacks : MonoBehaviour
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
             return;
-
-        StartCoroutine("BurnTimer", 5);
+        
+        if(blazingInfernoEnabled == false)
+        {
+            WeaponStats.fossilDurability[6] --;
+            blazingInfernoEnabled = true;
+            StartCoroutine("BurnTimer", 5);
+        }
     }
 
     public void PurifyArena()
@@ -123,6 +130,7 @@ public class FossilAttacks : MonoBehaviour
             BattleSystemFossil.EnemyTurn();
         } //If all enemies are not killed, enemy turn starts
 
+        blazingInfernoEnabled = false;
 
         StopCoroutine("BurnTimer");
     }

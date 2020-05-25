@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VisualizeWeaponStats : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class VisualizeWeaponStats : MonoBehaviour
     public void Awake()
     {
         fossilInfoText = GameObject.FindGameObjectWithTag("FossilInfoText");
+
+        WeaponStats.fossilDurability[6] = 2;
     }
 
     public float[,] fossilStats = new float[18, 2]
-   {
+    {
         //Skulls
         {10f, .5f,}, //Skull 1
         {10f, .5f,}, //Skull 2
@@ -46,6 +49,60 @@ public class VisualizeWeaponStats : MonoBehaviour
         
    };
 
+    public void Update()
+    {
+        for(int i = 0; i < WeaponStats.fossilsOutOfSpaces.Length; i++)
+        {
+            if(WeaponStats.fossilsOutOfSpaces[i] != null)
+            {
+                Image BG = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(0).gameObject.GetComponent<Image>();
+                Text fossilPart = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(1).gameObject.GetComponent<Text>();
+                Text fossilName = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(2).gameObject.GetComponent<Text>();
+                Text fossilDurability = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(3).gameObject.GetComponent<Text>();
+
+                if(WeaponStats.fossilDurability[i] > 0)
+                {
+                    fossilDurability.text = WeaponStats.fossilDurability[i] + "/XX";
+
+                }//Sets the durability text of the fossil in the inventory
+                else
+                {
+                    BG.color = Color.black;
+                    fossilPart.text = "Broken";
+                    fossilName.text = "Broken";
+                    fossilDurability.text = "Broken";
+                    WeaponStats.fossilsOutOfSpaces[i].GetComponent<Button>().enabled = false;
+
+                    if(WeaponStats.fossilsOutOfSpaces[i].tag.Contains("skull"))
+                    {
+                        WeaponStats.skull = 0;
+                    }
+                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("neck"))
+                    {
+                        WeaponStats.neck = 0;
+                    }
+                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("ribs"))
+                    {
+                        WeaponStats.ribs = 0;
+                    }
+                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("arms"))
+                    {
+                        WeaponStats.arms = 0;
+                    }
+                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("legs"))
+                    {
+                        WeaponStats.legs = 0;
+                    }
+                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("tail"))
+                    {
+                        WeaponStats.tail = 0;
+                    }
+
+                }//If the durability of a specific fossil is less than 0, indicate that it's broken
+            }
+        }
+    }
+
     public void InstantiateInfo()
     {
         fossilInfoText.SetActive(true);
@@ -55,7 +112,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[0, 0];
             StatString.defense = fossilStats[0, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[0] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -65,7 +122,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[1, 0];
             StatString.defense = fossilStats[1, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[1] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -75,7 +132,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[2, 0];
             StatString.defense = fossilStats[2, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[2] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -85,7 +142,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[3, 0];
             StatString.defense = fossilStats[3, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[3] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -95,7 +152,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[4, 0];
             StatString.defense = fossilStats[4, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[4] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -105,7 +162,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[5, 0];
             StatString.defense = fossilStats[5, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[5] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -115,7 +172,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[6, 0];
             StatString.defense = fossilStats[6, 1];
             StatString.fossilName = "Blazing Inferno";
-            StatString.durability = "Durability: XX/XX";
+            StatString.durability = WeaponStats.fossilDurability[6] + "/XX";
             StatString.fossilPart = "Ribs";
             StatString.flavorText = "PlacementPlacementPlacementPlacementPlacementPlacementPlacementPlacementPlacementPlacement";
             StatString.affinity = "cursed";
@@ -125,7 +182,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[7, 0];
             StatString.defense = fossilStats[7, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[7] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -135,7 +192,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[8, 0];
             StatString.defense = fossilStats[8, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[8] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -145,7 +202,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[9, 0];
             StatString.defense = fossilStats[9, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[9] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -155,7 +212,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[10, 0];
             StatString.defense = fossilStats[10, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[10] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -165,7 +222,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[11, 0];
             StatString.defense = fossilStats[11, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[11] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -175,7 +232,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[12, 0];
             StatString.defense = fossilStats[12, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[12] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -185,7 +242,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[13, 0];
             StatString.defense = fossilStats[13, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[13] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -195,7 +252,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[14, 0];
             StatString.defense = fossilStats[14, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[14] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -205,7 +262,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[15, 0];
             StatString.defense = fossilStats[15, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[15] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -215,7 +272,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[16, 0];
             StatString.defense = fossilStats[16, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[16] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
@@ -225,7 +282,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.attack = fossilStats[17, 0];
             StatString.defense = fossilStats[17, 1];
             StatString.fossilName = "PlacementPlacement";
-            StatString.durability = "PlacementPlacement";
+            StatString.durability = WeaponStats.fossilDurability[17] + "/XX";
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";

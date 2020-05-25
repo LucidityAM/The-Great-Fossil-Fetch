@@ -15,4 +15,5 @@ public static class PlayerStats
 
     #endregion BaseandMaxStats
 
+    public static float defendButton = 1; //The defense divisor for when the player pressed the defend button
 }

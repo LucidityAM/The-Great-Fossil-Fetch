@@ -101,10 +101,13 @@ public class BattleSystemFossil : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(PlayerStats.defendButton);
+
         if (EnemyHolder.coroutinesRunning == 0 && enemyTurnAttack == false)
         {
             attackButton.enabled = true;
             state = BattleStateFossil.PLAYERTURN;
+            PlayerStats.defendButton = 1;
             StartCoroutine(PlayerTurn());
         }//Checks if there are no enemies attacking and re enables attack buttons and player turn
 
@@ -265,6 +268,17 @@ public class BattleSystemFossil : MonoBehaviour
         buttons.SetActive(false);
 
     }//Attacks when the player presses a button
+    public void OnDefendButton()
+    {
+        if (state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        PlayerStats.defendButton = 1.5f;
+
+        state = BattleStateFossil.ENEMYTURN;
+        EnemyTurn();
+
+    }//Sets a devisor so when the enemy attacks, it divides the damage
 
     public IEnumerator PlayerAttack(GameObject enemy)
     {
@@ -538,7 +552,13 @@ public class BattleSystemFossil : MonoBehaviour
 
     public IEnumerator PlayerTurn()
     {
-       
+        if(canAttack == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            canAttack = false;
+            infoBar.SetBool("isOpen", false);
+            buttons.SetActive(true);
+        }
+
         for (int k = 0; k <= EnemyHolder.enemyAmount; k++)
         {
             if (EnemyHolder.enemyDowned[k] != null)

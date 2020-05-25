@@ -10,12 +10,14 @@ public static class WeaponStats
     public static int arms = 0;
     public static int legs = 0;
     public static int tail = 0;
+    //Whether fossils 1, 2, or 3 of each fossil type is equipped, 0 means no fossil is equipped for that type
 
-    public static int[] fossilsInSpaces = new int[18];
-    public static GameObject[] objectsInSpaces = new GameObject[18];
+    public static int[] fossilsInSpaces = new int[18]; //The number of the fossil in specific spaces
 
-    public static int[] fossilDurability = new int [18];
+    public static GameObject[] objectsInSpaces = new GameObject[18]; //The specific fossils in the first, second, and so on spaces
 
-    public static GameObject[] fossilsOutOfSpaces = new GameObject[18];
+    public static int[] fossilDurability = new int [18]; //The durability of all 18 fossils
+
+    public static GameObject[] fossilsOutOfSpaces = new GameObject[18]; //The instantiated fossils so that components can be grabbed from specific fossils
 }
 

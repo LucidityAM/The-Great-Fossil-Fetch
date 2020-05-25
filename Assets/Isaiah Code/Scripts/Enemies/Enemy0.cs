@@ -31,7 +31,6 @@ public class Enemy0 : MonoBehaviour
     {
         //Debug.Log(EnemyHolder.coroutinesRunning);
 
-       
     }
 
     public IEnumerator EnemyTurn0()
@@ -122,11 +121,11 @@ public class Enemy0 : MonoBehaviour
                     }
                 }
                 break;
-        }// Delays the coroutines activation depending on how many enemies you are fighting
+        }// Delays the coroutines activation depending on how many enemies you are fighting and disables specific lighting effects depending on downed enemies
 
         if (EnemyHolder.isDowned == false)
         {
-            isDead = playerStats.TakeDamage(10);
+            isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
 
             battleSystemFossil.playerColor.color = new Color(1, 0, 0);
 

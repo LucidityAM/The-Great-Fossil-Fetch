@@ -17,7 +17,7 @@ public class WeaponWatcher : MonoBehaviour
     {
 
         Scene scene = SceneManager.GetActiveScene();
-        if(scene.name == "Level2" || scene.name == "Level3" || scene.name == "FloorClearScreen")
+        if(scene.name == "Level2" || scene.name == "Level3")
         {
             for(int i = 0; i < 18; i++)
             {
@@ -115,33 +115,42 @@ public class WeaponWatcher : MonoBehaviour
                     }
                 }
             }
-        }
+
+        }//Simply repopulates the inventory for the second and third levels
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "skull1")
         {
-            collision.gameObject.SetActive(false);
-            for (int i = 0; i < isFilled.Length; i++)
+            collision.gameObject.SetActive(false); //When you collide with an object in the world, disable it
+
+            for (int i = 0; i < isFilled.Length; i++) 
             {
                 if (isFilled[i] == false)
                 {
                     //pickup.Play();
-                    GameObject FossilInstantiate = Instantiate(fossils[0], inventoryWeapons.inventorySpace[i]);
-                    FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+                    GameObject FossilInstantiate = Instantiate(fossils[0], inventoryWeapons.inventorySpace[i]); //makes a gameobject called FossilInstantiate based of a specific fossil in the fossil array
+
+                    FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                     WeaponStats.fossilsInSpaces[i] = 0;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[0] = FossilInstantiate;
-                    isFilled[i] = true;
+                    //Take the instantiated object and populate some arrays with it for future use
+
+                    isFilled[i] = true; //Sets the space to full so the next time the script instantiates an object, it is in the next space
                     break;
-                }
-            }
+
+                }//If the loop finds a space that isnt filled, run the code
+
+            }//Run a for loop for each the length of the isFilled array(18)
         }
         if (collision.gameObject.tag == "skull2")
         {
             collision.gameObject.SetActive(false);
+
             for (int i = 0; i < isFilled.Length; i++)
             {
                 if (isFilled[i] == false)

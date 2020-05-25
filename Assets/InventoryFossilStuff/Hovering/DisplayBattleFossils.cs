@@ -36,9 +36,11 @@ public class DisplayBattleFossils : MonoBehaviour
             Image affinity = skull.transform.GetChild(2).gameObject.GetComponent<Image>();
             Text durability = skull.transform.GetChild(3).gameObject.GetComponent<Text>();
 
-            Button btn = skull.GetComponent<Button>();
+            //Grabs the name, affinity, and durability of the fossil in the battle so it can be edited later
 
-            skull.SetActive(true);
+            Button btn = skull.GetComponent<Button>(); //Gets the button component from the battle fossil
+
+            skull.SetActive(true); //Sets the specific fossil type to active
 
             switch (WeaponStats.skull)
             {
@@ -61,13 +63,14 @@ public class DisplayBattleFossils : MonoBehaviour
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
-            }//Sets the text of the specific fossil attack
+            }//Sets the text of the specific fossil attack as well as the affinity, durability, and adds the specific fossil attack method to the onclick method of the button
         }
         else
         {
             skullNone.enabled = true;
             skull.SetActive(false);
-        }
+
+        }//If the WeaponStats part is equal to 0, makes text that says "none" appear, turns the fossil type off
 
         if (WeaponStats.neck != 0)
         {

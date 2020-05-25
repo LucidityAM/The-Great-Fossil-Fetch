@@ -12,6 +12,13 @@ public class DisplayBattleFossils : MonoBehaviour
     public GameObject legs;
     public GameObject tail;
 
+    public Text skullNone;
+    public Text neckNone;
+    public Text ribsNone;
+    public Text armsNone;
+    public Text legsNone;
+    public Text tailNone;
+
     public Sprite cursed;
     public Sprite blessed;
     public Sprite soma;
@@ -23,6 +30,8 @@ public class DisplayBattleFossils : MonoBehaviour
     {
         if(WeaponStats.skull != 0)
         {
+            skullNone.enabled = false;
+
             Text name = skull.transform.GetChild(1).gameObject.GetComponent<Text>();
             Image affinity = skull.transform.GetChild(2).gameObject.GetComponent<Image>();
             Text durability = skull.transform.GetChild(3).gameObject.GetComponent<Text>();
@@ -56,11 +65,13 @@ public class DisplayBattleFossils : MonoBehaviour
         }
         else
         {
+            skullNone.enabled = true;
             skull.SetActive(false);
         }
 
         if (WeaponStats.neck != 0)
         {
+            neckNone.enabled = false;
 
             Text name = neck.transform.GetChild(1).gameObject.GetComponent<Text>();
             Image affinity = neck.transform.GetChild(2).gameObject.GetComponent<Image>();
@@ -96,10 +107,12 @@ public class DisplayBattleFossils : MonoBehaviour
         else
         {
             neck.SetActive(false);
+            neckNone.enabled = true;
         }
 
         if (WeaponStats.ribs != 0)
         {
+            ribsNone.enabled = false;
 
             Text name = ribs.transform.GetChild(1).gameObject.GetComponent<Text>();
             Image affinity = ribs.transform.GetChild(2).gameObject.GetComponent<Image>();
@@ -134,11 +147,13 @@ public class DisplayBattleFossils : MonoBehaviour
         }
         else
         {
+            ribsNone.enabled = true;
             ribs.SetActive(false);
         }
 
         if (WeaponStats.arms != 0)
         {
+            armsNone.enabled = false;
 
             Text name = arms.transform.GetChild(1).gameObject.GetComponent<Text>();
             Image affinity = arms.transform.GetChild(2).gameObject.GetComponent<Image>();
@@ -173,11 +188,13 @@ public class DisplayBattleFossils : MonoBehaviour
         }
         else
         {
+            armsNone.enabled = true;
             arms.SetActive(false);
         }
 
         if (WeaponStats.legs != 0)
         {
+            legsNone.enabled = false;
 
             Text name = legs.transform.GetChild(1).gameObject.GetComponent<Text>();
             Image affinity = legs.transform.GetChild(2).gameObject.GetComponent<Image>();
@@ -212,11 +229,13 @@ public class DisplayBattleFossils : MonoBehaviour
         }
         else
         {
+            legsNone.enabled = true;
             legs.SetActive(false);
         }
 
         if (WeaponStats.tail != 0)
         {
+            tailNone.enabled = false;
 
             Text name = tail.transform.GetChild(1).gameObject.GetComponent<Text>();
             Image affinity = tail.transform.GetChild(2).gameObject.GetComponent<Image>();
@@ -251,6 +270,7 @@ public class DisplayBattleFossils : MonoBehaviour
         }
         else
         {
+            tailNone.enabled = true;
             tail.SetActive(false);
         }
 

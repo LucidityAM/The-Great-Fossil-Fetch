@@ -2189,6 +2189,12 @@ MonoBehaviour:
   - asddas
   - asdasddsadsad
   headerText: Overworld
+  hasPictures: 00010001
+  images:
+  - {fileID: 21300000, guid: e668775a08dce8d4b9d6baa7ef34d103, type: 3}
+  - {fileID: 21300000, guid: 7e2d8c72e85cb404f82d2fbfeb516342, type: 3}
+  - {fileID: 21300000, guid: e668775a08dce8d4b9d6baa7ef34d103, type: 3}
+  - {fileID: 21300000, guid: 73c7253163fca394090e2b8df14d26c1, type: 3}
 --- !u!1 &881546642
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,6 +3473,71 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 246385863}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 687.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -287
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904784851501337990, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341134276369015193, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3841614625927624934, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: Player

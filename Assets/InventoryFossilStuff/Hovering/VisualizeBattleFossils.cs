@@ -76,7 +76,7 @@ public class VisualizeBattleFossils : MonoBehaviour
 
             battleSystemFossil.canAttack = true;
 
-            Vector3 position = new Vector3(spawnLocation.position.x + .75f, spawnLocation.position.y + 2.3f);
+            Vector3 position = new Vector3(spawnLocation.position.x + .8f, spawnLocation.position.y + 2.35f);
             instantiatedFossilBattle = Instantiate(fossilBattle, position, Quaternion.identity, spawnLocation);
 
             instantiatedFossilBattle.GetComponent<Animator>().SetBool("isOpen", true);

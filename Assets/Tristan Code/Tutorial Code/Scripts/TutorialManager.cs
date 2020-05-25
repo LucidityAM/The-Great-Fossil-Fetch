@@ -18,6 +18,8 @@ public class TutorialManager : MonoBehaviour
 
     //Player access for making them stop moving n stuff
     public GameObject Player;
+    private PlayerMovementFinal Movement;
+    private LoadBattle battleTrigger;
     public PauseScript Pause;
 
     //Pulbic arrays that represent the text
@@ -43,6 +45,8 @@ public class TutorialManager : MonoBehaviour
         isActive = false;
         textBoxAnim = textBox.GetComponent<Animator>();
         backgroundAnim = Background.GetComponent<Animator>();
+        Movement = Player.GetComponent<PlayerMovementFinal>();
+        battleTrigger = Player.GetComponent<LoadBattle>();
         currentSentence = 0;
     }
 

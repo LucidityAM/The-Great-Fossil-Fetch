@@ -15,6 +15,8 @@ public class DisplayBattleFossils : MonoBehaviour
     public Sprite cursed;
     public Sprite blessed;
     public Sprite soma;
+
+    public FossilAttacks fossilAttacks;
    
     // Update is called once per frame
     void Update()
@@ -25,6 +27,8 @@ public class DisplayBattleFossils : MonoBehaviour
             Image affinity = skull.transform.GetChild(2).gameObject.GetComponent<Image>();
             Text durability = skull.transform.GetChild(3).gameObject.GetComponent<Text>();
 
+            Button btn = skull.GetComponent<Button>();
+
             skull.SetActive(true);
 
             switch (WeaponStats.skull)
@@ -33,16 +37,19 @@ public class DisplayBattleFossils : MonoBehaviour
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -59,6 +66,8 @@ public class DisplayBattleFossils : MonoBehaviour
             Image affinity = neck.transform.GetChild(2).gameObject.GetComponent<Image>();
             Text durability = neck.transform.GetChild(3).gameObject.GetComponent<Text>();
 
+            Button btn = neck.GetComponent<Button>();
+
             neck.SetActive(true);
 
             switch (WeaponStats.neck)
@@ -67,16 +76,19 @@ public class DisplayBattleFossils : MonoBehaviour
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -93,24 +105,29 @@ public class DisplayBattleFossils : MonoBehaviour
             Image affinity = ribs.transform.GetChild(2).gameObject.GetComponent<Image>();
             Text durability = ribs.transform.GetChild(3).gameObject.GetComponent<Text>();
 
+            Button btn = ribs.GetComponent<Button>();
+
             ribs.SetActive(true);
 
             switch (WeaponStats.ribs)
             {
                 case 1:
-                    name.text = "Placement Placement";
-                    affinity.sprite = blessed;
+                    name.text = "Blazing Inferno";
+                    affinity.sprite = cursed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -127,6 +144,8 @@ public class DisplayBattleFossils : MonoBehaviour
             Image affinity = arms.transform.GetChild(2).gameObject.GetComponent<Image>();
             Text durability = arms.transform.GetChild(3).gameObject.GetComponent<Text>();
 
+            Button btn = arms.GetComponent<Button>();
+
             arms.SetActive(true);
 
             switch (WeaponStats.arms)
@@ -135,16 +154,19 @@ public class DisplayBattleFossils : MonoBehaviour
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -161,6 +183,8 @@ public class DisplayBattleFossils : MonoBehaviour
             Image affinity = legs.transform.GetChild(2).gameObject.GetComponent<Image>();
             Text durability = legs.transform.GetChild(3).gameObject.GetComponent<Text>();
 
+            Button btn = legs.GetComponent<Button>();
+
             legs.SetActive(true);
 
             switch (WeaponStats.legs)
@@ -169,16 +193,19 @@ public class DisplayBattleFossils : MonoBehaviour
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -195,6 +222,8 @@ public class DisplayBattleFossils : MonoBehaviour
             Image affinity = tail.transform.GetChild(2).gameObject.GetComponent<Image>();
             Text durability = tail.transform.GetChild(3).gameObject.GetComponent<Text>();
 
+            Button btn = tail.GetComponent<Button>();
+
             tail.SetActive(true);
 
             switch (WeaponStats.tail)
@@ -203,16 +232,19 @@ public class DisplayBattleFossils : MonoBehaviour
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
                     name.text = "Placement Placement";
                     affinity.sprite = blessed;
                     durability.text = "XX/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack

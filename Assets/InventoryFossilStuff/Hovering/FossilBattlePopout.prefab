@@ -2322,6 +2322,7 @@ GameObject:
   - component: {fileID: 5243538217242174440}
   - component: {fileID: 1242531654719777931}
   - component: {fileID: 3596212831525971775}
+  - component: {fileID: 566998393787317887}
   - component: {fileID: 7749904591859921530}
   m_Layer: 5
   m_Name: FossilBattlePopout
@@ -2416,6 +2417,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &566998393787317887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217028558644053989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719fa493c6bb53649a1e1e6dc9e0e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skull: {fileID: 4683087814244109003}
+  neck: {fileID: 657140799356258773}
+  ribs: {fileID: 7444584177798264419}
+  arms: {fileID: 7643674956708515166}
+  legs: {fileID: 6833276293122222091}
+  tail: {fileID: 162050994351041613}
+  cursed: {fileID: -3670627111881492962, guid: 9f0d2847d04807f45a3f77e26354b61f, type: 3}
+  blessed: {fileID: -5564897186976684662, guid: 9f0d2847d04807f45a3f77e26354b61f,
+    type: 3}
+  soma: {fileID: 2748530034041488346, guid: 9f0d2847d04807f45a3f77e26354b61f, type: 3}
+  fossilAttacks: {fileID: 7749904591859921530}
 --- !u!114 &7749904591859921530
 MonoBehaviour:
   m_ObjectHideFlags: 0

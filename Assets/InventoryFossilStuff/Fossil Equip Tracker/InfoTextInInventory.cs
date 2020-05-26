@@ -44,5 +44,6 @@ public class InfoTextInInventory : MonoBehaviour
         {
             affinity.enabled = false;
         }
-    }
+
+    }//Sets the text in an info text game object in the inventory to whichever fossil the player is hovering on rn
 }

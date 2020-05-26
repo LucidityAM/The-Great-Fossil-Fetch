@@ -47,7 +47,7 @@ public class VisualizeWeaponStats : MonoBehaviour
         {10f, .5f,}, //Tail 2
         {10f, .5f,}, //Tail 3
         
-   };
+   };//Simply a 2D array that holds the attack and defense stats for each fossil
 
     public void Update()
     {
@@ -59,6 +59,7 @@ public class VisualizeWeaponStats : MonoBehaviour
                 Text fossilPart = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(1).gameObject.GetComponent<Text>();
                 Text fossilName = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(2).gameObject.GetComponent<Text>();
                 Text fossilDurability = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(3).gameObject.GetComponent<Text>();
+                //Grabs the Background, fossil part, name, and durability from the specific fossil in the inventory so it can be edited later
 
                 if(WeaponStats.fossilDurability[i] > 0)
                 {
@@ -288,8 +289,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.affinity = "PlacementPlacement";
         }
 
-
-    }
+    }//If you hover over a specific fossil in the inventory, check the tag of it and then display the appropriate text;
 
     public void DestroyInfo()
     {
@@ -300,5 +300,6 @@ public class VisualizeWeaponStats : MonoBehaviour
         StatString.fossilPart = null;
         StatString.flavorText = null;
         StatString.affinity = null;
-    }
+
+    }//When you stop hovering over a fossil, sets all the text to null and turns off the object that holds all the text
 }

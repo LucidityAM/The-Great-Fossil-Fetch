@@ -39,7 +39,7 @@ public class WeaponinInventory : MonoBehaviour
             tail = gameObject.GetComponent<Image>();
         }
 
-    }
+    }//In the inventory, checks what fossil type the object the script is attatched to is and assigns specific images accordingly
     public void Update()
     {
         if (gameObject.tag == ("skull" + WeaponStats.skull))
@@ -66,6 +66,7 @@ public class WeaponinInventory : MonoBehaviour
         {
             tail.enabled = true;
         }
+        //Checks if the gameobject is equiped and if it is, enables the specific according image
         else
         {
             if(skull != null)
@@ -97,10 +98,6 @@ public class WeaponinInventory : MonoBehaviour
             {
                 tail.enabled = false;
             }
-           
         }
-
-
-
     }
 }

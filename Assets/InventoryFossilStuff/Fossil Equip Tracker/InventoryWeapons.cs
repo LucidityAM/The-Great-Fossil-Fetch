@@ -12,7 +12,7 @@ public class InventoryWeapons : MonoBehaviour
         for (int i = 0; i < inventorySpace.Length; i++)
         {
             inventorySpace[i] = InventoryBlocks[i].GetComponent<RectTransform>();
-            inventorySpace[i].anchoredPosition = new Vector2(inventorySpace[i].anchoredPosition.x + 444f, inventorySpace[i].anchoredPosition.y);
-        }
+
+        }//Gets a specific game object in an array and grabs its RectTransform to assign it to another array where inventory fossils will be assigned
     }
 }

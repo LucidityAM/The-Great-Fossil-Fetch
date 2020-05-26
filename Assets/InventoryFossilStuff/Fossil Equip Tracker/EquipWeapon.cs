@@ -53,5 +53,6 @@ public class EquipWeapon : MonoBehaviour
                 WeaponStats.tail = i + 1;
             }
         }
-    }
+
+    }//Checks the specific tag of the fossil that is clicked on and sets the int corresponding with that fossil type to whichever fossil needs to be equipped
 }

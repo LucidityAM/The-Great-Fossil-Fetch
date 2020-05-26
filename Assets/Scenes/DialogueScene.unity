@@ -328,7 +328,7 @@ MonoBehaviour:
   CharacterFrame: {fileID: 139257713}
   Background: {fileID: 564419955}
   Player: {fileID: 139257711}
-  Menu: {fileID: 0}
+  pauseMenu: {fileID: 0}
   CharacterSprite: {fileID: 139257714}
   BGSprite: {fileID: 564419956}
 --- !u!4 &214911232
@@ -340,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 214911230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 707.2226, y: 179.71648, z: 11.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -713,6 +713,8 @@ MonoBehaviour:
     - {fileID: 0}
     bossTrigger: 0
     sceneTransition: 0
+    tutorialTrigger: 0
+    tutorial: {fileID: 0}
 --- !u!4 &635270339
 Transform:
   m_ObjectHideFlags: 0

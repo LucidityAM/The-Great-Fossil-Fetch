@@ -77,6 +77,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: WorldBG
+    uniqueID: 2692455777
+    locked: 0
+  - name: WorldBackgroundPlayerLit
+    uniqueID: 1819181187
+    locked: 0
   - name: World
     uniqueID: 1206403479
     locked: 0
@@ -91,4 +97,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: WorldPlayer
+    uniqueID: 1883878391
     locked: 0

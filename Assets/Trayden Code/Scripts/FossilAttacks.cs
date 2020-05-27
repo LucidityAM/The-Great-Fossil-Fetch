@@ -37,7 +37,7 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        if (enemyAmount == 1)
+        if (enemyAmount == 0)
         {
             BattleSystemFossil.enemyUnit[0].TakeDamage(32);
         }
@@ -74,7 +74,7 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        if (enemyAmount == 1)
+        if (enemyAmount == 0)
         {
             BattleSystemFossil.enemyUnit[0].TakeDamage(32);
         }
@@ -89,51 +89,6 @@ public class FossilAttacks : MonoBehaviour
             }
         }
     } //An attack that deals massive damage to the frontmost enemy.
-
-    public void PurifyArena() //Affinity: Support
-    {
-        if (purifyUsed == false)
-        {
-            if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-                return;
-
-            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-
-            ChooseAffinity();
-            for (int i = 0; i <= enemyAmount; i++)
-            {
-                if (BattleSystemFossil.currentEnemies[i] != null)
-                {
-                    BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity = chosenAffinity;
-                    Debug.Log(BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity); //DEBUG: Displays new affinities inside console
-                }
-            }
-            purifyUsed = true;
-        }
-        else
-        {
-            Debug.Log("You have already purified this arena. You may not do so again."); //DEBUG: Displays a message that explains that Purify Arena cannot be used
-        }
-    } //A special skill that runs an RNG (froms 0-2) then switches all enemy affinities to the number picked. Disables after one use.
-
-    public void AncientRelic() //Affinity: Support
-    {
-        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
-
-        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-
-        if (healUsed == false)
-        {
-            BattleSystemFossil.playerUnit.currentHP += 100;
-            BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
-            healUsed = true;
-        }
-        else
-        {
-            Debug.Log("You can only heal to full health once per battle.");
-        }
-    } //A special skill that heals the player for full health. Disables after one use.
 
     public void CleansingVapors() //Affinity: Blessed
     {
@@ -182,7 +137,50 @@ public class FossilAttacks : MonoBehaviour
         }
     } //An attack that deals low damage to all enemies in battle and halves the damage output of all enemies of the "Cursed" affinity.
 
+    public void PurifyArena() //Affinity: Support
+    {
+        if (purifyUsed == false)
+        {
+            if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+                return;
 
+            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+            ChooseAffinity();
+            for (int i = 0; i <= enemyAmount; i++)
+            {
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity = chosenAffinity;
+                    Debug.Log(BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity); //DEBUG: Displays new affinities inside console
+                }
+            }
+            purifyUsed = true;
+        }
+        else
+        {
+            Debug.Log("You have already purified this arena. You may not do so again."); //DEBUG: Displays a message that explains that Purify Arena cannot be used
+        }
+    } //A special skill that runs an RNG (froms 0-2) then switches all enemy affinities to the number picked. Disables after one use.
+
+    public void AncientRelic() //Affinity: Support
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        if (healUsed == false)
+        {
+            BattleSystemFossil.playerUnit.currentHP += 100;
+            BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
+            healUsed = true;
+        }
+        else
+        {
+            Debug.Log("You can only heal to full health once per battle.");
+        }
+    } //A special skill that heals the player for full health. Disables after one use.
 
     public IEnumerator KillTimer(int timer)
     {
@@ -249,13 +247,13 @@ public class FossilAttacks : MonoBehaviour
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
             BattleSystemFossil.EnemyTurn();
-        } //If all enemies are not killed, enemy turn starts
+        }
 
         StopCoroutine("BurnTimer");
     } //The burn timer for BlazingInferno.
 
     public void ChooseAffinity()
     {
-        chosenAffinity = Random.Range(0, 2);
+        chosenAffinity = Random.Range(0, 3);
     } //The RNG that PurifyArena uses to select an affinity.
 }

@@ -9,7 +9,8 @@ public class FossilAttacks : MonoBehaviour
     public BattleSystemFossil BattleSystemFossil;
 
     public int enemyAmount;
-    public int chosenAffinity;
+    private int chosenAffinity;
+    private int chosenAttack;
 
     private bool purifyUsed = false;
     private bool skullUsed = false;
@@ -47,15 +48,31 @@ public class FossilAttacks : MonoBehaviour
             {
                 if (BattleSystemFossil.currentEnemies[i] != null)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(20);
                     if (i == 2)
                     {
                         return;
                     }
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(20);
                 }
             }
         }
     } //An attack that deals decent damage to the front two enemies in a battle.
+
+    public void TailStab() //Affinity: Soma
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        for (int i = 0; i <= enemyAmount; i++)
+        {
+            if (BattleSystemFossil.currentEnemies[i] != null)
+            {
+                BattleSystemFossil.enemyUnit[i].TakeDamage(15);
+            }
+        }
+    } //An attack that hits all enemies for even damage.
 
     public void BlazingInferno() //Affinity: Cursed
     {
@@ -65,7 +82,7 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         StartCoroutine("BurnTimer", 5);
-    } //An attack that burns all enemies in battle for a specified number of passovers.
+    } //An attack that burns all enemies in battle for a specified number of passovers. Uses KillTimer.
 
     public void PhantomTalons() //Affinity: Cursed
     {
@@ -80,11 +97,12 @@ public class FossilAttacks : MonoBehaviour
         }
         else
         {
-            for (int i = 1; i <= enemyAmount; i++)
+            for (int i = 0; i <= enemyAmount; i++)
             {
-                if (BattleSystemFossil.currentEnemies[i] != null)
+                if (BattleSystemFossil.currentEnemies[i] != null && i == 0)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(32);
+                    return;
                 }
             }
         }
@@ -182,6 +200,84 @@ public class FossilAttacks : MonoBehaviour
         }
     } //A special skill that heals the player for full health. Disables after one use.
 
+    public void VampiricFang() //Affinity: Support
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        for (int i = 0; i <= enemyAmount; i++)
+        {
+            if (BattleSystemFossil.currentEnemies[i] != null && i == 0)
+            {
+                BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().TakeDamage(BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().currentHP / 2);
+                BattleSystemFossil.playerUnit.currentHP += BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().currentHP;
+                BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
+                return;
+            }
+        }
+    } //An attack that steals half of the frontmost enemy's health and gives it to the player. The amount of health gained will diminish due to the nature of the attack, preventing attack spam.
+
+    public void SecretPower() //Affinity: Variable
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        ChooseAttack();
+        if (chosenAttack == 0)
+        {
+            MeteorStrike();
+            Debug.Log("Chosen Attack: Metor Strike");
+        }
+        else if (chosenAttack == 1)
+        {
+            LowKick();
+            Debug.Log("Chosen Attack: Low Kick");
+        }
+        else if (chosenAttack == 2)
+        {
+            BlazingInferno();
+            Debug.Log("Chosen Attack: Blazing Inferno");
+        }
+        else if (chosenAttack == 3)
+        {
+            PhantomTalons();
+            Debug.Log("Chosen Attack: Phantom Talons");
+        }
+        else if (chosenAttack == 4)
+        {
+            CleansingVapors();
+            Debug.Log("Chosen Attack: Cleansing Vapors");
+        }
+        else if (chosenAttack == 5)
+        {
+            AlbinoSkull();
+            Debug.Log("Chosen Attack: Albino Skull");
+        }
+        else if (chosenAttack == 6)
+        {
+            PurifyArena();
+            Debug.Log("Chosen Attack: Purify Arena");
+        }
+        else if (chosenAttack == 7)
+        {
+            AncientRelic();
+            Debug.Log("Chosen Attack: Ancient Relic");
+        }
+        else if (chosenAttack == 8)
+        {
+            TailStab();
+            Debug.Log("Chosen Attack: Tail Stab");
+        }
+        else if (chosenAttack == 9)
+        {
+            VampiricFang();
+            Debug.Log("Chosen Attack: Vampiric Fang");
+        }
+    } //An attack that uses an RNG to select a random attack or skill from the FossilAttacks script to use. If this code can be simplified and not look like shit, please tell me how :3
+      //Debug text will be removed in final build.
+
     public IEnumerator KillTimer(int timer)
     {
         while (timer > 0)
@@ -256,4 +352,9 @@ public class FossilAttacks : MonoBehaviour
     {
         chosenAffinity = Random.Range(0, 3);
     } //The RNG that PurifyArena uses to select an affinity.
+
+    public void ChooseAttack()
+    {
+        chosenAttack = Random.Range(0, 10);
+    } //The RNG that SecretPower uses to select an attack or skill.
 }

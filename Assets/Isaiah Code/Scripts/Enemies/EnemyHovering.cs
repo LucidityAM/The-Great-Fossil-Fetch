@@ -38,7 +38,7 @@ public class EnemyHovering : MonoBehaviour
                     }
                     else
                     {
-                        enemyGlow.material.SetVector("_Color", new Vector4(25, 16, 5, 0)); //191,123,39,0, 5.06 intensity
+                        enemyGlow.material.SetVector("_Color", new Vector4(15, 8, 5, 0)); //191,123,39,0, 5.06 intensity
                     }
                     
                     targetSelect.enabled = false;
@@ -78,7 +78,7 @@ public class EnemyHovering : MonoBehaviour
                 }
                 else
                 {
-                    enemyGlow.material.SetVector("_Color", new Vector4(25, 16, 5, 0)); //191,123,39,0, 5.06 intensity
+                    enemyGlow.material.SetVector("_Color", new Vector4(15, 8, 5, 0)); //191,123,39,0, 5.06 intensity
                 }
 
                 battleSystemFossil.enemyLightingEffects[i].SetActive(false);

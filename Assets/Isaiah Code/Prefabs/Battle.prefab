@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 218368462570548394}
   - component: {fileID: 4699745206593532252}
   - component: {fileID: 2043061393177502828}
-  - component: {fileID: 3532705670204559124}
+  - component: {fileID: 5045798511789059101}
   - component: {fileID: 3508378487265227619}
   m_Layer: 0
   m_Name: Player (1)
@@ -306,7 +306,7 @@ MonoBehaviour:
   damage: 50
   affinity: 0
   isDowned: 0
---- !u!114 &3532705670204559124
+--- !u!114 &5045798511789059101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,9 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9496183f044f343b0b8e68bacb1dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BattleSystemFossil: {fileID: 3532705672072063198}
+  BattleSystemFossil: {fileID: 0}
   enemyAmount: 0
-  chosenAffinity: 0
 --- !u!95 &3508378487265227619
 Animator:
   serializedVersion: 3

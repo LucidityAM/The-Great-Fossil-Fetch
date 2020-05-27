@@ -28,6 +28,9 @@ public class DisplayBattleFossils : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        fossilAttacks = GameObject.FindGameObjectWithTag("Player").GetComponent<FossilAttacks>();
+
+
         if(WeaponStats.skull != 0)
         {
             skullNone.enabled = false;

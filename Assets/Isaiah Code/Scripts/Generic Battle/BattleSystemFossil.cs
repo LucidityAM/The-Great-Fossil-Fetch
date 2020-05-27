@@ -637,6 +637,7 @@ public class BattleSystemFossil : MonoBehaviour
             MenuManager.enabled = true;
             enemiesKilled = 0;
             MusicManager.normalBattleMusic = false;
+            MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
         else if (state == BattleStateFossil.LOST)
@@ -655,6 +656,7 @@ public class BattleSystemFossil : MonoBehaviour
             MenuManager.enabled = true;
             enemiesKilled = 0;
             MusicManager.normalBattleMusic = false;
+            MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
 

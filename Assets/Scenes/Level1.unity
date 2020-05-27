@@ -4061,10 +4061,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - yu
-  - uyg
-  - asddas
-  - asdasddsadsad
+  - In the Overworld, you control Dimitri freely in the caves.
+  - Once you run into an enemy, a battle will occur.
+  - If you pick up a fossil in the Overworld, you can equip it in the inventory menu
+    by pressing ESCAPE > Inventory > then select the fossil.
+  - 'Equipping fossils will give you an ability in battle. You can equip up to 6
+    fossils at a time. '
   headerText: Overworld
   hasPictures: 00010001
   images:
@@ -11867,7 +11869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945661671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 128.92, y: -76.7, z: -2826.5552}
+  m_LocalPosition: {x: 127.15, y: -76.7, z: -2826.5552}
   m_LocalScale: {x: 1, y: 8.218, z: 1}
   m_Children: []
   m_Father: {fileID: 1731720127}

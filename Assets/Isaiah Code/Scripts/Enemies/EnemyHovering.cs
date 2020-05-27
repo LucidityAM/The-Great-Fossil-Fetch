@@ -32,7 +32,15 @@ public class EnemyHovering : MonoBehaviour
             {
                 if (enemyGlowObject == battleSystemFossil.currentEnemies[i])
                 {
-                    enemyGlow.material.SetVector("_Color", new Vector4(37, 24, 7, 0));
+                    if(battleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        enemyGlow.material.SetVector("_Color", new Vector4(37, 24, 7, 0));
+                    }
+                    else
+                    {
+                        enemyGlow.material.SetVector("_Color", new Vector4(25, 16, 5, 0)); //191,123,39,0, 5.06 intensity
+                    }
+                    
                     targetSelect.enabled = false;
                 }
             }
@@ -63,9 +71,18 @@ public class EnemyHovering : MonoBehaviour
         {
             if (enemyGlowObject == battleSystemFossil.currentEnemies[i])
             {
-                battleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                if(battleSystemFossil.currentEnemies[i].tag != "Boss1")
+                {
+                    battleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    enemyGlow.material.SetVector("_Color", new Vector4(37, 24, 7, 0));
+                }
+                else
+                {
+                    enemyGlow.material.SetVector("_Color", new Vector4(25, 16, 5, 0)); //191,123,39,0, 5.06 intensity
+                }
+
                 battleSystemFossil.enemyLightingEffects[i].SetActive(false);
-                enemyGlow.material.SetVector("_Color", new Vector4(37, 24, 7, 0));
+                
                 targetSelect.enabled = false;
             }
         }

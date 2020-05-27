@@ -55,6 +55,12 @@ public class BattleHUD : MonoBehaviour
                         affinity.sprite = blessed;
 
                     }//Sets the scarab affinity to blessed and moves the health bar
+                    else if (battleSystemFossil.currentEnemies[i].CompareTag("Boss1"))
+                    {
+                        hp.transform.position = new Vector3(hp.transform.position.x + 1f, hp.transform.position.y + 2f, hp.transform.position.z);
+                        affinity.sprite = soma;
+
+                    }//Sets Panama's affinity to cursed and moves the health bar
 
                 }
                 else

@@ -43,6 +43,9 @@ TagManager:
   - tail1
   - tail2
   - tail3
+  - Boss1
+  - Boss2
+  - Boss3
   layers:
   - Default
   - TransparentFX

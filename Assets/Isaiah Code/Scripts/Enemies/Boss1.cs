@@ -24,7 +24,7 @@ public class Boss1 : MonoBehaviour
         playerStats = GameObject.Find("Player (1)").GetComponent<UnitStats>();
         cameraShake = this.gameObject.GetComponent<CameraShake>();
 
-        MusicManager.bossBattleMusic = true;
+        
 
     }// Grabs the BattleSystem script and assigns it to the empty variable battleSystemFossil, also sets enemy ID
 

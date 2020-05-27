@@ -285,6 +285,10 @@ public class BattleSystemFossil : MonoBehaviour
 
     IEnumerator SetUpBossFight1()
     {
+        MusicManager.bossBattleMusic = true;
+
+        MusicManager.normalBattleMusic = false;
+
         EnemyHolder.enemyAmount = 0;
 
         GameObject enemyGO = Instantiate(bosses[0], enemyBattleStations[1]); //Instantiates enemy

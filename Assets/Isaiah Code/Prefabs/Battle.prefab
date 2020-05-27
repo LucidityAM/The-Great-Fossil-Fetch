@@ -320,6 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BattleSystemFossil: {fileID: 3532705672072063198}
   enemyAmount: 0
+  chosenAffinity: 0
 --- !u!95 &3508378487265227619
 Animator:
   serializedVersion: 3
@@ -4618,6 +4619,7 @@ GameObject:
   - component: {fileID: 3532705671930189142}
   - component: {fileID: 3532705671930189144}
   - component: {fileID: 3532705671930189145}
+  - component: {fileID: 1194995735747630159}
   - component: {fileID: 3532705671930189147}
   m_Layer: 5
   m_Name: Enemy Stuff
@@ -4695,6 +4697,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a243218a23b65f43aa101e5d7024e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleSystemFossil: {fileID: 0}
+  playerStats: {fileID: 0}
+  isDead: 0
+  cameraShake: {fileID: 0}
+--- !u!114 &1194995735747630159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532705671930189140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffc999b7dff11940a261008b84d6c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   battleSystemFossil: {fileID: 0}
@@ -5225,6 +5243,10 @@ MonoBehaviour:
   - {fileID: 7260547686550556518, guid: 8cabf527f99dd7e4483f0a69be0c6300, type: 3}
   - {fileID: 7260547686550556518, guid: 3d33f2e292a30474a851b2f23493ae9d, type: 3}
   - {fileID: 7260547686550556518, guid: 36e65555bcd9f304197628da2b428048, type: 3}
+  bosses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   enemyBattleStations:
   - {fileID: 3532705672068401418}
   - {fileID: 3532705671603820769}
@@ -5233,6 +5255,10 @@ MonoBehaviour:
   playerUnit: {fileID: 0}
   enemyUnit:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  bossUnit:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

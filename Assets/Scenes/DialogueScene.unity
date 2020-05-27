@@ -328,7 +328,7 @@ MonoBehaviour:
   CharacterFrame: {fileID: 139257713}
   Background: {fileID: 564419955}
   Player: {fileID: 139257711}
-  Menu: {fileID: 0}
+  pauseMenu: {fileID: 0}
   CharacterSprite: {fileID: 139257714}
   BGSprite: {fileID: 564419956}
 --- !u!4 &214911232
@@ -713,6 +713,8 @@ MonoBehaviour:
     - {fileID: 0}
     bossTrigger: 0
     sceneTransition: 0
+    tutorialTrigger: 0
+    tutorial: {fileID: 0}
 --- !u!4 &635270339
 Transform:
   m_ObjectHideFlags: 0

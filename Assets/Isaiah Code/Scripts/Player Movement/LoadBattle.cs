@@ -14,7 +14,7 @@ public class LoadBattle : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("WorldEnemy"))
+        if (collision.gameObject.CompareTag("WorldEnemy") || collision.gameObject.CompareTag("Boss1") || collision.gameObject.CompareTag("Boss2") || collision.gameObject.CompareTag("Boss3"))
         {
             StartCoroutine(BattleSetup());
 

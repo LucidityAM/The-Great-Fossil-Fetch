@@ -18,4 +18,6 @@ public static class EnemyHolder
 
     public static bool shakeEnemy;
 
+    public static int bossNumber;
+
 }

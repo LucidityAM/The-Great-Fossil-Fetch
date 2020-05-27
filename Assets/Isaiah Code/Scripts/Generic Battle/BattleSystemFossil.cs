@@ -96,7 +96,23 @@ public class BattleSystemFossil : MonoBehaviour
 
 
         state = BattleStateFossil.START;
-        StartCoroutine(SetupBattle());
+
+        switch (EnemyHolder.bossNumber)
+        {
+            case 0:
+                StartCoroutine(SetupBattle());
+                break;
+            case 1:
+                StartCoroutine(SetUpBossFight1());
+                break;
+            case 2:
+                StartCoroutine(SetUpBossFight2());
+                break;
+            case 3:
+                StartCoroutine(SetUpBossFight3());
+                break;
+        }
+        
     }//Does an initial setup of all battle things
 
     void Update()
@@ -258,6 +274,21 @@ public class BattleSystemFossil : MonoBehaviour
         state = BattleStateFossil.PLAYERTURN;
         PlayerTurn();
     }//Does an initial setup of the battle
+
+    IEnumerator SetUpBossFight1()
+    {
+        yield return new WaitForSeconds(1f);
+    }
+
+    IEnumerator SetUpBossFight2()
+    {
+        yield return new WaitForSeconds(1f);
+    }
+
+    IEnumerator SetUpBossFight3()
+    {
+        yield return new WaitForSeconds(1f);
+    }
 
     public void OnAttackButton()
     {

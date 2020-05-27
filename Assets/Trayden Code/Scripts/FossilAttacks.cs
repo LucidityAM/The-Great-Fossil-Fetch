@@ -38,21 +38,43 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        if (enemyAmount == 0)
+        if (enemyAmount == 0 && BattleSystemFossil.currentEnemies[0] != null)
         {
-            BattleSystemFossil.enemyUnit[0].TakeDamage(32);
+            if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
+            {
+                BattleSystemFossil.enemyUnit[0].TakeDamage(64);
+            }
+            else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+            {
+                BattleSystemFossil.enemyUnit[0].TakeDamage(32);
+            }
+            else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+            {
+                BattleSystemFossil.enemyUnit[0].TakeDamage(15);
+            }
         }
         else
         {
             for (int i = 0; i <= enemyAmount; i++)
             {
-                if (BattleSystemFossil.currentEnemies[i] != null)
+                if (BattleSystemFossil.currentEnemies[i] != null && i != 2)
                 {
-                    if (i == 2)
+                    if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
                     {
-                        return;
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(64);
                     }
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(20);
+                    else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(32);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(15);
+                    }
+                }
+                else if (BattleSystemFossil.currentEnemies[i] != null && i == 2)
+                {
+                    return;
                 }
             }
         }
@@ -69,7 +91,18 @@ public class FossilAttacks : MonoBehaviour
         {
             if (BattleSystemFossil.currentEnemies[i] != null)
             {
-                BattleSystemFossil.enemyUnit[i].TakeDamage(15);
+                if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
+                {
+                    BattleSystemFossil.enemyUnit[0].TakeDamage(30);
+                }
+                else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+                {
+                    BattleSystemFossil.enemyUnit[0].TakeDamage(15);
+                }
+                else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+                {
+                    BattleSystemFossil.enemyUnit[0].TakeDamage(7);
+                }
             }
         }
     } //An attack that hits all enemies for even damage.
@@ -91,9 +124,20 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        if (enemyAmount == 0)
+        if (enemyAmount == 0 && BattleSystemFossil.currentEnemies[0] != null)
         {
-            BattleSystemFossil.enemyUnit[0].TakeDamage(32);
+            if(BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
+            {
+                BattleSystemFossil.enemyUnit[0].TakeDamage(12);
+            }
+            else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+            {
+                BattleSystemFossil.enemyUnit[0].TakeDamage(64);
+            }
+            else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+            {
+                BattleSystemFossil.enemyUnit[0].TakeDamage(32);
+            }
         }
         else
         {
@@ -101,7 +145,18 @@ public class FossilAttacks : MonoBehaviour
             {
                 if (BattleSystemFossil.currentEnemies[i] != null && i == 0)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(32);
+                    if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
+                    {
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(12);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(64);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(32);
+                    }
                     return;
                 }
             }
@@ -119,15 +174,22 @@ public class FossilAttacks : MonoBehaviour
         {
             if (BattleSystemFossil.currentEnemies[i] != null)
             {
-                BattleSystemFossil.enemyUnit[i].TakeDamage(15);
-                if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+                if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                    BattleSystemFossil.enemyUnit[0].TakeDamage(15);
+                }
+                else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+                {
+                    BattleSystemFossil.enemyUnit[0].TakeDamage(5);
+                }
+                else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+                {
+                    BattleSystemFossil.enemyUnit[0].TakeDamage(35);
                     BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity = 0;
                 }
             }
         }
-    } //An attack that deals decent damage to all enemies in battle, deals extra damage to enemies of the "Cursed" affinity, then switches any "Cursed" affinity to "Blessed".
+    } //An attack that deals decent damage to all enemies in battle then switches any "Cursed" affinity to "Blessed".
 
     public void AlbinoSkull() //Affinity: Blessed
     {
@@ -139,9 +201,17 @@ public class FossilAttacks : MonoBehaviour
             {
                 if (BattleSystemFossil.currentEnemies[i] != null)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(5);
-                    if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+                    if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
                     {
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(5);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(1);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[0].TakeDamage(10);
                         BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().damage = BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().damage / 2;
                     }
                 }
@@ -152,8 +222,10 @@ public class FossilAttacks : MonoBehaviour
         else
         {
             Debug.Log("Enemy attack power cannot be lowered anymore. You cannot use this fossil.");
+            return;
         }
     } //An attack that deals low damage to all enemies in battle and halves the damage output of all enemies of the "Cursed" affinity.
+      //Debug messages will be removed in the final build.
 
     public void PurifyArena() //Affinity: Support
     {
@@ -170,16 +242,17 @@ public class FossilAttacks : MonoBehaviour
                 if (BattleSystemFossil.currentEnemies[i] != null)
                 {
                     BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity = chosenAffinity;
-                    Debug.Log(BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity); //DEBUG: Displays new affinities inside console
+                    Debug.Log(BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity);
                 }
             }
             purifyUsed = true;
         }
         else
         {
-            Debug.Log("You have already purified this arena. You may not do so again."); //DEBUG: Displays a message that explains that Purify Arena cannot be used
+            Debug.Log("You have already purified this arena. You may not do so again.");
         }
     } //A special skill that runs an RNG (froms 0-2) then switches all enemy affinities to the number picked. Disables after one use.
+      //Debug messages will be removed in the final build.
 
     public void AncientRelic() //Affinity: Support
     {
@@ -291,7 +364,18 @@ public class FossilAttacks : MonoBehaviour
 
         for (int i = 0; i <= enemyAmount; i++)
         {
-            BattleSystemFossil.enemyUnit[i].TakeDamage(45);
+            if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 0)
+            {
+                BattleSystemFossil.enemyUnit[i].TakeDamage(45);
+            }
+            else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 1)
+            {
+                BattleSystemFossil.enemyUnit[i].TakeDamage(22);
+            }
+            else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+            {
+                BattleSystemFossil.enemyUnit[i].TakeDamage(11);
+            }
         }
 
         StopCoroutine("KillTimer");

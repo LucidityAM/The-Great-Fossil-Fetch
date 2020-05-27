@@ -4138,19 +4138,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - In the Overworld, you control Dimitri freely in the caves.
-  - Once you run into an enemy, a battle will occur.
-  - If you pick up a fossil in the Overworld, you can equip it in the inventory menu
-    by pressing ESCAPE > Inventory > then select the fossil.
-  - 'Equipping fossils will give you an ability in battle. You can equip up to 6
-    fossils at a time. '
-  headerText: Overworld
-  hasPictures: 00010001
+  - To explore the cave, use AD to move left and right, and use SPACE to jump.
+  - Be careful while exploring however, because you have the chance of running into
+    terrible creatures. When you see a dark shadow, prepare for a fight.
+  - If you pick up a fossil in the cave, you can equip it in the inventory menu by
+    pressing ESCAPE > Inventory > then select the fossil. A fossil looks like this.
+  - Equipping fossils will give you a special "Fossil Attack" that you can use in
+    battle. You can only have 6 fossils equipped at a time, so choose wisely.
+  headerText: The Basics
+  hasPictures: 00010101
   images:
   - {fileID: 21300000, guid: e668775a08dce8d4b9d6baa7ef34d103, type: 3}
-  - {fileID: 21300000, guid: 7e2d8c72e85cb404f82d2fbfeb516342, type: 3}
-  - {fileID: 21300000, guid: e668775a08dce8d4b9d6baa7ef34d103, type: 3}
-  - {fileID: 21300000, guid: 73c7253163fca394090e2b8df14d26c1, type: 3}
+  - {fileID: 2677522946132148369, guid: 22f4fedefc372b247acd700fa9ecb557, type: 3}
+  - {fileID: -787543189334909279, guid: 415f359982decd24090de34dbfe24849, type: 3}
+  - {fileID: 21300000, guid: 2ff67e242050f9843b0672560b28b612, type: 3}
 --- !u!1 &872068577
 GameObject:
   m_ObjectHideFlags: 0
@@ -11973,8 +11974,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
-      together, finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
+      finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:

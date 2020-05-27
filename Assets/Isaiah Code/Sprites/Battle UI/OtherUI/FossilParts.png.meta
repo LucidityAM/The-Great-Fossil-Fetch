@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 415f359982decd24090de34dbfe24849
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -787543189334909279
+    second: FossilParts_0
+  - first:
+      213: -5736585672145440628
+    second: FossilParts_1
+  - first:
+      213: -2287327576992041912
+    second: FossilParts_2
+  - first:
+      213: -1153288654895817815
+    second: FossilParts_3
+  - first:
+      213: -7670975840656483684
+    second: FossilParts_4
+  - first:
+      213: -2311037782270332607
+    second: FossilParts_5
+  - first:
+      213: 488070318797022254
+    second: FossilParts_6
+  - first:
+      213: 8181775832241392806
+    second: FossilParts_7
+  - first:
+      213: 3039255448279972050
+    second: FossilParts_8
+  - first:
+      213: -1212923649879323891
+    second: FossilParts_9
+  - first:
+      213: 5294939890188762256
+    second: FossilParts_10
+  - first:
+      213: 3848280732440805132
+    second: FossilParts_11
+  - first:
+      213: -8149873138036192827
+    second: FossilParts_12
+  - first:
+      213: -5941565376669947764
+    second: FossilParts_13
+  - first:
+      213: 3701829361349435129
+    second: FossilParts_14
+  - first:
+      213: -5869135471656784718
+    second: FossilParts_15
+  - first:
+      213: 8737808750544690398
+    second: FossilParts_16
+  - first:
+      213: -199856507109535765
+    second: FossilParts_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FossilParts_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 379
+        width: 105
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae1a6254a51215f0800000000000000
+      internalID: -787543189334909279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 376
+        width: 107
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80fc2499bd8360b0800000000000000
+      internalID: -5736585672145440628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_2
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 364
+        width: 50
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8443f6000b7c140e0800000000000000
+      internalID: -2287327576992041912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_3
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 394
+        width: 120
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab52792412beffe0800000000000000
+      internalID: -1153288654895817815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_4
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 368
+        width: 50
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a11119d183b8590800000000000000
+      internalID: -7670975840656483684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_5
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 408
+        width: 122
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1413545a16b8defd0800000000000000
+      internalID: -2311037782270332607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_6
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 206
+        width: 105
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24ee497e59f5c600800000000000000
+      internalID: 488070318797022254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 203
+        width: 107
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6accf9045c18b8170800000000000000
+      internalID: 8181775832241392806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_8
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 191
+        width: 50
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8f5604aba9d2a20800000000000000
+      internalID: 3039255448279972050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_9
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 221
+        width: 120
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bc545ed54da2fe0800000000000000
+      internalID: -1212923649879323891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_10
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 195
+        width: 50
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c3fbdb6c76b7940800000000000000
+      internalID: 5294939890188762256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_11
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 235
+        width: 122
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f3d15efe6d76530800000000000000
+      internalID: 3848280732440805132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_12
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 39
+        width: 105
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9cad29f85d5ee80800000000000000
+      internalID: -8149873138036192827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_13
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 36
+        width: 107
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88e3d905c15b8da0800000000000000
+      internalID: -5941565376669947764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_14
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 23
+        width: 50
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe1856e03a8f5330800000000000000
+      internalID: 3701829361349435129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_15
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 54
+        width: 120
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bca0417264ac8ea0800000000000000
+      internalID: -5869135471656784718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_16
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 28
+        width: 50
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc148383cee24970800000000000000
+      internalID: 8737808750544690398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FossilParts_17
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 68
+        width: 122
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef8fafc097f93df0800000000000000
+      internalID: -199856507109535765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

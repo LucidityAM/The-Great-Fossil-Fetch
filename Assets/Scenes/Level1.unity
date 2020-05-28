@@ -900,7 +900,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1206403479
   m_SortingLayer: -6
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -8418929178235436079, guid: 22f4fedefc372b247acd700fa9ecb557,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5802,9 +5802,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 14a1ab4cd04aacb48a72677dd518eb7c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1513c4a3c3b2802448cbb08a968d5544, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8721,8 +8721,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483746000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 146.17, y: -26, z: 3114.461}
-  m_LocalScale: {x: 47.387623, y: 1, z: 1}
+  m_LocalPosition: {x: 142.005, y: -26, z: 3114.461}
+  m_LocalScale: {x: 55.727844, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 133901321}
   m_RootOrder: 7
@@ -14191,12 +14191,12 @@ PrefabInstance:
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.23
+      value: -10.22
       objectReference: {fileID: 0}
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45
+      value: -4.12
       objectReference: {fileID: 0}
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}

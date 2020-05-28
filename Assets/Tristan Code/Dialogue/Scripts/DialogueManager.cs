@@ -29,7 +29,6 @@ public class DialogueManager : MonoBehaviour
     //Player access for making them stop moving n stuff
     public GameObject Player;
     public PauseScript pauseMenu;
-    public bool bossTrigger;
 
     public Image CharacterSprite;
     public Image BGSprite;
@@ -41,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     //checks if the text has ended
     private bool endText;
     private bool tutorialTrigger;
+    private bool bossTrigger;
 
     public static DialogueManager Instance;
 
@@ -64,6 +64,7 @@ public class DialogueManager : MonoBehaviour
     {
         endText = false;
         tutorialTrigger = dialogue.tutorialTrigger;
+        bossTrigger = dialogue.bossTrigger;
         tutorial = dialogue.tutorial;
         if (Player != null)
         {
@@ -99,6 +100,7 @@ public class DialogueManager : MonoBehaviour
         {
             sprites.Enqueue(sprite);
         }
+
         //BGSprites.Clear();
         //foreach (Sprite BGSprite in dialogue.BGsprites)
         //{

@@ -8,7 +8,6 @@ public class FossilAttacks : MonoBehaviour
 {
     public BattleSystemFossil BattleSystemFossil;
 
-    public int enemyAmount;
     private int chosenAffinity;
     private int chosenAttack;
 
@@ -31,15 +30,6 @@ public class FossilAttacks : MonoBehaviour
         StartCoroutine("KillTimer", 10);
     } //An attack that drops a metor on the battlefield after a specified number of turns. (NOTE: Turn counting has not been implemented yet. Sticking to counting seconds until implemented.)
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            BlazingInferno();
-        }
-    }
-
-
     public void LowKick() //Affinity: Soma
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
@@ -47,37 +37,36 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        enemyAmount = EnemyHolder.enemyAmount;
-        if (enemyAmount == 0 && BattleSystemFossil.currentEnemies[0] != null)
+        if (EnemyHolder.enemyAmount == 0 && BattleSystemFossil.currentEnemies[0] != null)
         {
-            if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
+            if (BattleSystemFossil.enemyUnit[0].affinity == 0)
             {
                 BattleSystemFossil.enemyUnit[0].TakeDamage(64);
             }
-            else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+            else if (BattleSystemFossil.enemyUnit[0].affinity == 1)
             {
                 BattleSystemFossil.enemyUnit[0].TakeDamage(32);
             }
-            else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+            else if (BattleSystemFossil.enemyUnit[0].affinity == 2)
             {
                 BattleSystemFossil.enemyUnit[0].TakeDamage(15);
             }
         }
         else
         {
-            for (int i = 0; i <= enemyAmount; i++)
+            for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
             {
                 if (BattleSystemFossil.currentEnemies[i] != null && i != 2)
                 {
-                    if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 0)
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(64);
                     }
-                    else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 1)
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(32);
                     }
-                    else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(15);
                     }
@@ -97,20 +86,19 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        enemyAmount = EnemyHolder.enemyAmount;
-        for (int i = 0; i <= enemyAmount; i++)
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if (BattleSystemFossil.currentEnemies[i] != null)
             {
-                if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 0)
+                if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(30);
                 }
-                else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 1)
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(15);
                 }
-                else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(7);
                 }
@@ -135,37 +123,36 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        enemyAmount = EnemyHolder.enemyAmount;
-        if (enemyAmount == 0 && BattleSystemFossil.currentEnemies[0] != null)
+        if (EnemyHolder.enemyAmount == 0 && BattleSystemFossil.currentEnemies[0] != null)
         {
-            if(BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 0)
+            if(BattleSystemFossil.enemyUnit[0].affinity == 0)
             {
                 BattleSystemFossil.enemyUnit[0].TakeDamage(12);
             }
-            else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 1)
+            else if (BattleSystemFossil.enemyUnit[0].affinity == 1)
             {
                 BattleSystemFossil.enemyUnit[0].TakeDamage(64);
             }
-            else if (BattleSystemFossil.enemyUnit[0].GetComponent<UnitStats>().affinity == 2)
+            else if (BattleSystemFossil.enemyUnit[0].affinity == 2)
             {
                 BattleSystemFossil.enemyUnit[0].TakeDamage(32);
             }
         }
         else
         {
-            for (int i = 0; i <= enemyAmount; i++)
+            for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
             {
                 if (BattleSystemFossil.currentEnemies[i] != null && i == 0)
                 {
-                    if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 0)
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(12);
                     }
-                    else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 1)
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(64);
                     }
-                    else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(32);
                     }
@@ -175,6 +162,37 @@ public class FossilAttacks : MonoBehaviour
         }
     } //An attack that deals massive damage to the frontmost enemy.
 
+    public void DarkPulse() //Affinity: Cursed
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
+        {
+            if (BattleSystemFossil.currentEnemies[i] != null)
+            {
+                if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(10);
+                    BattleSystemFossil.enemyUnit[i].affinity = 1;
+                }
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(40);
+                    BattleSystemFossil.enemyUnit[i].affinity = 2;
+                }
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(20);
+                    BattleSystemFossil.enemyUnit[i].affinity = 0;
+                }
+            }
+        }
+
+    } //An attack that deals decent damage to all enemies then inverts all enemy affinities.
+
     public void CleansingVapors() //Affinity: Blessed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
@@ -182,23 +200,22 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        enemyAmount = EnemyHolder.enemyAmount;
-        for (int i = 0; i <= enemyAmount; i++)
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if (BattleSystemFossil.currentEnemies[i] != null)
             {
-                if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 0)
+                if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(15);
                 }
-                else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 1)
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(5);
                 }
-                else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(35);
-                    BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity = 0;
+                    BattleSystemFossil.enemyUnit[i].affinity = 0;
                 }
             }
         }
@@ -210,23 +227,22 @@ public class FossilAttacks : MonoBehaviour
             return;
         if (skullUsed == false)
         {
-            enemyAmount = EnemyHolder.enemyAmount;
-            for (int i = 0; i <= enemyAmount; i++)
+            for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
             {
                 if (BattleSystemFossil.currentEnemies[i] != null)
                 {
-                    if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 0)
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(5);
                     }
-                    else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 1)
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(1);
                     }
-                    else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(10);
-                        BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().damage = BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().damage / 2;
+                        BattleSystemFossil.enemyUnit[i].damage = BattleSystemFossil.enemyUnit[i].damage / 2;
                     }
                 }
             }
@@ -251,13 +267,12 @@ public class FossilAttacks : MonoBehaviour
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
             ChooseAffinity();
-            enemyAmount = EnemyHolder.enemyAmount;
-            for (int i = 0; i <= enemyAmount; i++)
+            for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
             {
                 if (BattleSystemFossil.currentEnemies[i] != null)
                 {
-                    BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity = chosenAffinity;
-                    Debug.Log(BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity);
+                    BattleSystemFossil.enemyUnit[i].affinity = chosenAffinity;
+                    Debug.Log(BattleSystemFossil.enemyUnit[i].affinity);
                 }
             }
             purifyUsed = true;
@@ -295,13 +310,12 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        enemyAmount = EnemyHolder.enemyAmount;
-        for (int i = 0; i <= enemyAmount; i++)
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if (BattleSystemFossil.currentEnemies[i] != null && i == 0)
             {
-                BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().TakeDamage(BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().currentHP / 2);
-                BattleSystemFossil.playerUnit.currentHP += BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().currentHP;
+                BattleSystemFossil.enemyUnit[i].TakeDamage(BattleSystemFossil.enemyUnit[i].currentHP / 2);
+                BattleSystemFossil.playerUnit.currentHP += BattleSystemFossil.enemyUnit[i].currentHP;
                 BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
                 return;
             }
@@ -364,12 +378,16 @@ public class FossilAttacks : MonoBehaviour
             VampiricFang();
             Debug.Log("Chosen Attack: Vampiric Fang");
         }
+        else if (chosenAttack == 10)
+        {
+            DarkPulse();
+            Debug.Log("Chosen Attack: Dark Pulse");
+        }
     } //An attack that uses an RNG to select a random attack or skill from the FossilAttacks script to use. If this code can be simplified and not look like shit, please tell me how :3
       //Debug text will be removed in final build.
 
     public IEnumerator KillTimer(int timer)
     {
-        enemyAmount = EnemyHolder.enemyAmount;
         while (timer > 0)
         {
             timer--;
@@ -379,17 +397,17 @@ public class FossilAttacks : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
 
-        for (int i = 0; i <= enemyAmount; i++)
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
-            if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 0)
+            if (BattleSystemFossil.enemyUnit[i].affinity == 0)
             {
                 BattleSystemFossil.enemyUnit[i].TakeDamage(45);
             }
-            else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 1)
+            else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
             {
                 BattleSystemFossil.enemyUnit[i].TakeDamage(22);
             }
-            else if (BattleSystemFossil.enemyUnit[i].GetComponent<UnitStats>().affinity == 2)
+            else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
             {
                 BattleSystemFossil.enemyUnit[i].TakeDamage(11);
             }
@@ -468,6 +486,6 @@ public class FossilAttacks : MonoBehaviour
 
     public void ChooseAttack()
     {
-        chosenAttack = Random.Range(0, 10);
+        chosenAttack = Random.Range(0, 11);
     } //The RNG that SecretPower uses to select an attack or skill.
 }

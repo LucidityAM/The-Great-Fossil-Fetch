@@ -63,7 +63,11 @@ public class DialogueManager : MonoBehaviour
         if (Player != null)
         {
             Player.GetComponent<PlayerMovementFinal>().enabled = false;
-            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, Player.GetComponent<Rigidbody2D>().velocity.y);
+
+            Player.GetComponent<Animator>().SetBool("inJump", false);
+            Player.GetComponent<Animator>().SetFloat("walkSpeed", 0f);
+
             if (pauseMenu != null)
             {
                 pauseMenu.enabled = false;

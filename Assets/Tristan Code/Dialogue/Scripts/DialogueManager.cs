@@ -29,7 +29,8 @@ public class DialogueManager : MonoBehaviour
     //Player access for making them stop moving n stuff
     public GameObject Player;
     public PauseScript pauseMenu;
-    
+    public bool bossTrigger;
+
     public Image CharacterSprite;
     public Image BGSprite;
 
@@ -63,7 +64,11 @@ public class DialogueManager : MonoBehaviour
         if (Player != null)
         {
             Player.GetComponent<PlayerMovementFinal>().enabled = false;
-            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, Player.GetComponent<Rigidbody2D>().velocity.y);
+
+            Player.GetComponent<Animator>().SetBool("inJump", false);
+            Player.GetComponent<Animator>().SetFloat("walkSpeed", 0f);
+
             if (pauseMenu != null)
             {
                 pauseMenu.enabled = false;
@@ -187,10 +192,12 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        //enables menu
         endText = true;
         Player.GetComponent<PlayerMovementFinal>().enabled = true;
         Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
+        //disables menu
         if (pauseMenu != null)
         {
             pauseMenu.enabled = true;
@@ -199,16 +206,21 @@ public class DialogueManager : MonoBehaviour
         {
             Background.SetBool("isOpen", false);
         }
+
         nameBorderText.SetBool("isOpen", false);
         CharacterFrame.SetBool("isOpen", false);
         textBox.SetBool("isOpen", false);
         CharacterFrameObject.SetActive(false);
-        //Menu.SetActive(true);
 
+        //Triggers tutorial if tutorialTrigger = true
         if(tutorialTrigger == true && tutorial != null)
         {
-            Debug.Log("Hello ");
             FindObjectOfType<TutorialManager>().StartTutorial(tutorial);
+        }
+        //Triggers boss if bossTrigger = true
+        if(bossTrigger == true)
+        {
+
         }
 
     }

@@ -11980,8 +11980,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
-      finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
+      together, finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:
@@ -12004,7 +12004,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: c9edf86024ac2a84fa48b0fe7748b830, type: 3}
     voices: []
     BGsprites: []
-    bossTrigger: 0
+    bossTrigger: 1
     sceneTransition: 0
     tutorialTrigger: 0
     tutorial: {fileID: 0}
@@ -14191,12 +14191,12 @@ PrefabInstance:
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.77
+      value: 255.5
       objectReference: {fileID: 0}
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.26
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}

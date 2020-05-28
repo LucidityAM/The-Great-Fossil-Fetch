@@ -43,6 +43,8 @@ public class DialogueManager : MonoBehaviour
     private bool tutorialTrigger;
 
     public static DialogueManager Instance;
+
+    public LoadBattle loadBattle;
     void Start()
     {
         endText = false;
@@ -53,6 +55,8 @@ public class DialogueManager : MonoBehaviour
         sprites = new Queue<Sprite>();
         //BGSprites = new Queue<Sprite>();
         tutorialTrigger = false;
+
+        loadBattle = GameObject.FindGameObjectWithTag("player").GetComponent<LoadBattle>();
 
         CharacterFrameObject.SetActive(false);
     }
@@ -220,6 +224,20 @@ public class DialogueManager : MonoBehaviour
         //Triggers boss if bossTrigger = true
         if(bossTrigger == true)
         {
+            loadBattle.StartCoroutine("BattleSetup");
+
+            if (GameObject.FindGameObjectsWithTag("Boss1").Length >= 1)
+            {
+                EnemyHolder.bossNumber = 1;
+            }
+            else if(GameObject.FindGameObjectsWithTag("Boss2").Length >= 1)
+            {
+                EnemyHolder.bossNumber = 2;
+            }
+            else if(GameObject.FindGameObjectsWithTag("Boss3").Length >= 1)
+            {
+                EnemyHolder.bossNumber = 3;
+            }
 
         }
 

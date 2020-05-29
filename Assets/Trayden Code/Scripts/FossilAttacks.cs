@@ -10,6 +10,7 @@ public class FossilAttacks : MonoBehaviour
 
     private int chosenAffinity;
     private int chosenAttack;
+    private int chosenEnemy;
 
     private bool purifyUsed = false;
     private bool skullUsed = false;
@@ -106,6 +107,99 @@ public class FossilAttacks : MonoBehaviour
         }
     } //An attack that hits all enemies for even damage.
 
+    public void ReverseStrike() //Affinity: Soma
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        if (EnemyHolder.enemyAmount == 3)
+        {
+            for (int i = 3; i <= EnemyHolder.enemyAmount; i++)
+            {
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(33);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                    }
+                }
+            }
+        }
+        else if (EnemyHolder.enemyAmount == 2)
+        {
+            for (int i = 2; i <= EnemyHolder.enemyAmount; i++)
+            {
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(33);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                    }
+                }
+            }
+        }
+        else if (EnemyHolder.enemyAmount == 1)
+        {
+            for (int i = 1; i <= EnemyHolder.enemyAmount; i++)
+            {
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(33);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                    }
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
+            {
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(33);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                    }
+                }
+            }
+        }
+    } //An attack that deals massive damage to the last enemy.
+
     public void BlazingInferno() //Affinity: Cursed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
@@ -193,6 +287,36 @@ public class FossilAttacks : MonoBehaviour
 
     } //An attack that deals decent damage to all enemies then inverts all enemy affinities.
 
+    public void PitchBlackDarkness()
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
+        {
+            if (BattleSystemFossil.currentEnemies[i] != null)
+            {
+                if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                    BattleSystemFossil.enemyUnit[i].affinity = 1;
+                }
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(35);
+                    BattleSystemFossil.enemyUnit[i].affinity = 2;
+                }
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(15);
+                    BattleSystemFossil.enemyUnit[i].affinity = 0;
+                }
+            }
+        }
+    } //An attack that deals decent damage to all enemies.
+
     public void CleansingVapors() //Affinity: Blessed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
@@ -257,6 +381,110 @@ public class FossilAttacks : MonoBehaviour
     } //An attack that deals low damage to all enemies in battle and halves the damage output of all enemies of the "Cursed" affinity.
       //Debug messages will be removed in the final build.
 
+    public void EphemeralEssence() //Affinity: Blessed
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+        if (EnemyHolder.enemyAmount == 3)
+        {
+            for (int i = 1; i <= EnemyHolder.enemyAmount; i++)
+            {
+                if (BattleSystemFossil.currentEnemies[i] != null && i != 2)
+                {
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                    }
+                }
+                else if (i == 2)
+                {
+                    return;
+                }
+            }
+        }
+        else if (EnemyHolder.enemyAmount == 2)
+        {
+            for (int i = 1; i <= EnemyHolder.enemyAmount; i++)
+            {
+                if (BattleSystemFossil.currentEnemies[i] != null && i == 1)
+                {
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                    }
+                    return;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
+            {
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                    }
+                    else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                    {
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                    }
+                }
+            }
+        }
+    } //An attack that deals massive damage to the middle two enemies.
+
+    public void HolyBoneSpear()
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
+        {
+            if (BattleSystemFossil.currentEnemies[i] != null)
+            {
+                if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(10);
+                }
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                }
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(20);
+                }
+            }
+        }
+
+    } //An attack that deals poor damage to all enemies.
+
     public void PurifyArena() //Affinity: Support
     {
         if (purifyUsed == false)
@@ -317,12 +545,34 @@ public class FossilAttacks : MonoBehaviour
                 BattleSystemFossil.enemyUnit[i].TakeDamage(BattleSystemFossil.enemyUnit[i].currentHP / 2);
                 BattleSystemFossil.playerUnit.currentHP += BattleSystemFossil.enemyUnit[i].currentHP;
                 BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
-                return;
             }
         }
-    } //An attack that steals half of the frontmost enemy's health and gives it to the player. The amount of health gained will diminish due to the nature of the attack, preventing attack spam.
+    } //A special attack that steals half of the frontmost enemy's health and gives it to the player. The amount of health gained will diminish due to the nature of the attack, preventing attack spam.
 
-    public void SecretPower() //Affinity: Variable
+    public void VitalitySwap() //Affinity: Support
+    {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        ChooseEnemy();
+        if (chosenEnemy > EnemyHolder.enemyAmount)
+        {
+            ChooseEnemy();
+        }
+        else
+        {
+            float plrHealth = BattleSystemFossil.playerUnit.currentHP;
+            float enemyHealth = BattleSystemFossil.enemyUnit[chosenEnemy].currentHP;
+
+            BattleSystemFossil.playerUnit.currentHP = enemyHealth;
+            BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
+            BattleSystemFossil.enemyUnit[chosenEnemy].currentHP = plrHealth;
+        }
+    } //An attack that swaps the player's health with a random enemy's health
+
+    public void SecretPower() //Affinity: Special
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
             return;
@@ -340,52 +590,95 @@ public class FossilAttacks : MonoBehaviour
         }
         else if (chosenAttack == 2)
         {
+            TailStab();
+            Debug.Log("Chosen Attack: Tail Stab");
+        }
+        else if (chosenAttack == 3)
+        {
+            ReverseStrike();
+            Debug.Log("Chosen Attack: Reverse Strike");
+        }
+        else if (chosenAttack == 4)
+        {
             BlazingInferno();
             Debug.Log("Chosen Attack: Blazing Inferno");
         }
-        else if (chosenAttack == 3)
+        else if (chosenAttack == 5)
         {
             PhantomTalons();
             Debug.Log("Chosen Attack: Phantom Talons");
         }
-        else if (chosenAttack == 4)
-        {
-            CleansingVapors();
-            Debug.Log("Chosen Attack: Cleansing Vapors");
-        }
-        else if (chosenAttack == 5)
-        {
-            AlbinoSkull();
-            Debug.Log("Chosen Attack: Albino Skull");
-        }
         else if (chosenAttack == 6)
-        {
-            PurifyArena();
-            Debug.Log("Chosen Attack: Purify Arena");
-        }
-        else if (chosenAttack == 7)
-        {
-            AncientRelic();
-            Debug.Log("Chosen Attack: Ancient Relic");
-        }
-        else if (chosenAttack == 8)
-        {
-            TailStab();
-            Debug.Log("Chosen Attack: Tail Stab");
-        }
-        else if (chosenAttack == 9)
-        {
-            VampiricFang();
-            Debug.Log("Chosen Attack: Vampiric Fang");
-        }
-        else if (chosenAttack == 10)
         {
             DarkPulse();
             Debug.Log("Chosen Attack: Dark Pulse");
         }
+        else if (chosenAttack == 7)
+        {
+            PitchBlackDarkness();
+            Debug.Log("Chosen Attack: Pitch Black Darkness");
+        }
+        else if (chosenAttack == 8)
+        {
+            CleansingVapors();
+            Debug.Log("Chosen Attack: Cleansing Vapors");
+        }
+        else if (chosenAttack == 9)
+        {
+            AlbinoSkull();
+            Debug.Log("Chosen Attack: Albino Skull");
+        }
+        else if (chosenAttack == 10)
+        {
+            EphemeralEssence();
+            Debug.Log("Chosen Attack: Ephemeral Essence");
+        }
+        else if (chosenAttack == 11)
+        {
+            HolyBoneSpear();
+            Debug.Log("Chosen Attack: Holy Bone Spear");
+        }
+        else if (chosenAttack == 12)
+        {
+            PurifyArena();
+            Debug.Log("Chosen Attack: Purify Arena");
+        }
+        else if (chosenAttack == 13)
+        {
+            AncientRelic();
+            Debug.Log("Chosen Attack: Ancient Relic");
+        }
+        else if (chosenAttack == 14)
+        {
+            VampiricFang();
+            Debug.Log("Chosen Attack: Vampiric Fang");
+        }
     } //An attack that uses an RNG to select a random attack or skill from the FossilAttacks script to use. If this code can be simplified and not look like shit, please tell me how :3
       //Debug text will be removed in final build.
 
+    public void AllOutAttack()
+    {
+        float plrHealth = BattleSystemFossil.playerUnit.currentHP;
+
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
+        {
+            if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+            {
+                BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
+            }
+            else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+            {
+                BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
+            }
+            else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+            {
+                BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
+            }
+        }
+
+        BattleSystemFossil.playerUnit.currentHP = 1;
+        BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
+    } //An attack that brings you down to 1 HP, but deals damage depending on how much health is lost to the attack, ignoring enemy affinities. 
     public IEnumerator KillTimer(int timer)
     {
         while (timer > 0)
@@ -486,6 +779,11 @@ public class FossilAttacks : MonoBehaviour
 
     public void ChooseAttack()
     {
-        chosenAttack = Random.Range(0, 11);
+        chosenAttack = Random.Range(0, 15);
     } //The RNG that SecretPower uses to select an attack or skill.
+
+    public void ChooseEnemy()
+    {
+        chosenEnemy = Random.Range(0, 4);
+    } //The RNG that VitalitySwap uses to select an enemy.
 }

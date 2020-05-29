@@ -127,17 +127,21 @@ public class Enemy0 : MonoBehaviour
         {
             isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
 
-            battleSystemFossil.playerColor.color = new Color(1, 0, 0);
+            battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
+
+            battleSystemFossil.CreatePlayerParticles(); //Generates feedback particles that shooot out of player
 
             cameraShake.shake = battleSystemFossil.playerPrefab;
             EnemyHolder.shakeEnemy = true;
+            //Shakes the player for more feedback
 
-            battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP);
+            battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
 
             yield return new WaitForSeconds(.2f);
 
-            battleSystemFossil.playerColor.color = new Color(1, 1, 1);
+            battleSystemFossil.playerColor.color = new Color(1, 1, 1); 
             EnemyHolder.shakeEnemy = false;
+            //Turns color and shaking back to normal
 
             yield return new WaitForSeconds(.2f);
 

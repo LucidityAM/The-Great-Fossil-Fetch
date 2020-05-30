@@ -5,6 +5,7 @@ using System.Diagnostics.Contracts;
 using System.Net;
 using System.Numerics;
 using System.Runtime.Serialization;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,8 @@ public class Enemy0 : MonoBehaviour
     public bool isDead;
 
     public CameraShake cameraShake;
+
+    public GameObject thisEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +47,8 @@ public class Enemy0 : MonoBehaviour
                     battleSystemFossil.enemyLightingEffects[0].SetActive(true);
                     battleSystemFossil.currentEnemies[0].GetComponent<Image>().enabled = false;
 
+                    thisEnemy = battleSystemFossil.currentEnemies[0];
+
                     if (EnemyHolder.enemyDowned[0] != null && EnemyHolder.enemyDowned[0].GetComponent<UnitStats>().isDowned == true)
                     {
                         battleSystemFossil.enemyLightingEffects[0].SetActive(false);
@@ -64,6 +69,8 @@ public class Enemy0 : MonoBehaviour
                 { 
                     battleSystemFossil.enemyLightingEffects[1].SetActive(true);
                     battleSystemFossil.currentEnemies[1].GetComponent<Image>().enabled = false;
+
+                    thisEnemy = battleSystemFossil.currentEnemies[1];
 
                     if (EnemyHolder.enemyDowned[1] != null && EnemyHolder.enemyDowned[1].GetComponent<UnitStats>().isDowned == true)
                     {
@@ -86,6 +93,8 @@ public class Enemy0 : MonoBehaviour
                     battleSystemFossil.enemyLightingEffects[2].SetActive(true);
                     battleSystemFossil.currentEnemies[2].GetComponent<Image>().enabled = false;
 
+                    thisEnemy = battleSystemFossil.currentEnemies[2];
+
                     if (EnemyHolder.enemyDowned[2] != null && EnemyHolder.enemyDowned[2].GetComponent<UnitStats>().isDowned == true)
                     {
                         battleSystemFossil.enemyLightingEffects[2].SetActive(false);
@@ -107,6 +116,8 @@ public class Enemy0 : MonoBehaviour
                     battleSystemFossil.enemyLightingEffects[3].SetActive(true);
                     battleSystemFossil.currentEnemies[3].GetComponent<Image>().enabled = false;
 
+                    thisEnemy = battleSystemFossil.currentEnemies[3];
+
                     if (EnemyHolder.enemyDowned[3] != null && EnemyHolder.enemyDowned[3].GetComponent<UnitStats>().isDowned == true)
                     {
                         battleSystemFossil.enemyLightingEffects[3].SetActive(false);
@@ -123,7 +134,7 @@ public class Enemy0 : MonoBehaviour
                 break;
         }// Delays the coroutines activation depending on how many enemies you are fighting and disables specific lighting effects depending on downed enemies
 
-        if (EnemyHolder.isDowned == false)
+        if (EnemyHolder.isDowned == false && thisEnemy.GetComponent<UnitStats>().currentHP > thisEnemy.GetComponent<UnitStats>().maxHP / 2)
         {
             isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
 
@@ -158,6 +169,48 @@ public class Enemy0 : MonoBehaviour
             yield return new WaitForSeconds(.55f);
 
         }
+        else if(EnemyHolder.isDowned == false)
+        {
+            int timer = 5;
+
+            while (timer > 0)
+            {
+                timer--;
+
+                isDead = playerStats.TakeDamage(5 / PlayerStats.defendButton);
+
+                battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
+
+                battleSystemFossil.CreatePlayerParticles(); //Generates feedback particles that shooot out of player
+
+                cameraShake.shake = battleSystemFossil.playerPrefab;
+                EnemyHolder.shakeEnemy = true;
+                //Shakes the player for more feedback
+
+                battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
+
+                yield return new WaitForSeconds(.15f);
+
+                battleSystemFossil.playerColor.color = new Color(1, 1, 1);
+                EnemyHolder.shakeEnemy = false;
+                //Turns color and shaking back to normal
+
+                yield return new WaitForSeconds(.15f);
+
+                for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
+                {
+                    if (battleSystemFossil.enemyLightingEffects[j] != null)
+                    {
+                        battleSystemFossil.enemyLightingEffects[j].SetActive(false);
+                        battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
+                    }
+                }
+                //Depending on how many enemies you are fighting, turns off respecitve lights
+            }
+
+        }//Special attack that only occurs when the enemy has less than half health, attacks the player 5 times in quick succession
+
+
 
         if (EnemyHolder.isDowned == true)
         {

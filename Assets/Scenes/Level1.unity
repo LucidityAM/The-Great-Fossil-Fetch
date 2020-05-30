@@ -10229,6 +10229,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1040779355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3532705670202913913, guid: 97bc51e06d26584409fe27b725bfd7eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3532705670204559121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1045778318
 GameObject:
   m_ObjectHideFlags: 0
@@ -11537,6 +11543,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 246385863}
+    - target: {fileID: 191807010536390165, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 209581428711342456, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -11591,6 +11602,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 670800638275084697, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 899831251954057920, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
@@ -11756,6 +11772,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933528263384680978, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933528263384680978, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3317553320731916155, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
@@ -11973,6 +11999,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5122234000143524009, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419329500672150461, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5438796170277962235, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -12012,6 +12048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150255013535158250, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6326219835199255306, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
@@ -21499,8 +21540,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
-      finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
+      together, finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:
@@ -23427,6 +23468,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3532705671930189144, guid: 97bc51e06d26584409fe27b725bfd7eb,
+        type: 3}
+      propertyPath: infoBar
+      value: 
+      objectReference: {fileID: 1040779355}
+    - target: {fileID: 3532705671930189145, guid: 97bc51e06d26584409fe27b725bfd7eb,
+        type: 3}
+      propertyPath: infoBar
+      value: 
+      objectReference: {fileID: 1040779355}
     - target: {fileID: 3532705671930189147, guid: 97bc51e06d26584409fe27b725bfd7eb,
         type: 3}
       propertyPath: shakePower

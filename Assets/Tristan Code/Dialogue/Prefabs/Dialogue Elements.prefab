@@ -54,6 +54,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   CharacterSprite: {fileID: 8467545841649331254}
   BGSprite: {fileID: 0}
+  loadBattle: {fileID: 0}
 --- !u!1 &8467545839662777545
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,15 +515,15 @@ RectTransform:
   m_GameObject: {fileID: 8467545841630640150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_Children: []
   m_Father: {fileID: 8467545841537295250}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: -15.053}
-  m_SizeDelta: {x: 118.48, y: 30.105}
+  m_AnchoredPosition: {x: 3.2, y: -5}
+  m_SizeDelta: {x: 793.6, y: 183.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8467545841630640155
 CanvasRenderer:
@@ -552,11 +553,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4deb80b6dc649cf4381600025be05d11, type: 3}
-    m_FontSize: 24
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 45
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1

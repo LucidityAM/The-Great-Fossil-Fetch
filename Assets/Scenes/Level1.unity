@@ -16432,8 +16432,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.5377358, g: 0, b: 0, a: 1}
-        key1: {r: 0.5660378, g: 0, b: 0, a: 0}
+        key0: {r: 0.7490196, g: 0.6156863, b: 0.34901962, a: 1}
+        key1: {r: 0.7490196, g: 0.6156863, b: 0.34901962, a: 0}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -21869,8 +21869,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
-      together, finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
+      finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:

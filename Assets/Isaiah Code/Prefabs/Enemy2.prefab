@@ -1549,8 +1549,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.5377358, g: 0, b: 0, a: 1}
-        key1: {r: 0.5660378, g: 0, b: 0, a: 0}
+        key0: {r: 0.7490196, g: 0.6156863, b: 0.34901962, a: 1}
+        key1: {r: 0.7490196, g: 0.6156863, b: 0.34901962, a: 0}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -5407,7 +5407,7 @@ MonoBehaviour:
   maxHP: 120
   currentHP: 120
   damage: 30
-  affinity: 0
+  affinity: 2
   isDowned: 0
 --- !u!114 &1993336951963997919
 MonoBehaviour:

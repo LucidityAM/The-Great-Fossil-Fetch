@@ -570,7 +570,7 @@ public class FossilAttacks : MonoBehaviour
             BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
             BattleSystemFossil.enemyUnit[chosenEnemy].currentHP = plrHealth;
         }
-    } //An attack that swaps the player's health with a random enemy's health
+    } //An attack that swaps the player's health with a random enemy's health.
 
     public void SecretPower() //Affinity: Special
     {

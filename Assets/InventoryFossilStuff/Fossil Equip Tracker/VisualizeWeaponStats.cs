@@ -234,9 +234,15 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.defense = fossilStats[12, 1];
             StatString.fossilName = "PlacementPlacement";
             StatString.durability = WeaponStats.fossilDurability[12] + "/XX";
+<<<<<<< HEAD
             StatString.fossilPart = "PlacementPlacement";
             StatString.flavorText = "PlacementPlacement";
             StatString.affinity = "PlacementPlacement";
+=======
+            StatString.fossilPart = "Leg";
+            StatString.flavorText = "An attack that brings you down to 1 HP, but deals damage depending on how much health is lost to the attack, ignoring enemy affinities.";
+            StatString.affinity = "Cursed";
+>>>>>>> parent of 47d4fea... Fixed Weapon descriptions.
         }
         else if (this.gameObject.CompareTag("legs2"))
         {

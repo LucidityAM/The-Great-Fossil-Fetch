@@ -76,7 +76,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RIBS
+  m_Text: Leg
 --- !u!1 &2611051072295206643
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 5091042235930534325}
   - component: {fileID: 7225985919209511454}
   m_Layer: 5
-  m_Name: Fossil Base
+  m_Name: Fossil Base 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,4 +614,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BLAZING INFERNO
+  m_Text: All Out Attack

@@ -568,6 +568,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9985e1b70dcab441bcb4d036bf009b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &137516680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5643665812671767556, guid: e1a235b2c062d84499dd36f441fd81b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 137516676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137516677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3eacad575c9fa409ab6b6ca558e122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &157318892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1182,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169850427172340316, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 137516677}
+    - target: {fileID: 169850427172340316, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: loadBattle
+      value: 
+      objectReference: {fileID: 137516680}
     - target: {fileID: 3841614625927624934, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: Player

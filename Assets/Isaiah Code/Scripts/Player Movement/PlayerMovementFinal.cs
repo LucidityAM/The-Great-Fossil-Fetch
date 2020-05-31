@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class PlayerMovementFinal : MonoBehaviour
 {
@@ -21,15 +20,12 @@ public class PlayerMovementFinal : MonoBehaviour
     private bool isJumping;
     public bool isGrounded;
     private bool isMoving;
-    private bool isFlipped;
 
     //Components
     Rigidbody2D rb2;
     Animator anim;
     SpriteRenderer sr;
     AudioSource audioSrc;
-
-    public ParticleSystem dust;
 
     // Start is called before the first frame update
     void Start()
@@ -49,14 +45,8 @@ public class PlayerMovementFinal : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
-                StartCoroutine(Dust());
                 rb2.velocity = new Vector2(rb2.velocity.x, jumpForce);
                 anim.SetBool("inJump", true);
-
-                if (isJumping == true)
-                {
-                    isJumping = false;
-                }
             }
         }//Checks if the player is grounded or if they were grounded in the last couple miliseconds and then jumps
 
@@ -70,14 +60,6 @@ public class PlayerMovementFinal : MonoBehaviour
             float y = Input.GetAxis("Horizontal");
             float moving = y * moveForce;
             rb2.velocity = new Vector2(moving, rb2.velocity.y);
-        }
-        else
-        {
-            if (isJumping == false)
-            {
-                StartCoroutine(Dust());
-                isJumping = true;
-            }
         }
 
         if (rb2.velocity.x != 0 && isGrounded == true)
@@ -106,38 +88,20 @@ public class PlayerMovementFinal : MonoBehaviour
 
         #region Flip
         //Flipping
-        if (rb2.velocity.x > 0)
+        if (rb2.velocity.x >= 0)
         {
             sr.flipX = false;
-
-            if(isFlipped == false && isGrounded == true)
-            {
-                StartCoroutine(Dust());
-                isFlipped = true;
-            }
 
         }
         else if (rb2.velocity.x < 0)
         {
-            if(isFlipped == true && isGrounded == true)
-            {
-                StartCoroutine(Dust());
-                isFlipped = false;
-            }
-
             sr.flipX = true;
 
         }
         else if(rb2.velocity.x == 0)
         {
             sr.flipX = false;
-
-            if(isGrounded == true)
-            {
-                DeleteDust();
-            } 
         }
-        //Checks if the player switched directions, flips the sprite, then generates some dust
         #endregion Flip
 
         #region Ground
@@ -146,7 +110,6 @@ public class PlayerMovementFinal : MonoBehaviour
         if (colliders != null)
         {
             isGrounded = true;
-
             anim.SetBool("inJump", false);
         }
         else
@@ -157,27 +120,6 @@ public class PlayerMovementFinal : MonoBehaviour
             }
             isGrounded = false;
         }
-        //Creates an overlaping circle that detects if the player is touching the ground and either sets isGrounded to true or false
         #endregion Ground
     }
-
-    void CreateDust()
-    {
-        dust.Play();
-    }
-
-    void DeleteDust()
-    {
-        dust.Stop();
-    }
-
-    IEnumerator Dust()
-    {
-        CreateDust();
-
-        yield return new WaitForSeconds(.09f);
-
-        DeleteDust();
-
-    }//Generates a short burst of dust
 }

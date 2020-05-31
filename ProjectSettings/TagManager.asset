@@ -92,9 +92,6 @@ TagManager:
   - name: Platform
     uniqueID: 2975184749
     locked: 0
-  - name: WorldEnemy
-    uniqueID: 3912030561
-    locked: 0
   - name: Background
     uniqueID: 3816960739
     locked: 0

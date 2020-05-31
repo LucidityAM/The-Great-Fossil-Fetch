@@ -41,69 +41,24 @@ public class BattleHUD : MonoBehaviour
                     if (battleSystemFossil.currentEnemies[i].CompareTag("Enemy1"))
                     {
                         hp.transform.position = new Vector3(hp.transform.position.x, hp.transform.position.y + 2.2f, hp.transform.position.z);
-
-                        switch (battleSystemFossil.enemyUnit[i].affinity)
-                        {
-                            case 0:
-                                affinity.sprite = blessed;
-                                break;
-                            case 1:
-                                affinity.sprite = soma;
-                                break;
-                            case 2:
-                                affinity.sprite = cursed;
-                                break;
-                        }
+                        affinity.sprite = soma;
 
                     }//Sets the mummy affinity to soma and moves the health bar;
                     else if (battleSystemFossil.currentEnemies[i].CompareTag("Enemy2"))
                     {
                         hp.transform.position = new Vector3(hp.transform.position.x + .2f, hp.transform.position.y, hp.transform.position.z);
-                        switch (battleSystemFossil.enemyUnit[i].affinity)
-                        {
-                            case 0:
-                                affinity.sprite = blessed;
-                                break;
-                            case 1:
-                                affinity.sprite = soma;
-                                break;
-                            case 2:
-                                affinity.sprite = cursed;
-                                break;
-                        }
+                        affinity.sprite = cursed;
 
                     }//Sets the dinosaur affinity to cursed and moves the health bar
                     else if (battleSystemFossil.currentEnemies[i].CompareTag("Enemy0"))
                     {
-                        switch (battleSystemFossil.enemyUnit[i].affinity)
-                        {
-                            case 0:
-                                affinity.sprite = blessed;
-                                break;
-                            case 1:
-                                affinity.sprite = soma;
-                                break;
-                            case 2:
-                                affinity.sprite = cursed;
-                                break;
-                        }
+                        affinity.sprite = blessed;
 
                     }//Sets the scarab affinity to blessed and moves the health bar
                     else if (battleSystemFossil.currentEnemies[i].CompareTag("Boss1"))
                     {
                         hp.transform.position = new Vector3(hp.transform.position.x + 1f, hp.transform.position.y + 2f, hp.transform.position.z);
-                        switch (battleSystemFossil.enemyUnit[i].affinity)
-                        {
-                            case 0:
-                                affinity.sprite = blessed;
-                                break;
-                            case 1:
-                                affinity.sprite = soma;
-                                break;
-                            case 2:
-                                affinity.sprite = cursed;
-                                break;
-                        }
+                        affinity.sprite = soma;
 
                     }//Sets Panama's affinity to cursed and moves the health bar
 

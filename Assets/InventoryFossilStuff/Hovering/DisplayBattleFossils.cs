@@ -48,22 +48,22 @@ public class DisplayBattleFossils : MonoBehaviour
             switch (WeaponStats.skull)
             {
                 case 1:
-                    name.text = "Pitch Black Darkness";
-                    affinity.sprite = cursed;
-                    durability.text = WeaponStats.fossilDurability[0] + "/15";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("PitchBlackDarkness"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[0] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
-                    name.text = "Meteor Strike";
-                    affinity.sprite = soma;
-                    durability.text = WeaponStats.fossilDurability[1] + "/3";
-                    btn.onClick.AddListener(delegate { fossilAttacks.MeteorStrike(); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[1] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
-                    name.text = "Albino Skull";
+                    name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = WeaponStats.fossilDurability[2] + "/10";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("AlbinoSkull"); });
+                    durability.text = WeaponStats.fossilDurability[2] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack as well as the affinity, durability, and adds the specific fossil attack method to the onclick method of the button
@@ -90,22 +90,22 @@ public class DisplayBattleFossils : MonoBehaviour
             switch (WeaponStats.neck)
             {
                 case 1:
-                    name.text = "Dark Pulse";
-                    affinity.sprite = cursed;
-                    durability.text = WeaponStats.fossilDurability[3] + "/7";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("DarkPulse"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[3] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
-                    name.text = "Vitality Swap";
-                    affinity.sprite = soma;
-                    durability.text = WeaponStats.fossilDurability[4] + "/5";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("VitalitySwap"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[4] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
-                    name.text = "Ephemeral Essence";
+                    name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = WeaponStats.fossilDurability[5] + "/3";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("EphemeralEssence"); });
+                    durability.text = WeaponStats.fossilDurability[5] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -133,20 +133,20 @@ public class DisplayBattleFossils : MonoBehaviour
                 case 1:
                     name.text = "Blazing Inferno";
                     affinity.sprite = cursed;
-                    durability.text = WeaponStats.fossilDurability[6] + "/20";
+                    durability.text = WeaponStats.fossilDurability[6] + "/XX";
                     btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
-                    name.text = "Purify Arena";
-                    affinity.sprite = soma;
-                    durability.text = WeaponStats.fossilDurability[7] + "/7";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("PurifyArena"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[7] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
-                    name.text = "Cleansing Vapors";
+                    name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = WeaponStats.fossilDurability[8] + "/12";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("CleansingVapors"); });
+                    durability.text = WeaponStats.fossilDurability[8] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -172,22 +172,22 @@ public class DisplayBattleFossils : MonoBehaviour
             switch (WeaponStats.arms)
             {
                 case 1:
-                    name.text = "Phantom Talons";
-                    affinity.sprite = cursed;
-                    durability.text = WeaponStats.fossilDurability[9] + "/10";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("PhantomTalons"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[9] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
-                    name.text = "Reverse Strike";
-                    affinity.sprite = soma;
-                    durability.text = WeaponStats.fossilDurability[10] + "/10";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("ReverseStrike"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[10] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
-                    name.text = "Vampiric Fang";
+                    name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = WeaponStats.fossilDurability[11] + "/7";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("VampiricFang"); });
+                    durability.text = WeaponStats.fossilDurability[11] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -213,22 +213,22 @@ public class DisplayBattleFossils : MonoBehaviour
             switch (WeaponStats.legs)
             {
                 case 1:
-                    name.text = "All Out Attack";
-                    affinity.sprite = cursed;
-                    durability.text = WeaponStats.fossilDurability[12] + "/5";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("AllOutAttack"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[12] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
-                    name.text = "Low Kick";
-                    affinity.sprite = soma;
-                    durability.text = WeaponStats.fossilDurability[13] + "/7";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("LowKick"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[13] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
-                    name.text = "Ancient Relic";
+                    name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = WeaponStats.fossilDurability[14] + "/5";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("AncientRelic"); });
+                    durability.text = WeaponStats.fossilDurability[14] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack
@@ -254,22 +254,22 @@ public class DisplayBattleFossils : MonoBehaviour
             switch (WeaponStats.tail)
             {
                 case 1:
-                    name.text = "Secret Power";
-                    affinity.sprite = cursed;
-                    durability.text = WeaponStats.fossilDurability[15] + "/20";
-                    btn.onClick.AddListener(delegate { fossilAttacks.SecretPower(); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[15] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 2:
-                    name.text = "Tail Stab";
-                    affinity.sprite = soma;
-                    durability.text = WeaponStats.fossilDurability[16] + "/15";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("TailStab"); });
+                    name.text = "Placement Placement";
+                    affinity.sprite = blessed;
+                    durability.text = WeaponStats.fossilDurability[16] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
                 case 3:
-                    name.text = "Holy Bone Spear";
+                    name.text = "Placement Placement";
                     affinity.sprite = blessed;
-                    durability.text = WeaponStats.fossilDurability[17] + "/15";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("HolyBoneSpear"); });
+                    durability.text = WeaponStats.fossilDurability[17] + "/XX";
+                    btn.onClick.AddListener(delegate { fossilAttacks.BlazingInferno(); });
                     break;
 
             }//Sets the text of the specific fossil attack

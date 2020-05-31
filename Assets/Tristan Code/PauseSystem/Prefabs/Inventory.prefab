@@ -134,9 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -153,6 +151,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &237972540745430241
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,9 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -306,6 +307,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &249046141642624666
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,9 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -684,6 +688,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &685737175738946670
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,9 +827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -837,6 +844,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &799801460193191350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,9 +1240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -1247,6 +1257,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &1348072646561124157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,9 +1520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -1524,6 +1537,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &2188915563958523289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,7 +1946,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5941565376669947764, guid: 415f359982decd24090de34dbfe24849,
+  m_Sprite: {fileID: 3701829361349435129, guid: 415f359982decd24090de34dbfe24849,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1996,9 +2014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -2015,6 +2031,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &2816224083953630329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2703,9 +2724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -2722,6 +2741,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &4186923417257634964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,7 +2877,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -8, y: 3}
-  m_SizeDelta: {x: 95.2, y: 95.2}
+  m_SizeDelta: {x: 122, y: 57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &736464234067309693
 CanvasRenderer:
@@ -2949,9 +2973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -2968,6 +2990,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &4221319542052785897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,7 +3126,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -8, y: 3}
-  m_SizeDelta: {x: 95.2, y: 95.2}
+  m_SizeDelta: {x: 122, y: 57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1479525793423054121
 CanvasRenderer:
@@ -3195,9 +3222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -3214,6 +3239,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &4405325791327506520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3348,9 +3378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -3367,6 +3395,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &4408971895488899624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,9 +3534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -3520,6 +3551,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &4723286742396820257
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,9 +3797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -3780,6 +3814,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
+--- !u!1 &5029600058645071513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054557401747379062}
+  - component: {fileID: 7346823717860461846}
+  m_Layer: 5
+  m_Name: Button (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2054557401747379062
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5029600058645071513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1347307410562509665}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 422.75, y: -1295}
+  m_SizeDelta: {x: 845.5, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7346823717860461846
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5029600058645071513}
+  m_CullTransparentMesh: 0
 --- !u!1 &5181935663133581915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,9 +4202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -4138,6 +4219,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &5913742501529817419
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,7 +4334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3701829361349435129, guid: 415f359982decd24090de34dbfe24849,
+  m_Sprite: {fileID: 3039255448279972050, guid: 415f359982decd24090de34dbfe24849,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -4316,9 +4402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -4335,6 +4419,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &6043032627330150158
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,9 +4558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -4488,6 +4575,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &6302901165899288165
 GameObject:
   m_ObjectHideFlags: 0
@@ -4908,8 +5000,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6269519392821590631}
   m_HandleRect: {fileID: 4239044478772873869}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.28380954
+  m_Value: 1.0000001
+  m_Size: 0.26887217
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5201,9 +5293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -5220,6 +5310,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &7224830090664198200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5491,9 +5586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skull: {fileID: 0}
   neck: {fileID: 0}
-  ribs1: {fileID: 0}
-  ribs2: {fileID: 0}
-  ribs3: {fileID: 0}
+  ribs: {fileID: 0}
   arms: {fileID: 0}
   legs: {fileID: 0}
   tail: {fileID: 0}
@@ -5510,6 +5603,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &7655803094876432754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5603,12 +5701,13 @@ RectTransform:
   - {fileID: 5775041616312041503}
   - {fileID: 4164542929706869675}
   - {fileID: 7858755801317237952}
+  - {fileID: 2054557401747379062}
   m_Father: {fileID: 5743093848911749016}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: 178.8}
+  m_AnchoredPosition: {x: -0.000012398, y: 178.79996}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4139855927063521062

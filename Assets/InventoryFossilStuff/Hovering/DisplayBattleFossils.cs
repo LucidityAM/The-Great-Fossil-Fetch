@@ -63,7 +63,7 @@ public class DisplayBattleFossils : MonoBehaviour
                     name.text = "Albino Skull";
                     affinity.sprite = blessed;
                     durability.text = WeaponStats.fossilDurability[2] + "/10";
-                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("AlboinoSkull"); });
+                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("AlbinoSkull"); });
                     break;
 
             }//Sets the text of the specific fossil attack as well as the affinity, durability, and adds the specific fossil attack method to the onclick method of the button

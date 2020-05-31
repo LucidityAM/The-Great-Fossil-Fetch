@@ -126,10 +126,14 @@ public class BattleSystemFossil : MonoBehaviour
     {
         Debug.Log(EnemyHolder.bossNumber);
 
-        if (currentEnemies[0].gameObject.CompareTag("Boss1"))
+        if (currentEnemies[0] != null)
         {
-            enemyLightingEffects[0].SetActive(true);
+            if (currentEnemies[0].gameObject.CompareTag("Boss1"))
+            {
+                enemyLightingEffects[0].SetActive(true);
+            }
         }
+        
 
         if (EnemyHolder.coroutinesRunning == 0 && enemyTurnAttack == false)
         {
@@ -394,7 +398,6 @@ public class BattleSystemFossil : MonoBehaviour
 
             for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
             { 
-
                 if (enemy == currentEnemies[i] && enemy.GetComponent<UnitStats>().isDowned == false)
                 {
                     EnemyHolder.enemyDowned[i] = enemy;

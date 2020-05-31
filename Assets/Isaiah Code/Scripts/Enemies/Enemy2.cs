@@ -134,114 +134,115 @@ public class Enemy2 : MonoBehaviour
                 break;
         }// Delays the coroutines activation depending on how many enemies you are fighting and disables specific lighting effects depending on downed enemies
 
-        if (EnemyHolder.isDowned == false && thisEnemy.GetComponent<UnitStats>().currentHP > thisEnemy.GetComponent<UnitStats>().maxHP / 2)
+        if (thisEnemy != null)
         {
-            isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
-
-            battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
-
-            battleSystemFossil.CreatePlayerParticles(); //Generates feedback particles that shooot out of player
-
-            cameraShake.shake = battleSystemFossil.playerPrefab;
-            EnemyHolder.shakeEnemy = true;
-            //Shakes the player for more feedback
-
-            battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
-
-            yield return new WaitForSeconds(.2f);
-
-            battleSystemFossil.playerColor.color = new Color(1, 1, 1);
-            EnemyHolder.shakeEnemy = false;
-            //Turns color and shaking back to normal
-
-            yield return new WaitForSeconds(.2f);
-
-            for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
+            if (EnemyHolder.isDowned == false && thisEnemy.GetComponent<UnitStats>().currentHP > thisEnemy.GetComponent<UnitStats>().maxHP / 2)
             {
-                if (battleSystemFossil.enemyLightingEffects[j] != null)
+                isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
+
+                battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
+
+                battleSystemFossil.CreatePlayerParticles(); //Generates feedback particles that shooot out of player
+
+                cameraShake.shake = battleSystemFossil.playerPrefab;
+                EnemyHolder.shakeEnemy = true;
+                //Shakes the player for more feedback
+
+                battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
+
+                yield return new WaitForSeconds(.2f);
+
+                battleSystemFossil.playerColor.color = new Color(1, 1, 1);
+                EnemyHolder.shakeEnemy = false;
+                //Turns color and shaking back to normal
+
+                yield return new WaitForSeconds(.2f);
+
+                for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
                 {
-                    battleSystemFossil.enemyLightingEffects[j].SetActive(false);
-                    battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
+                    if (battleSystemFossil.enemyLightingEffects[j] != null)
+                    {
+                        battleSystemFossil.enemyLightingEffects[j].SetActive(false);
+                        battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
+                    }
+                }
+                //Depending on how many enemies you are fighting, turns off respecitve lights
+
+                yield return new WaitForSeconds(.55f);
+
+            }
+            else if (EnemyHolder.isDowned == false)
+            {
+
+                if (thisEnemy.GetComponent<UnitStats>().currentHP <= 25)
+                {
+                    thisEnemy.GetComponent<UnitStats>().currentHP = 26;
+                }
+
+                isDead = playerStats.TakeDamage(25 / PlayerStats.defendButton);
+                thisEnemy.GetComponent<UnitStats>().TakeDamage(25);
+
+
+                battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
+                thisEnemy.GetComponent<Image>().color = new Color(1, 0, 0); //Sets the enemy to red too
+
+                battleSystemFossil.CreatePlayerParticles(); //Generates feedback particles that shooot out of player
+                thisEnemy.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play(); //Generates feedback particles that shooot out of the enemy
+
+                cameraShake.shake = battleSystemFossil.playerPrefab;
+                EnemyHolder.shakeEnemy = true;
+                //Shakes the player for more feedback
+
+                battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
+                for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
+                {
+                    battleSystemFossil.enemyHUDs[i].SetHP(battleSystemFossil.enemyUnit[i].currentHP);
+                }//Sets the enemy hp
+
+                infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+                infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "The enemy hurt itself with its attack";
+
+                yield return new WaitForSeconds(.4f);
+
+                battleSystemFossil.playerColor.color = new Color(1, 1, 1);
+                thisEnemy.GetComponent<Image>().color = new Color(1, 1, 1); //Sets the enemy color to normal
+                EnemyHolder.shakeEnemy = false;
+                //Turns color and shaking back to normal
+
+                yield return new WaitForSeconds(.4f);
+
+                infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+                infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+                for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
+                {
+                    if (battleSystemFossil.enemyLightingEffects[j] != null)
+                    {
+                        battleSystemFossil.enemyLightingEffects[j].SetActive(false);
+                        battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
+                    }
+                }
+                //Depending on how many enemies you are fighting, turns off respecitve lights
+            }
+            else if (EnemyHolder.isDowned == true)
+            {
+                yield return new WaitForSeconds(.95f);
+
+                EnemyHolder.isDowned = false;
+
+                for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
+                {
+                    if (battleSystemFossil.enemyLightingEffects[j] != null)
+                    {
+                        battleSystemFossil.enemyLightingEffects[j].SetActive(false);
+                        battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
+                    }
                 }
             }
-            //Depending on how many enemies you are fighting, turns off respecitve lights
-
-            yield return new WaitForSeconds(.55f);
-
         }
-        else if (EnemyHolder.isDowned == false)
-        {
-
-            if (thisEnemy.GetComponent<UnitStats>().currentHP <= 25)
-            {
-                thisEnemy.GetComponent<UnitStats>().currentHP = 26;
-            }
-
-            isDead = playerStats.TakeDamage(25 / PlayerStats.defendButton);
-            thisEnemy.GetComponent<UnitStats>().TakeDamage(25);
-
-
-            battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
-            thisEnemy.GetComponent<Image>().color = new Color(1, 0, 0); //Sets the enemy to red too
-
-            battleSystemFossil.CreatePlayerParticles(); //Generates feedback particles that shooot out of player
-            thisEnemy.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play(); //Generates feedback particles that shooot out of the enemy
-
-            cameraShake.shake = battleSystemFossil.playerPrefab;
-            EnemyHolder.shakeEnemy = true;
-            //Shakes the player for more feedback
-
-            battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
-            for(int i = 0; i <= EnemyHolder.enemyAmount; i++)
-            {
-                battleSystemFossil.enemyHUDs[i].SetHP(battleSystemFossil.enemyUnit[i].currentHP);
-            }//Sets the enemy hp
-
-            infoBar.GetComponent<Animator>().SetBool("isOpen", true);
-
-            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "The enemy hurt itself with its attack";
-   
-            yield return new WaitForSeconds(.4f);
-
-            battleSystemFossil.playerColor.color = new Color(1, 1, 1);
-            thisEnemy.GetComponent<Image>().color = new Color(1, 1, 1); //Sets the enemy color to normal
-            EnemyHolder.shakeEnemy = false;
-            //Turns color and shaking back to normal
-
-            yield return new WaitForSeconds(.4f);
-
-            infoBar.GetComponent<Animator>().SetBool("isOpen", false);
-
-            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
-
-            for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
-            {
-                if (battleSystemFossil.enemyLightingEffects[j] != null)
-                {
-                    battleSystemFossil.enemyLightingEffects[j].SetActive(false);
-                    battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
-                }
-            }
-            //Depending on how many enemies you are fighting, turns off respecitve lights
-        }
-
-        if (EnemyHolder.isDowned == true)
-        {
-            yield return new WaitForSeconds(.95f);
-
-            EnemyHolder.isDowned = false;
-
-            for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
-            {
-                if (battleSystemFossil.enemyLightingEffects[j] != null)
-                {
-                    battleSystemFossil.enemyLightingEffects[j].SetActive(false);
-                    battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
-                }
-            }
-
-        }
-
+        
         EnemyHolder.coroutinesRunning--;
 
         if (isDead)

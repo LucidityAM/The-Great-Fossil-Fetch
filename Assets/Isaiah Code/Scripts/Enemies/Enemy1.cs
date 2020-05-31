@@ -136,47 +136,11 @@ public class Enemy1 : MonoBehaviour
                 break;
         }// Delays the coroutines activation depending on how many enemies you are fighting and disables specific lighting effects depending on downed enemies
 
-        if (EnemyHolder.isDowned == false && thisEnemy.GetComponent<UnitStats>().currentHP > thisEnemy.GetComponent<UnitStats>().maxHP / 2)
+        if (thisEnemy != null)
         {
-            isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
-
-            battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
-
-            battleSystemFossil.CreatePlayerParticles(); //Generates feedback particles that shooot out of player
-
-            cameraShake.shake = battleSystemFossil.playerPrefab;
-            EnemyHolder.shakeEnemy = true;
-            //Shakes the player for more feedback
-
-            battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
-
-            yield return new WaitForSeconds(.2f);
-
-            battleSystemFossil.playerColor.color = new Color(1, 1, 1);
-            EnemyHolder.shakeEnemy = false;
-            //Turns color and shaking back to normal
-
-            yield return new WaitForSeconds(.2f);
-
-            for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
+            if (EnemyHolder.isDowned == false && thisEnemy.GetComponent<UnitStats>().currentHP > thisEnemy.GetComponent<UnitStats>().maxHP / 2)
             {
-                if (battleSystemFossil.enemyLightingEffects[j] != null)
-                {
-                    battleSystemFossil.enemyLightingEffects[j].SetActive(false);
-                    battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
-                }
-            }
-            //Depending on how many enemies you are fighting, turns off respecitve lights
-
-            yield return new WaitForSeconds(.55f);
-
-        }
-        else if (EnemyHolder.isDowned == false)
-        {
-
-            if(isCharging == true)
-            {
-                isDead = playerStats.TakeDamage(5 / PlayerStats.defendButton);
+                isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
 
                 battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
 
@@ -188,13 +152,13 @@ public class Enemy1 : MonoBehaviour
 
                 battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
 
-                yield return new WaitForSeconds(.15f);
+                yield return new WaitForSeconds(.2f);
 
                 battleSystemFossil.playerColor.color = new Color(1, 1, 1);
                 EnemyHolder.shakeEnemy = false;
                 //Turns color and shaking back to normal
 
-                yield return new WaitForSeconds(.15f);
+                yield return new WaitForSeconds(.2f);
 
                 for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
                 {
@@ -205,37 +169,77 @@ public class Enemy1 : MonoBehaviour
                     }
                 }
                 //Depending on how many enemies you are fighting, turns off respecitve lights
-            }
-            else
-            {
-
-                infoBar.GetComponent<Animator>().SetBool("isOpen", true);
-
-                infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "The enemy is charging up an attack";
 
                 yield return new WaitForSeconds(.55f);
 
-                for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
+            }
+            else if (EnemyHolder.isDowned == false && thisEnemy.GetComponent<UnitStats>().currentHP < thisEnemy.GetComponent<UnitStats>().maxHP / 2)
+            {
+
+                if (isCharging == true)
                 {
-                    if (battleSystemFossil.enemyLightingEffects[j] != null)
+                    isDead = playerStats.TakeDamage(5 / PlayerStats.defendButton);
+
+                    battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
+
+                    battleSystemFossil.CreatePlayerParticles(); //Generates feedback particles that shooot out of player
+
+                    cameraShake.shake = battleSystemFossil.playerPrefab;
+                    EnemyHolder.shakeEnemy = true;
+                    //Shakes the player for more feedback
+
+                    battleSystemFossil.playerHUD.SetHP(battleSystemFossil.playerUnit.currentHP); //Sets the HP of the player in the HUD
+
+                    yield return new WaitForSeconds(.15f);
+
+                    battleSystemFossil.playerColor.color = new Color(1, 1, 1);
+                    EnemyHolder.shakeEnemy = false;
+                    //Turns color and shaking back to normal
+
+                    yield return new WaitForSeconds(.15f);
+
+                    for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
                     {
-                        battleSystemFossil.enemyLightingEffects[j].SetActive(false);
-                        battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
+                        if (battleSystemFossil.enemyLightingEffects[j] != null)
+                        {
+                            battleSystemFossil.enemyLightingEffects[j].SetActive(false);
+                            battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
+                        }
                     }
+                    //Depending on how many enemies you are fighting, turns off respecitve lights
                 }
+                else if (isCharging == false)
+                {
 
-                infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+                    infoBar.GetComponent<Animator>().SetBool("isOpen", true);
 
-                yield return new WaitForSeconds(.2f);
+                    infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "The enemy is charging up an attack";
 
-                infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+                    yield return new WaitForSeconds(.55f);
 
-                isCharging = true;
+                    for (int j = 0; j <= EnemyHolder.enemyAmount; j++)
+                    {
+                        if (battleSystemFossil.enemyLightingEffects[j] != null)
+                        {
+                            battleSystemFossil.enemyLightingEffects[j].SetActive(false);
+                            battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
+                        }
+                    }
 
-            }//If it is the first time the enemy is attacking, it will say that the enemy is charging an attack
+                    infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+                    yield return new WaitForSeconds(.2f);
+
+                    infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+                    isCharging = true;
+
+                }//If it is the first time the enemy is attacking, it will say that the enemy is charging an attack
+            }
+           
 
         }//Special attack that only occurs when the enemy has less than half health, attacks the player 5 times in quick succession
-
+        
         if (EnemyHolder.isDowned == true)
         {
             yield return new WaitForSeconds(.95f);
@@ -250,7 +254,6 @@ public class Enemy1 : MonoBehaviour
                     battleSystemFossil.currentEnemies[j].GetComponent<Image>().enabled = true;
                 }
             }
-
         }
 
         EnemyHolder.coroutinesRunning--;

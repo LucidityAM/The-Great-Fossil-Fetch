@@ -12422,6 +12422,51 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493480, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 69.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493480, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493480, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 644.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493480, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 128.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493480, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.017876707
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493480, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9998402
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493480, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 2.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493481, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467545841668493481, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
 --- !u!1 &1193341208
@@ -21869,8 +21914,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
-      finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
+      together, finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:

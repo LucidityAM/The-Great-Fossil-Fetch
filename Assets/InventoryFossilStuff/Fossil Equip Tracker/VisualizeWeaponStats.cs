@@ -15,28 +15,34 @@ public class VisualizeWeaponStats : MonoBehaviour
     public Text fossilName;
     public Text fossilDurability;
 
-    public void Awake()
+    public void Start()
     {
         fossilInfoText = GameObject.FindGameObjectWithTag("FossilInfoText");
 
-        WeaponStats.fossilDurability[0] = 15;
-        WeaponStats.fossilDurability[1] = 3;
-        WeaponStats.fossilDurability[2] = 10;
-        WeaponStats.fossilDurability[3] = 7;
-        WeaponStats.fossilDurability[4] = 5;
-        WeaponStats.fossilDurability[5] = 3;
-        WeaponStats.fossilDurability[6] = 20;
-        WeaponStats.fossilDurability[7] = 7;
-        WeaponStats.fossilDurability[8] = 12;
-        WeaponStats.fossilDurability[9] = 10;
-        WeaponStats.fossilDurability[10] = 10;
-        WeaponStats.fossilDurability[11] = 7;
-        WeaponStats.fossilDurability[12] = 5;
-        WeaponStats.fossilDurability[13] = 7;
-        WeaponStats.fossilDurability[14] = 5;
-        WeaponStats.fossilDurability[15] = 20;
-        WeaponStats.fossilDurability[16] = 15;
-        WeaponStats.fossilDurability[17] = 15;
+        if(WeaponStats.isSet == false)
+        {
+            WeaponStats.fossilDurability[0] = 15;
+            WeaponStats.fossilDurability[1] = 3;
+            WeaponStats.fossilDurability[2] = 1;
+            WeaponStats.fossilDurability[3] = 7;
+            WeaponStats.fossilDurability[4] = 5;
+            WeaponStats.fossilDurability[5] = 3;
+            WeaponStats.fossilDurability[6] = 20;
+            WeaponStats.fossilDurability[7] = 7;
+            WeaponStats.fossilDurability[8] = 12;
+            WeaponStats.fossilDurability[9] = 10;
+            WeaponStats.fossilDurability[10] = 10;
+            WeaponStats.fossilDurability[11] = 7;
+            WeaponStats.fossilDurability[12] = 5;
+            WeaponStats.fossilDurability[13] = 7;
+            WeaponStats.fossilDurability[14] = 5;
+            WeaponStats.fossilDurability[15] = 20;
+            WeaponStats.fossilDurability[16] = 15;
+            WeaponStats.fossilDurability[17] = 15;
+
+            WeaponStats.isSet = true;
+        }
+
         
         fossilDurabilitys[0] = 15;
         fossilDurabilitys[1] = 3;
@@ -56,6 +62,14 @@ public class VisualizeWeaponStats : MonoBehaviour
         fossilDurabilitys[15] = 20;
         fossilDurabilitys[16] = 15;
         fossilDurabilitys[17] = 15;
+    }
+
+    void FixedUpdate()
+    {
+        if(fossilInfoText == null)
+        {
+            fossilInfoText = GameObject.FindGameObjectWithTag("FossilInfoText");
+        }
     }
 
     public float[,] fossilStats = new float[18, 2]
@@ -94,60 +108,61 @@ public class VisualizeWeaponStats : MonoBehaviour
 
     public void Update()
     {
-        for(int i = 0; i < WeaponStats.fossilsOutOfSpaces.Length; i++)
+        if (gameObject.name.Contains("Base"))
         {
-            if(WeaponStats.fossilsOutOfSpaces[i] != null)
+            BG = gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
+            fossilPart = gameObject.transform.GetChild(1).gameObject.GetComponent<Text>();
+            fossilName = gameObject.transform.GetChild(2).gameObject.GetComponent<Text>();
+            fossilDurability = gameObject.transform.GetChild(3).gameObject.GetComponent<Text>();
+
+            //Grabs the Background, fossil part, name, and durability from the specific fossil in the inventory so it can be edited later
+
+            for (int i = 0; i < WeaponStats.fossilsOutOfSpaces.Length; i++)
             {
-                BG = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(0).gameObject.GetComponent<Image>();
-                fossilPart = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(1).gameObject.GetComponent<Text>();
-                fossilName = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(2).gameObject.GetComponent<Text>();
-                fossilDurability = WeaponStats.fossilsOutOfSpaces[i].transform.GetChild(3).gameObject.GetComponent<Text>();
-
-                //Grabs the Background, fossil part, name, and durability from the specific fossil in the inventory so it can be edited later
-
-                if (WeaponStats.fossilDurability[i] > 0)
+                if(gameObject == WeaponStats.fossilsOutOfSpaces[i])
                 {
-                    fossilDurability.text = WeaponStats.fossilDurability[i] + "/" + fossilDurabilitys[i];
+                    if (WeaponStats.fossilDurability[i] > 0)
+                    {
+                        fossilDurability.text = WeaponStats.fossilDurability[i] + "/" + fossilDurabilitys[i];
+                    }//Sets the durability text of the fossil in the inventory
+                    else
+                    {
+                        BG.color = Color.black;
+                        fossilPart.text = "Broken";
+                        fossilName.text = "Broken";
+                        fossilDurability.text = "Broken";
+                        WeaponStats.fossilsOutOfSpaces[i].GetComponent<Button>().enabled = false;
 
-                }//Sets the durability text of the fossil in the inventory
-                else
-                {
-                    BG.color = Color.black;
-                    fossilPart.text = "Broken";
-                    fossilName.text = "Broken";
-                    fossilDurability.text = "Broken";
-                    WeaponStats.fossilsOutOfSpaces[i].GetComponent<Button>().enabled = false;
-
-                    if(WeaponStats.fossilsOutOfSpaces[i].tag.Contains("skull"))
-                    {
-                        WeaponStats.skull = 0;
+                        if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("skull"))
+                        {
+                            WeaponStats.skull = 0;
+                        }
+                        else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("neck"))
+                        {
+                            WeaponStats.neck = 0;
+                        }
+                        else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("ribs"))
+                        {
+                            WeaponStats.ribs = 0;
+                        }
+                        else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("arms"))
+                        {
+                            WeaponStats.arms = 0;
+                        }
+                        else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("legs"))
+                        {
+                            WeaponStats.legs = 0;
+                        }
+                        else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("tail"))
+                        {
+                            WeaponStats.tail = 0;
+                        }
+                        //If the durability of a specific fossil is less than 0, indicate that it's broken
                     }
-                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("neck"))
-                    {
-                        WeaponStats.neck = 0;
-                    }
-                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("ribs"))
-                    {
-                        WeaponStats.ribs = 0;
-                    }
-                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("arms"))
-                    {
-                        WeaponStats.arms = 0;
-                    }
-                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("legs"))
-                    {
-                        WeaponStats.legs = 0;
-                    }
-                    else if (WeaponStats.fossilsOutOfSpaces[i].tag.Contains("tail"))
-                    {
-                        WeaponStats.tail = 0;
-                    }
-
-                }//If the durability of a specific fossil is less than 0, indicate that it's broken
+                }
             }
         }
     }
-
     public void InstantiateInfo()
     {
         fossilInfoText.SetActive(true);

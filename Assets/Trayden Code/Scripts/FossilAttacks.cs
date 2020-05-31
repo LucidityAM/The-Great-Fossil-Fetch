@@ -31,6 +31,8 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
+        WeaponStats.fossilDurability[1]--;
+
         StartCoroutine("KillTimer", 10);
     } //An attack that drops a metor on the battlefield after a specified number of turns. (NOTE: Turn counting has not been implemented yet. Sticking to counting seconds until implemented.)
 
@@ -42,6 +44,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[13]--;
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -146,6 +150,8 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
+        WeaponStats.fossilDurability[16]--;
+
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if (BattleSystemFossil.currentEnemies[i] != null)
@@ -242,6 +248,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[9]--;
 
         if (EnemyHolder.enemyAmount == 3)
         {
@@ -567,6 +575,8 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
+        WeaponStats.fossilDurability[6]--;
+
         StartCoroutine("BurnTimer", 5);
     } //An attack that burns all enemies in battle for a specified number of passovers. Uses KillTimer.
 
@@ -578,6 +588,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[9]--;
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -652,7 +664,6 @@ public class FossilAttacks : MonoBehaviour
                             Destroy(BattleSystemFossil.currentEnemies[i]);
                         }
                     }
-                    yield break;
                 }
             }
         }
@@ -679,6 +690,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[3]--;
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -780,6 +793,8 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
+        WeaponStats.fossilDurability[0]--;
+
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if (BattleSystemFossil.currentEnemies[i] != null)
@@ -873,6 +888,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[8]--;
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -972,6 +989,8 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
+        WeaponStats.fossilDurability[2]--;
+
         if (skullUsed == false)
         {
             for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
@@ -1053,7 +1072,19 @@ public class FossilAttacks : MonoBehaviour
         }
         else
         {
-            Debug.Log("Enemy attack power cannot be lowered anymore. You cannot use this fossil.");
+            infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "You cannot use that again this battle";
+
+
+            yield return new WaitForSeconds(1.5f);
+
+            infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+            BattleSystemFossil.enemyTurnAttack = false;
+            BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
             yield break;
         }
 
@@ -1080,6 +1111,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[5]--;
 
         if (EnemyHolder.enemyAmount == 3)
         {
@@ -1334,6 +1367,8 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
+        WeaponStats.fossilDurability[17]--;
+
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if (BattleSystemFossil.currentEnemies[i] != null)
@@ -1421,16 +1456,18 @@ public class FossilAttacks : MonoBehaviour
 
     } //An attack that deals poor damage to all enemies.
 
-    public void PurifyArena() //Affinity: Support
+    public IEnumerator PurifyArena() //Affinity: Support
     {
         if (purifyUsed == false)
         {
             if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-                return;
+                yield break;
 
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
             BattleSystemFossil.enemyTurnAttack = true;
+
+            WeaponStats.fossilDurability[7]--;
 
             ChooseAffinity();
             for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
@@ -1445,7 +1482,20 @@ public class FossilAttacks : MonoBehaviour
         }
         else
         {
-            Debug.Log("You have already purified this arena. You may not do so again.");
+            infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "You cannot use that again this battle";
+
+
+            yield return new WaitForSeconds(1.5f);
+
+            infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+            BattleSystemFossil.enemyTurnAttack = false;
+            BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
+            yield break;
         }
 
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
@@ -1462,12 +1512,16 @@ public class FossilAttacks : MonoBehaviour
     } //A special skill that runs an RNG (froms 0-2) then switches all enemy affinities to the number picked. Disables after one use.
       //Debug messages will be removed in the final build.
 
-    public void AncientRelic() //Affinity: Support
+    public IEnumerator AncientRelic() //Affinity: Support
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[14]--;
 
         if (healUsed == false)
         {
@@ -1477,8 +1531,19 @@ public class FossilAttacks : MonoBehaviour
         }
         else
         {
-            Debug.Log("You can only heal to full health once per battle.");
-            return;
+            infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "You cannot use that again this battle";
+
+            yield return new WaitForSeconds(1.5f);
+
+            infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+            BattleSystemFossil.enemyTurnAttack = false;
+            BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
+            yield break;
         }
 
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
@@ -1503,6 +1568,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[11]--;
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -1580,6 +1647,8 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
+        WeaponStats.fossilDurability[4]--;
+
         ChooseEnemy();
         if (chosenEnemy > EnemyHolder.enemyAmount)
         {
@@ -1616,6 +1685,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[15]--;
 
         ChooseAttack();
 
@@ -1678,6 +1749,8 @@ public class FossilAttacks : MonoBehaviour
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
         BattleSystemFossil.enemyTurnAttack = true;
+
+        WeaponStats.fossilDurability[12]--;
 
         float plrHealth = BattleSystemFossil.playerUnit.currentHP;
 

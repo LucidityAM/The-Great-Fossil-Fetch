@@ -203,14 +203,14 @@ public class Enemy2 : MonoBehaviour
 
                 infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "The enemy hurt itself with its attack";
 
-                yield return new WaitForSeconds(.4f);
+                yield return new WaitForSeconds(.7f);
 
                 battleSystemFossil.playerColor.color = new Color(1, 1, 1);
                 thisEnemy.GetComponent<Image>().color = new Color(1, 1, 1); //Sets the enemy color to normal
                 EnemyHolder.shakeEnemy = false;
                 //Turns color and shaking back to normal
 
-                yield return new WaitForSeconds(.4f);
+                yield return new WaitForSeconds(.7f);
 
                 infoBar.GetComponent<Animator>().SetBool("isOpen", false);
 

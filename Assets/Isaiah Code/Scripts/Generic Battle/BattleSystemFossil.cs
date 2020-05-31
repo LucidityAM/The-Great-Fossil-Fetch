@@ -133,7 +133,8 @@ public class BattleSystemFossil : MonoBehaviour
                 enemyLightingEffects[0].SetActive(true);
             }
         }
-        
+
+        Debug.Log(WeaponStats.fossilDurability[2]);
 
         if (EnemyHolder.coroutinesRunning == 0 && enemyTurnAttack == false)
         {

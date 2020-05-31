@@ -281,6 +281,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.fossilPart = "Leg";
             StatString.flavorText = "An attack that brings you down to 1 HP, but deals damage depending on how much health is lost to the attack, ignoring enemy affinities.";
             StatString.affinity = "cursed";
+
         }
         else if (this.gameObject.CompareTag("legs2"))
         {

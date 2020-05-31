@@ -647,7 +647,7 @@ MonoBehaviour:
   maxHP: 100
   currentHP: 100
   damage: 30
-  affinity: 0
+  affinity: 1
   isDowned: 0
 --- !u!114 &1993336951963997919
 MonoBehaviour:

@@ -31,59 +31,96 @@ public class FossilAttacks : MonoBehaviour
         StartCoroutine("KillTimer", 10);
     } //An attack that drops a metor on the battlefield after a specified number of turns. (NOTE: Turn counting has not been implemented yet. Sticking to counting seconds until implemented.)
 
-    public void LowKick() //Affinity: Soma
+    public IEnumerator LowKick() //Affinity: Soma
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        if (EnemyHolder.enemyAmount == 0 && BattleSystemFossil.currentEnemies[0] != null)
+
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
-            if (BattleSystemFossil.enemyUnit[0].affinity == 0)
+            if(i == 0 || i == 1)
             {
-                BattleSystemFossil.enemyUnit[0].TakeDamage(64);
-            }
-            else if (BattleSystemFossil.enemyUnit[0].affinity == 1)
-            {
-                BattleSystemFossil.enemyUnit[0].TakeDamage(32);
-            }
-            else if (BattleSystemFossil.enemyUnit[0].affinity == 2)
-            {
-                BattleSystemFossil.enemyUnit[0].TakeDamage(15);
-            }
-        }
-        else
-        {
-            for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
-            {
-                if (BattleSystemFossil.currentEnemies[i] != null && i != 2)
+                if (BattleSystemFossil.currentEnemies[i] != null)
                 {
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(64);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(32);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(15);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                 }
-                else if (BattleSystemFossil.currentEnemies[i] != null && i == 2)
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
                 {
-                    return;
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
+
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
                 }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                    if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        BattleSystemFossil.enemiesKilled++;
+                        Destroy(BattleSystemFossil.currentEnemies[i]);
+                    }
+                }
+
             }
+            else
+            {
+                break;
+            }
+            
         }
+
+
     } //An attack that deals decent damage to the front two enemies in a battle.
 
-    public void TailStab() //Affinity: Soma
+    public IEnumerator TailStab() //Affinity: Soma
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
@@ -94,23 +131,71 @@ public class FossilAttacks : MonoBehaviour
                 if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(30);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(15);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(7);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
+
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
+                }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                    if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        BattleSystemFossil.enemiesKilled++;
+                        Destroy(BattleSystemFossil.currentEnemies[i]);
+                    }
+                }
+
             }
         }
     } //An attack that hits all enemies for even damage.
 
-    public void ReverseStrike() //Affinity: Soma
+    public IEnumerator ReverseStrike() //Affinity: Soma
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
@@ -123,15 +208,63 @@ public class FossilAttacks : MonoBehaviour
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(33);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
+                    }
+
                 }
             }
         }
@@ -144,15 +277,63 @@ public class FossilAttacks : MonoBehaviour
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(33);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
+                    }
+
                 }
             }
         }
@@ -165,15 +346,63 @@ public class FossilAttacks : MonoBehaviour
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(33);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
+                    }
+
                 }
             }
         }
@@ -186,15 +415,63 @@ public class FossilAttacks : MonoBehaviour
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(33);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
+                    }
+
                 }
             }
         }
@@ -210,56 +487,90 @@ public class FossilAttacks : MonoBehaviour
         StartCoroutine("BurnTimer", 5);
     } //An attack that burns all enemies in battle for a specified number of passovers. Uses KillTimer.
 
-    public void PhantomTalons() //Affinity: Cursed
+    public IEnumerator PhantomTalons() //Affinity: Cursed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        if (EnemyHolder.enemyAmount == 0 && BattleSystemFossil.currentEnemies[0] != null)
+        for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
-            if(BattleSystemFossil.enemyUnit[0].affinity == 0)
-            {
-                BattleSystemFossil.enemyUnit[0].TakeDamage(12);
-            }
-            else if (BattleSystemFossil.enemyUnit[0].affinity == 1)
-            {
-                BattleSystemFossil.enemyUnit[0].TakeDamage(64);
-            }
-            else if (BattleSystemFossil.enemyUnit[0].affinity == 2)
-            {
-                BattleSystemFossil.enemyUnit[0].TakeDamage(32);
-            }
-        }
-        else
-        {
-            for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
+            if(i == 0)
             {
                 if (BattleSystemFossil.currentEnemies[i] != null && i == 0)
                 {
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(12);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(64);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(32);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
-                    return;
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
+                    }
+
+                    yield break;
+
                 }
             }
         }
     } //An attack that deals massive damage to the frontmost enemy.
 
-    public void DarkPulse() //Affinity: Cursed
+    public IEnumerator DarkPulse() //Affinity: Cursed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
@@ -270,27 +581,74 @@ public class FossilAttacks : MonoBehaviour
                 if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(10);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 1;
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(40);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 2;
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(20);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 0;
+                }
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
+
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
+                }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                    if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        BattleSystemFossil.enemiesKilled++;
+                        Destroy(BattleSystemFossil.currentEnemies[i]);
+                    }
                 }
             }
         }
 
     } //An attack that deals decent damage to all enemies then inverts all enemy affinities.
 
-    public void PitchBlackDarkness()
+    public IEnumerator PitchBlackDarkness() //Affinity: Cursed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+           yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
@@ -301,26 +659,74 @@ public class FossilAttacks : MonoBehaviour
                 if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 1;
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(35);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 2;
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(15);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 0;
                 }
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
+
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
+                }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                    if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        BattleSystemFossil.enemiesKilled++;
+                        Destroy(BattleSystemFossil.currentEnemies[i]);
+                    }
+                }
+
             }
         }
     } //An attack that deals decent damage to all enemies.
 
-    public void CleansingVapors() //Affinity: Blessed
+    public IEnumerator CleansingVapors() //Affinity: Blessed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+           yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
@@ -331,24 +737,73 @@ public class FossilAttacks : MonoBehaviour
                 if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(15);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(35);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 0;
                 }
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
+
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
+                }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                    if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        BattleSystemFossil.enemiesKilled++;
+                        Destroy(BattleSystemFossil.currentEnemies[i]);
+                    }
+                }
+
             }
         }
     } //An attack that deals decent damage to all enemies in battle then switches any "Cursed" affinity to "Blessed".
 
-    public void AlbinoSkull() //Affinity: Blessed
+    public IEnumerator AlbinoSkull() //Affinity: Blessed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+           yield break;
+
         if (skullUsed == false)
         {
             for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
@@ -358,16 +813,64 @@ public class FossilAttacks : MonoBehaviour
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(1);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(10);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                         BattleSystemFossil.enemyUnit[i].damage = BattleSystemFossil.enemyUnit[i].damage / 2;
                     }
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
+                    }
+
                 }
             }
             skullUsed = true;
@@ -376,15 +879,15 @@ public class FossilAttacks : MonoBehaviour
         else
         {
             Debug.Log("Enemy attack power cannot be lowered anymore. You cannot use this fossil.");
-            return;
+            yield break;
         }
     } //An attack that deals low damage to all enemies in battle and halves the damage output of all enemies of the "Cursed" affinity.
       //Debug messages will be removed in the final build.
 
-    public void EphemeralEssence() //Affinity: Blessed
+    public IEnumerator EphemeralEssence() //Affinity: Blessed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
         if (EnemyHolder.enemyAmount == 3)
@@ -396,19 +899,67 @@ public class FossilAttacks : MonoBehaviour
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
+                    }
+
                 }
                 else if (i == 2)
                 {
-                    return;
+                    yield break;
                 }
             }
         }
@@ -421,16 +972,63 @@ public class FossilAttacks : MonoBehaviour
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
-                    return;
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
+                    }
+                    yield break;
                 }
             }
         }
@@ -443,24 +1041,72 @@ public class FossilAttacks : MonoBehaviour
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+                    }
+                   
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                        EnemyHolder.shakeEnemy = true;
+
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                        }
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                    }//Set lighting to active, flash red
+
+                    if (BattleSystemFossil.enemyParticles[i] != null)
+                    {
+                        BattleSystemFossil.enemyParticles[i].Play();
+                    }
+
+                    yield return new WaitForSeconds(.3f);
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        EnemyHolder.shakeEnemy = false;
+
+                        BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                        if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                        {
+                            BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                            BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                        }
+
+                    }//Turn enemy color normal and disable lighting
+
+                    if (BattleSystemFossil.currentEnemies[i] != null)
+                    {
+                        BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                        if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                        {
+                            BattleSystemFossil.enemiesKilled++;
+                            Destroy(BattleSystemFossil.currentEnemies[i]);
+                        }
                     }
                 }
             }
         }
     } //An attack that deals massive damage to the middle two enemies.
 
-    public void HolyBoneSpear()
+    public IEnumerator HolyBoneSpear() //Affinity: Blessed
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
@@ -471,14 +1117,61 @@ public class FossilAttacks : MonoBehaviour
                 if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(10);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
                     BattleSystemFossil.enemyUnit[i].TakeDamage(20);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+                }
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
+
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
+                }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                    if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        BattleSystemFossil.enemiesKilled++;
+                        Destroy(BattleSystemFossil.currentEnemies[i]);
+                    }
                 }
             }
         }
@@ -521,7 +1214,7 @@ public class FossilAttacks : MonoBehaviour
 
         if (healUsed == false)
         {
-            BattleSystemFossil.playerUnit.currentHP += 100;
+            BattleSystemFossil.playerUnit.currentHP = BattleSystemFossil.playerUnit.maxHP;
             BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
             healUsed = true;
         }
@@ -531,10 +1224,10 @@ public class FossilAttacks : MonoBehaviour
         }
     } //A special skill that heals the player for full health. Disables after one use.
 
-    public void VampiricFang() //Affinity: Support
+    public IEnumerator VampiricFang() //Affinity: Support
     {
         if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+            yield break;
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
@@ -545,6 +1238,50 @@ public class FossilAttacks : MonoBehaviour
                 BattleSystemFossil.enemyUnit[i].TakeDamage(BattleSystemFossil.enemyUnit[i].currentHP / 2);
                 BattleSystemFossil.playerUnit.currentHP += BattleSystemFossil.enemyUnit[i].currentHP;
                 BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
+                BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
+
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
+                }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                    if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        BattleSystemFossil.enemiesKilled++;
+                        Destroy(BattleSystemFossil.currentEnemies[i]);
+                    }
+                }
             }
         }
     } //A special attack that steals half of the frontmost enemy's health and gives it to the player. The amount of health gained will diminish due to the nature of the attack, preventing attack spam.
@@ -656,23 +1393,73 @@ public class FossilAttacks : MonoBehaviour
     } //An attack that uses an RNG to select a random attack or skill from the FossilAttacks script to use. If this code can be simplified and not look like shit, please tell me how :3
       //Debug text will be removed in final build.
 
-    public void AllOutAttack()
+    public IEnumerator AllOutAttack()
     {
         float plrHealth = BattleSystemFossil.playerUnit.currentHP;
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
-            if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+            if(BattleSystemFossil.currentEnemies[i] != null)
             {
-                BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
-            }
-            else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
-            {
-                BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
-            }
-            else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
-            {
-                BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
+                if (BattleSystemFossil.enemyUnit[i].affinity == 0)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+                }
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+                }
+                else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
+                {
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(plrHealth - 1);
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+                }
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
+
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
+                }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                    if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                    {
+                        BattleSystemFossil.enemiesKilled++;
+                        Destroy(BattleSystemFossil.currentEnemies[i]);
+                    }
+                }
             }
         }
 
@@ -704,6 +1491,50 @@ public class FossilAttacks : MonoBehaviour
             {
                 BattleSystemFossil.enemyUnit[i].TakeDamage(11);
             }
+
+            if (BattleSystemFossil.currentEnemies[i] != null)
+            {
+                BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                EnemyHolder.shakeEnemy = true;
+
+                if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                {
+                    BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                    BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                }
+                BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+            }//Set lighting to active, flash red
+
+            if (BattleSystemFossil.enemyParticles[i] != null)
+            {
+                BattleSystemFossil.enemyParticles[i].Play();
+            }
+
+            yield return new WaitForSeconds(.3f);
+
+            if (BattleSystemFossil.currentEnemies[i] != null)
+            {
+                EnemyHolder.shakeEnemy = false;
+
+                BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                {
+                    BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                    BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                }
+
+            }//Turn enemy color normal and disable lighting
+
+            if (BattleSystemFossil.currentEnemies[i] != null)
+            {
+                BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
+
+                if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
+                {
+                    BattleSystemFossil.enemiesKilled++;
+                    Destroy(BattleSystemFossil.currentEnemies[i]);
+                }
+            }
         }
 
         StopCoroutine("KillTimer");
@@ -734,15 +1565,43 @@ public class FossilAttacks : MonoBehaviour
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(2);
                     }
-                    BattleSystemFossil.currentEnemies[i].GetComponent<Image>().color = new Color(1, 0, 0);
                 }
-
-                yield return new WaitForSeconds(.2f);
 
                 if (BattleSystemFossil.currentEnemies[i] != null)
                 {
-                    BattleSystemFossil.currentEnemies[i].GetComponent<Image>().color = new Color(1, 1, 1);
+                    BattleSystemFossil.cameraShake.shake = BattleSystemFossil.currentEnemies[i];
+                    EnemyHolder.shakeEnemy = true;
 
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(true);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
+                    }
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
+                }//Set lighting to active, flash red
+
+                if (BattleSystemFossil.enemyParticles[i] != null)
+                {
+                    BattleSystemFossil.enemyParticles[i].Play();
+                }
+
+                yield return new WaitForSeconds(.3f);
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
+                    EnemyHolder.shakeEnemy = false;
+
+                    BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
+                    if (BattleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    {
+                        BattleSystemFossil.enemyLightingEffects[i].SetActive(false);
+                        BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
+                    }
+
+                }//Turn enemy color normal and disable lighting
+
+                if (BattleSystemFossil.currentEnemies[i] != null)
+                {
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
 
                     if (BattleSystemFossil.enemyUnit[i].currentHP <= 0)
@@ -752,7 +1611,6 @@ public class FossilAttacks : MonoBehaviour
                     }
                 }
             }
-            
         }
 
         yield return new WaitForSeconds(0f);

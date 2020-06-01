@@ -6,6 +6,13 @@ public class DeathChecker : MonoBehaviour
 {
     void Start()
     {
+        WeaponStats.skull = 0;
+        WeaponStats.neck = 0;
+        WeaponStats.ribs = 0;
+        WeaponStats.arms = 0;
+        WeaponStats.legs = 0;
+        WeaponStats.tail = 0;
+
         for (int j = 0; j <= WeaponStats.fossilsInSpaces.Length; j++)
         {
             WeaponStats.fossilsInSpaces[j] = 0;
@@ -23,15 +30,7 @@ public class DeathChecker : MonoBehaviour
             EnemyHolder.enemyDowned[k] = null;
         }
 
-
         WeaponStats.isSet = false;
-
-        WeaponStats.skull = 0;
-        WeaponStats.neck = 0;
-        WeaponStats.ribs = 0;
-        WeaponStats.arms = 0;
-        WeaponStats.legs = 0;
-        WeaponStats.tail = 0;
 
         PlayerStats.attack = 1;
         PlayerStats.defendButton = 1;

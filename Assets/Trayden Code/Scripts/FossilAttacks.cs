@@ -153,7 +153,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -252,7 +252,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -628,7 +628,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -741,7 +741,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -843,7 +843,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -940,7 +940,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1039,7 +1039,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1161,7 +1161,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1417,7 +1417,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1515,7 +1515,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1571,7 +1571,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1619,7 +1619,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1698,7 +1698,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1737,7 +1737,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -1896,7 +1896,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -2007,7 +2007,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {
@@ -2102,7 +2102,7 @@ public class FossilAttacks : MonoBehaviour
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
-            BattleSystemFossil.EndBattle();
+            BattleSystemFossil.StartCoroutine("EndBattle");
         }
         else
         {

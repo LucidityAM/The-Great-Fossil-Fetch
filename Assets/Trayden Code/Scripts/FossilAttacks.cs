@@ -1785,7 +1785,7 @@ public class FossilAttacks : MonoBehaviour
                         BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
                     }
                     BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
-                }//Set lighting to active, flash red
+                }
 
                 if (BattleSystemFossil.enemyParticles[i] != null)
                 {
@@ -1805,7 +1805,7 @@ public class FossilAttacks : MonoBehaviour
                         BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
                     }
 
-                }//Turn enemy color normal and disable lighting
+                }
 
                 if (BattleSystemFossil.currentEnemies[i] != null)
                 {
@@ -1859,7 +1859,6 @@ public class FossilAttacks : MonoBehaviour
                     EnemyHolder.enemyDowned[i].GetComponent<UnitStats>().isDowned = true;
 
                 }
-                //Assigns the enemy to be downed
             }
             else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
             {
@@ -1881,7 +1880,7 @@ public class FossilAttacks : MonoBehaviour
                     BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = false;
                 }
                 BattleSystemFossil.enemyLightingEffects[i].transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
-            }//Set lighting to active, flash red
+            }
 
             if (BattleSystemFossil.enemyParticles[i] != null)
             {
@@ -1901,7 +1900,7 @@ public class FossilAttacks : MonoBehaviour
                     BattleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
                 }
 
-            }//Turn enemy color normal and disable lighting
+            }
 
             if (BattleSystemFossil.currentEnemies[i] != null)
             {

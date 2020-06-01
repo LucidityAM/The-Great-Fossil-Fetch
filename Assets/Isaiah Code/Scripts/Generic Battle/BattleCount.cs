@@ -5,4 +5,6 @@ using UnityEngine;
 public static class BattleCount
 {
     public static int battleCount;
+
+    public static bool inBattle;
 }

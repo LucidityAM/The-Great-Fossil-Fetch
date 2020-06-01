@@ -691,6 +691,7 @@ public class BattleSystemFossil : MonoBehaviour
             enemiesKilled = 0;
             battle.SetActive(false);
             EnemyHolder.turnCount = 0;
+            MusicManager.victoryMusic = false;
             BattleCount.inBattle = false;
             MenuManager.enabled = true;
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values

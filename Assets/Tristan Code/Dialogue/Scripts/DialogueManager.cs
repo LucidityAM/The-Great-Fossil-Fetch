@@ -29,7 +29,6 @@ public class DialogueManager : MonoBehaviour
     //Player access for making them stop moving n stuff
     public GameObject Player;
     public PauseScript pauseMenu;
-    public bool bossTrigger;
 
     public Image CharacterSprite;
     public Image BGSprite;
@@ -41,8 +40,11 @@ public class DialogueManager : MonoBehaviour
     //checks if the text has ended
     private bool endText;
     private bool tutorialTrigger;
+    private bool bossTrigger;
 
     public static DialogueManager Instance;
+
+    public LoadBattle loadBattle;
     void Start()
     {
         endText = false;
@@ -54,12 +56,15 @@ public class DialogueManager : MonoBehaviour
         //BGSprites = new Queue<Sprite>();
         tutorialTrigger = false;
 
+        loadBattle = GameObject.FindGameObjectWithTag("player").GetComponent<LoadBattle>();
+
         CharacterFrameObject.SetActive(false);
     }
     public IEnumerator StartDialogue(Dialogue dialogue)
     {
         endText = false;
         tutorialTrigger = dialogue.tutorialTrigger;
+        bossTrigger = dialogue.bossTrigger;
         tutorial = dialogue.tutorial;
         if (Player != null)
         {
@@ -95,6 +100,7 @@ public class DialogueManager : MonoBehaviour
         {
             sprites.Enqueue(sprite);
         }
+
         //BGSprites.Clear();
         //foreach (Sprite BGSprite in dialogue.BGsprites)
         //{
@@ -220,6 +226,20 @@ public class DialogueManager : MonoBehaviour
         //Triggers boss if bossTrigger = true
         if(bossTrigger == true)
         {
+            loadBattle.StartCoroutine("BattleSetup");
+
+            if (GameObject.FindGameObjectsWithTag("Boss1").Length >= 1)
+            {
+                EnemyHolder.bossNumber = 1;
+            }
+            else if(GameObject.FindGameObjectsWithTag("Boss2").Length >= 1)
+            {
+                EnemyHolder.bossNumber = 2;
+            }
+            else if(GameObject.FindGameObjectsWithTag("Boss3").Length >= 1)
+            {
+                EnemyHolder.bossNumber = 3;
+            }
 
         }
 

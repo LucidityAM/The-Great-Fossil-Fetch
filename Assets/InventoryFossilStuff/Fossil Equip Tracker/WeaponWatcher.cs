@@ -275,6 +275,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 7;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[7] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -293,6 +294,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 8;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[8] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -311,6 +313,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 9;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[9] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -329,6 +332,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 10;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[10] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
@@ -347,116 +351,124 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 11;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[11] = FossilInstantiate;
                     isFilled[i] = true;
                     break;
                 }
             }
-            if (collision.gameObject.tag == "legs1")
+            
+        }
+        if (collision.gameObject.tag == "legs1")
+        {
+            collision.gameObject.SetActive(false);
+            for (int i = 0; i < isFilled.Length; i++)
             {
-                collision.gameObject.SetActive(false);
-                for (int i = 0; i < isFilled.Length; i++)
+                if (isFilled[i] == false)
                 {
-                    if (isFilled[i] == false)
-                    {
-                        //pickup.Play();
-                        GameObject FossilInstantiate = Instantiate(fossils[12], inventoryWeapons.inventorySpace[i]);
-                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+                    //pickup.Play();
+                    GameObject FossilInstantiate = Instantiate(fossils[12], inventoryWeapons.inventorySpace[i]);
+                    FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
-                        WeaponStats.fossilsInSpaces[i] = 12;
-                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                        isFilled[i] = true;
-                        break;
-                    }
+                    WeaponStats.fossilsInSpaces[i] = 12;
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[12] = FossilInstantiate;
+                    isFilled[i] = true;
+                    break;
                 }
             }
-            if (collision.gameObject.tag == "legs2")
+        }
+        if (collision.gameObject.tag == "legs2")
+        {
+            collision.gameObject.SetActive(false);
+            for (int i = 0; i < isFilled.Length; i++)
             {
-                collision.gameObject.SetActive(false);
-                for (int i = 0; i < isFilled.Length; i++)
+                if (isFilled[i] == false)
                 {
-                    if (isFilled[i] == false)
-                    {
-                        //pickup.Play();
-                        GameObject FossilInstantiate = Instantiate(fossils[13], inventoryWeapons.inventorySpace[i]);
-                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+                    //pickup.Play();
+                    GameObject FossilInstantiate = Instantiate(fossils[13], inventoryWeapons.inventorySpace[i]);
+                    FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
-                        WeaponStats.fossilsInSpaces[i] = 13;
-                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                        isFilled[i] = true;
-                        break;
-                    }
+                    WeaponStats.fossilsInSpaces[i] = 13;
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[13] = FossilInstantiate;
+                    isFilled[i] = true;
+                    break;
                 }
             }
-            if (collision.gameObject.tag == "legs3")
+        }
+        if (collision.gameObject.tag == "legs3")
+        {
+            collision.gameObject.SetActive(false);
+            for (int i = 0; i < isFilled.Length; i++)
             {
-                collision.gameObject.SetActive(false);
-                for (int i = 0; i < isFilled.Length; i++)
+                if (isFilled[i] == false)
                 {
-                    if (isFilled[i] == false)
-                    {
-                        //pickup.Play();
-                        GameObject FossilInstantiate = Instantiate(fossils[14], inventoryWeapons.inventorySpace[i]);
-                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+                    //pickup.Play();
+                    GameObject FossilInstantiate = Instantiate(fossils[14], inventoryWeapons.inventorySpace[i]);
+                    FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
-                        WeaponStats.fossilsInSpaces[i] = 14;
-                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                        isFilled[i] = true;
-                        break;
-                    }
+                    WeaponStats.fossilsInSpaces[i] = 14;
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[14] = FossilInstantiate;
+                    isFilled[i] = true;
+                    break;
                 }
             }
-            if (collision.gameObject.tag == "tail1")
+        }
+        if (collision.gameObject.tag == "tail1")
+        {
+            collision.gameObject.SetActive(false);
+            for (int i = 0; i < isFilled.Length; i++)
             {
-                collision.gameObject.SetActive(false);
-                for (int i = 0; i < isFilled.Length; i++)
+                if (isFilled[i] == false)
                 {
-                    if (isFilled[i] == false)
-                    {
-                        //pickup.Play();
-                        GameObject FossilInstantiate = Instantiate(fossils[15], inventoryWeapons.inventorySpace[i]);
-                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+                    //pickup.Play();
+                    GameObject FossilInstantiate = Instantiate(fossils[15], inventoryWeapons.inventorySpace[i]);
+                    FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
-                        WeaponStats.fossilsInSpaces[i] = 15;
-                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                        isFilled[i] = true;
-                        break;
-                    }
+                    WeaponStats.fossilsInSpaces[i] = 15;
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[15] = FossilInstantiate;
+                    isFilled[i] = true;
+                    break;
                 }
             }
-            if (collision.gameObject.tag == "tail2")
+        }
+        if (collision.gameObject.tag == "tail2")
+        {
+            collision.gameObject.SetActive(false);
+            for (int i = 0; i < isFilled.Length; i++)
             {
-                collision.gameObject.SetActive(false);
-                for (int i = 0; i < isFilled.Length; i++)
+                if (isFilled[i] == false)
                 {
-                    if (isFilled[i] == false)
-                    {
-                        //pickup.Play();
-                        GameObject FossilInstantiate = Instantiate(fossils[16], inventoryWeapons.inventorySpace[i]);
-                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+                    //pickup.Play();
+                    GameObject FossilInstantiate = Instantiate(fossils[16], inventoryWeapons.inventorySpace[i]);
+                    FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
-                        WeaponStats.fossilsInSpaces[i] = 16;
-                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                        isFilled[i] = true;
-                        break;
-                    }
+                    WeaponStats.fossilsInSpaces[i] = 16;
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[16] = FossilInstantiate;
+                    isFilled[i] = true;
+                    break;
                 }
             }
-            if (collision.gameObject.tag == "tail3")
+        }
+        if (collision.gameObject.tag == "tail3")
+        {
+            collision.gameObject.SetActive(false);
+            for (int i = 0; i < isFilled.Length; i++)
             {
-                collision.gameObject.SetActive(false);
-                for (int i = 0; i < isFilled.Length; i++)
+                if (isFilled[i] == false)
                 {
-                    if (isFilled[i] == false)
-                    {
-                        //pickup.Play();
-                        GameObject FossilInstantiate = Instantiate(fossils[17], inventoryWeapons.inventorySpace[i]);
-                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+                    //pickup.Play();
+                    GameObject FossilInstantiate = Instantiate(fossils[17], inventoryWeapons.inventorySpace[i]);
+                    FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
-                        WeaponStats.fossilsInSpaces[i] = 17;
-                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                        isFilled[i] = true;
-                        break;
-                    }
+                    WeaponStats.fossilsInSpaces[i] = 17;
+                    WeaponStats.objectsInSpaces[i] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[17] = FossilInstantiate;
+                    isFilled[i] = true;
+                    break;
                 }
             }
         }

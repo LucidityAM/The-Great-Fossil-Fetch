@@ -33,6 +33,10 @@ public class BattleSystemFossil : MonoBehaviour
     public UnitStats[] enemyUnit = new UnitStats[4];
     public UnitStats[] bossUnit = new UnitStats[3];
 
+    //Player and enemy Particle systems
+    public ParticleSystem[] enemyParticles = new ParticleSystem[4];
+    public ParticleSystem playerParticle;
+
     //The player and enemy HUD that controls the health of player and enemy
     public BattleHUD playerHUD;
     public BattleHUD[] enemyHUDs = new BattleHUD[4];
@@ -122,10 +126,15 @@ public class BattleSystemFossil : MonoBehaviour
     {
         Debug.Log(EnemyHolder.bossNumber);
 
-        if (currentEnemies[0].gameObject.CompareTag("Boss1"))
+        if (currentEnemies[0] != null)
         {
-            enemyLightingEffects[0].SetActive(true);
+            if (currentEnemies[0].gameObject.CompareTag("Boss1"))
+            {
+                enemyLightingEffects[0].SetActive(true);
+            }
         }
+
+        Debug.Log(WeaponStats.fossilDurability[2]);
 
         if (EnemyHolder.coroutinesRunning == 0 && enemyTurnAttack == false)
         {
@@ -217,6 +226,8 @@ public class BattleSystemFossil : MonoBehaviour
             currentEnemies[i] = enemyGO; //Assigns the enemy to a place on the array of all current enemies
 
             enemyUnit[i] = enemyGO.GetComponent<UnitStats>(); //Grabs the enemy's stats
+
+            enemyParticles[i] = enemyGO.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>();
 
             switch(enemyInSpace)
             {
@@ -388,7 +399,6 @@ public class BattleSystemFossil : MonoBehaviour
 
             for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
             { 
-
                 if (enemy == currentEnemies[i] && enemy.GetComponent<UnitStats>().isDowned == false)
                 {
                     EnemyHolder.enemyDowned[i] = enemy;
@@ -435,6 +445,17 @@ public class BattleSystemFossil : MonoBehaviour
             }
             enemy.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 0, 0);
         }//Set lighting to active, flash red
+
+        for(int i = 0; i <= EnemyHolder.enemyAmount; i++)
+        {
+            if(enemyParticles[i] != null)
+            {
+                if (enemy == currentEnemies[i])
+                {
+                    enemyParticles[i].Play();
+                }
+            } 
+        }
 
         yield return new WaitForSeconds(.3f);
 
@@ -513,6 +534,7 @@ public class BattleSystemFossil : MonoBehaviour
         //Clears the lighting effects and enemies so it can reassign them
         Array.Clear(enemyLightingEffects, 0, enemyLightingEffects.Length);
         Array.Clear(currentEnemies, 0, currentEnemies.Length);
+        Array.Clear(enemyParticles, 0, enemyParticles.Length);
 
         
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
@@ -523,6 +545,7 @@ public class BattleSystemFossil : MonoBehaviour
                 currentEnemies[i] = GameObject.Find("enemy0");
                 enemyUnit[i] = currentEnemies[i].GetComponent<UnitStats>();
                 enemyColor[i] = currentEnemies[i].GetComponent<Image>();
+                enemyParticles[i] = currentEnemies[i].transform.GetChild(3).GetComponent<ParticleSystem>();
                 enemyHUDs[i].SetHUD(enemyUnit[i]);
             }
             else if (GameObject.Find("enemy1") != null && enemy1Taken == false)
@@ -531,6 +554,7 @@ public class BattleSystemFossil : MonoBehaviour
                 currentEnemies[i] = GameObject.Find("enemy1");
                 enemyUnit[i] = currentEnemies[i].GetComponent<UnitStats>();
                 enemyColor[i] = currentEnemies[i].GetComponent<Image>();
+                enemyParticles[i] = currentEnemies[i].transform.GetChild(3).GetComponent<ParticleSystem>();
                 enemyHUDs[i].SetHUD(enemyUnit[i]);
             }
             else if (GameObject.Find("enemy2") != null && enemy2Taken == false)
@@ -539,6 +563,7 @@ public class BattleSystemFossil : MonoBehaviour
                 currentEnemies[i] = GameObject.Find("enemy2");
                 enemyUnit[i] = currentEnemies[i].GetComponent<UnitStats>();
                 enemyColor[i] = currentEnemies[i].GetComponent<Image>();
+                enemyParticles[i] = currentEnemies[i].transform.GetChild(3).GetComponent<ParticleSystem>();
                 enemyHUDs[i].SetHUD(enemyUnit[i]);
             }
             else if (GameObject.Find("enemy3") != null && enemy3Taken == false)
@@ -547,6 +572,7 @@ public class BattleSystemFossil : MonoBehaviour
                 currentEnemies[i] = GameObject.Find("enemy3");
                 enemyUnit[i] = currentEnemies[i].GetComponent<UnitStats>();
                 enemyColor[i] = currentEnemies[i].GetComponent<Image>();
+                enemyParticles[i] = currentEnemies[i].transform.GetChild(3).GetComponent<ParticleSystem>();
                 enemyHUDs[i].SetHUD(enemyUnit[i]);
             }
         }//Reassigns all of the enemies to make sure they are always taking up the first spaces in the array 
@@ -702,7 +728,10 @@ public class BattleSystemFossil : MonoBehaviour
         yield return new WaitForSeconds(.0f);
     } // Basic player turn that holds the state "PlayerTurn" indefinately
 
-
+    public void CreatePlayerParticles()
+    {
+        playerParticle.Play();
+    }
 }
 
 

@@ -63,6 +63,8 @@ public class Boss1 : MonoBehaviour
 
             battleSystemFossil.playerColor.color = new Color(1, 0, 0);
 
+            battleSystemFossil.CreatePlayerParticles();
+
             cameraShake.shake = battleSystemFossil.playerPrefab;
             EnemyHolder.shakeEnemy = true;
 

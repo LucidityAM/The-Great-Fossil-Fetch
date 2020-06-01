@@ -19,5 +19,7 @@ public static class WeaponStats
     public static int[] fossilDurability = new int [18]; //The durability of all 18 fossils
 
     public static GameObject[] fossilsOutOfSpaces = new GameObject[18]; //The instantiated fossils so that components can be grabbed from specific fossils
+
+    public static bool isSet;
 }
 

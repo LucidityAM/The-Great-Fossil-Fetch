@@ -91,6 +91,7 @@ public class TutorialManager : MonoBehaviour
         headerText = tutorial.headerText;
         header.text = headerText;
 
+        tutorialImageAnim.SetBool("isOpen", true);
         DisplayNextSentence();
 
         //Enabling all visual components
@@ -98,17 +99,20 @@ public class TutorialManager : MonoBehaviour
         textBox.SetActive(true);
         backgroundAnim.SetBool("isOpen", true);
         textBoxAnim.SetBool("isOpen", true);
+
     }
 
 
     //Displays the next sentence according to int CurrentSentence
     public void DisplayNextSentence()
     {
+        tutorialImageAnim.SetBool("isOpen", true);
+        if (currentSentence <= 0) { currentSentence = 0; }
         if (currentSentence == sentences.Length)
         {
             EndTutorial();
             return;
-        }
+        } 
         if (hasPictures[currentSentence] == true)
         {
             tutorialImage.SetActive(true);
@@ -120,7 +124,6 @@ public class TutorialManager : MonoBehaviour
             tutorialImageAnim.SetBool("isOpen", false);
             tutorialSprite.sprite = null;
         }
-        if(currentSentence <= 0) { currentSentence = 0; }
         body.text = "";
 
         string sentence = sentences[currentSentence];
@@ -140,7 +143,7 @@ public class TutorialManager : MonoBehaviour
     }
 
     IEnumerator TypeSentence(string sentence, string name)
-    {
+    { 
         pageNum.text = currentSentence + 1 + "      " + "/" + "     " + sentences.Length;
         //Typing letter by letter
         foreach (char letter in sentence.ToCharArray())
@@ -158,6 +161,7 @@ public class TutorialManager : MonoBehaviour
 
     public void EndTutorial()
     {
+        currentSentence = 0;
         Movement.enabled = true;
         battleTrigger.enabled = true;
 
@@ -189,6 +193,7 @@ public class TutorialManager : MonoBehaviour
             {
                 playedOnce = true;
                 StartTutorial(battleTutorial);
+                tutorialImageAnim.SetBool("isOpen", true);
             }
         }
     }

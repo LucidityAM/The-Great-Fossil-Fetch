@@ -644,9 +644,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Enemy
-  maxHP: 100
-  currentHP: 100
-  damage: 30
+  maxHP: 435
+  currentHP: 435
+  damage: 35
   affinity: 1
   isDowned: 0
 --- !u!114 &1993336951963997919

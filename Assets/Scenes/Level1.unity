@@ -4340,17 +4340,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - dadada
-  - adadadada
-  - adadadadada
-  - adadadada
+  - When you enter into a battle, you will be presented with three actions. You can
+    either use a basic ATTACK, use a special FOSSIL attack, or DEFEND.
+  - When you use your basic attack, you will be prompted to select a specific enemy
+    to target. You can cancel your attack by pressing ESC.
+  - Defending causes you to take half the damage you would normally recieve when
+    not defending.
+  - The bottom right displays the affinity system. Attacking enemies with attacks
+    that are strong against their affinity will cause them to take greater damage.
+    For example, purple "Cursed" attacks are strong against green "Soma" enemies.
   headerText: BATTLE
-  hasPictures: 00000000
+  hasPictures: 01000001
   images:
+  - {fileID: 21300000, guid: 62371a4510e6fb64fb7bdb28912cb183, type: 3}
   - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
   - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
-  - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
-  - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
+  - {fileID: 21300000, guid: 44deb58018bc5a74380af9db8784af1e, type: 3}
 --- !u!1 &709280140
 GameObject:
   m_ObjectHideFlags: 0

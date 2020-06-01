@@ -1797,12 +1797,8 @@ public class FossilAttacks : MonoBehaviour
 
     public void SecretPower() //Affinity: Special
     {
-        //if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-        //    return;
-
-        //BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-
-        //BattleSystemFossil.enemyTurnAttack = true;
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            return;
 
         WeaponStats.fossilDurability[15]--;
 

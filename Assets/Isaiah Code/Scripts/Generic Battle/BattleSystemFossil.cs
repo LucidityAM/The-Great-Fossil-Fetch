@@ -89,6 +89,9 @@ public class BattleSystemFossil : MonoBehaviour
     //Downed icon
     public GameObject downedIcon;
 
+    //Win screen
+    public WinScreenAnimation winScreenAnimation;
+
     public void BattleStart()
     {
         BattleCount.inBattle = true;
@@ -136,6 +139,11 @@ public class BattleSystemFossil : MonoBehaviour
             }
         }
 
+        if(BattleCount.inBattle == true)
+        {
+            MenuManager.enabled = false;
+        }
+
         if (EnemyHolder.coroutinesRunning == 0 && enemyTurnAttack == false)
         {
             attackButton.enabled = true;
@@ -152,7 +160,7 @@ public class BattleSystemFossil : MonoBehaviour
             }
 
             state = BattleStateFossil.WON;
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
 
         for(int i = 0; i <= EnemyHolder.enemyAmount; i++)
@@ -489,7 +497,7 @@ public class BattleSystemFossil : MonoBehaviour
             if (enemiesKilled >= EnemyHolder.enemyAmount + 1)
             {
                 state = BattleStateFossil.WON;
-                EndBattle();
+                StartCoroutine(EndBattle());
             }
         }//Checks if all enemies are killed and then ends the battle
         else
@@ -629,7 +637,7 @@ public class BattleSystemFossil : MonoBehaviour
         if (playerUnit.currentHP <= 0)
         {
             state = BattleStateFossil.LOST;
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
         enemyTurnAttack = false;
     } //Basic enemy turn that will look at which enemy the player is fighting, and start seperate scripts depending on the enemy.
@@ -646,15 +654,24 @@ public class BattleSystemFossil : MonoBehaviour
         if (playerUnit.currentHP <= 0)
         {
             state = BattleStateFossil.LOST;
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
         enemyTurnAttack = false;
     } //Basic enemy turn that will look at which enemy the player is fighting, and start seperate scripts depending on the enemy.
 
-    public void EndBattle()
+    public IEnumerator EndBattle()
     {
         if (state == BattleStateFossil.WON)
         {
+            winScreenAnimation.StartIEnumerator("OpenWinScreen");
+
+            yield return new WaitUntil(() => winScreenAnimation.inWinScreen == false);
+
+            yield return new WaitForSeconds(.6f);
+
+            worldPlayer.GetComponent<LoadBattle>().StartCoroutine("EndBattleTransition");
+
+            yield return new WaitForSeconds(.95f);
 
             for (int i = 0; i < currentEnemies.Length; i++)
             {
@@ -667,13 +684,13 @@ public class BattleSystemFossil : MonoBehaviour
             worldPlayer.GetComponent<SpriteRenderer>().enabled = true;
             mainCamera.orthographicSize = 12;
             worldPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            MenuManager.enabled = true;
             enemiesKilled = 0;
             MusicManager.normalBattleMusic = false;
             MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
             EnemyHolder.turnCount = 0;
             BattleCount.inBattle = false;
+            MenuManager.enabled = true;
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
         else if (state == BattleStateFossil.LOST)
         {
@@ -734,7 +751,7 @@ public class BattleSystemFossil : MonoBehaviour
         if (playerUnit.currentHP <= 0)
         {
             state = BattleStateFossil.LOST;
-            EndBattle();
+            StartCoroutine(EndBattle());
         }
         yield return new WaitForSeconds(.0f);
     } // Basic player turn that holds the state "PlayerTurn" indefinately

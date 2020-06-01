@@ -26,12 +26,12 @@ public class FossilAttacks : MonoBehaviour
 
     }
     
-    public void MeteorStrike() //Affinity: Soma
+    public IEnumerator MeteorStrike() //Affinity: Soma
     {
         if (meteorStarted == false)
         {
             if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-                return;
+                yield break;
 
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
@@ -39,11 +39,22 @@ public class FossilAttacks : MonoBehaviour
             futureTurnNumber = EnemyHolder.turnCount + 3;
             meteorStarted = true;
             StartCoroutine("MeteorStrikeAttack");
-            return;
+            yield break;
         }
         else if (meteorStarted == true)
         {
-            return;
+
+            infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "You have already summoned a meteor";
+
+            yield return new WaitForSeconds(1.5f);
+
+            infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+            yield break;
         }
     } //An attack that drops a metor on the battlefield after a specified number of turns.
 
@@ -1752,7 +1763,7 @@ public class FossilAttacks : MonoBehaviour
         switch (chosenAttack)
         {
             case 0:
-                MeteorStrike();
+                StartCoroutine(MeteorStrike());
                 break;
             case 1:
                 StartCoroutine(LowKick());
@@ -1788,13 +1799,13 @@ public class FossilAttacks : MonoBehaviour
                 StartCoroutine(HolyBoneSpear());
                 break;
             case 12:
-                PurifyArena();
+                StartCoroutine(PurifyArena());
                 break;
             case 13:
-                AncientRelic();
+                StartCoroutine(AncientRelic());
                 break;
             case 14:
-                VampiricFang();
+                StartCoroutine(VampiricFang());
                 break;
         }
     } //An attack that uses an RNG to select a random attack or skill from the FossilAttacks script to use. If this code can be simplified and not look like shit, please tell me how :3

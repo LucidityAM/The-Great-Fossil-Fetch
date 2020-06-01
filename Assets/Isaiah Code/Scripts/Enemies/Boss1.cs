@@ -99,7 +99,7 @@ public class Boss1 : MonoBehaviour
         {
 
             battleSystemFossil.state = BattleStateFossil.LOST;
-            battleSystemFossil.EndBattle();
+            battleSystemFossil.StartCoroutine("EndBattle");
             
         }
     } //Basic enemy turn that will look at which enemy the player is fighting, and start seperate scripts depending on the enemy.

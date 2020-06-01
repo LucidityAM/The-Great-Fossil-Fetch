@@ -50,4 +50,18 @@ public class LoadBattle : MonoBehaviour
 
     }
 
+    public IEnumerator EndBattleTransition()
+    {
+        anim.enabled = true;
+
+        anim.SetBool("FadeOut", true);
+
+        yield return new WaitForSeconds(2f);
+
+        anim.SetBool("FadeOut", false);
+
+        anim.enabled = false;
+    }
+
+
 }

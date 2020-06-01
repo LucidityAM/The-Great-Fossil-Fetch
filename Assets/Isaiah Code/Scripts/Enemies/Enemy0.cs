@@ -226,7 +226,7 @@ public class Enemy0 : MonoBehaviour
         if (isDead)
         {
             battleSystemFossil.state = BattleStateFossil.LOST;
-            battleSystemFossil.EndBattle();
+            battleSystemFossil.StartCoroutine("EndBattle");
         }
     } //Basic enemy turn that will look at which enemy the player is fighting, and start seperate scripts depending on the enemy.
 

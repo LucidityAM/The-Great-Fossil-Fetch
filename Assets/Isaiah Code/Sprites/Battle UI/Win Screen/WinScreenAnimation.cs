@@ -11,7 +11,7 @@ public class WinScreenAnimation : MonoBehaviour
     public Animator artAnim;
     public Animator HPAnim;
 
-    private bool inWinScreen;
+    public bool inWinScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +28,9 @@ public class WinScreenAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inWinScreen) { StartCoroutine("CloseWinScreen");  }
+        if(inWinScreen == true && Input.GetKeyDown(KeyCode.Escape)) { StartCoroutine(CloseWinScreen()); }
     }
+
 
     public IEnumerator OpenWinScreen()
     {

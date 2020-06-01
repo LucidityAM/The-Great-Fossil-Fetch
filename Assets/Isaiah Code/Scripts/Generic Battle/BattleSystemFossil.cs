@@ -378,7 +378,7 @@ public class BattleSystemFossil : MonoBehaviour
 
         float damage;
 
-        Affinities.attackAffinity = 2; //sets the affinity of the attack to cursed
+        Affinities.attackAffinity = 1; //sets the affinity of the attack to cursed
 
         // 0 = blessed
         // 1 = soma
@@ -395,7 +395,7 @@ public class BattleSystemFossil : MonoBehaviour
 
         if (enemy.GetComponent<UnitStats>().affinity == 0)
         {
-            enemy.GetComponent<UnitStats>().TakeDamage(damage * 1.35f);
+            enemy.GetComponent<UnitStats>().TakeDamage(damage * 2);
 
             for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
             { 
@@ -411,11 +411,11 @@ public class BattleSystemFossil : MonoBehaviour
         }
         else if(enemy.GetComponent<UnitStats>().affinity == 1)
         {
-            enemy.GetComponent<UnitStats>().TakeDamage(damage * .75f);
+            enemy.GetComponent<UnitStats>().TakeDamage(damage);
         }
         else
         {
-            enemy.GetComponent<UnitStats>().TakeDamage(damage);
+            enemy.GetComponent<UnitStats>().TakeDamage(damage / 2);
         }//checks what the enemy affinity is and does more/less damage accod
 
         for(int i = 0; i < enemyHUDs.Length; i++)

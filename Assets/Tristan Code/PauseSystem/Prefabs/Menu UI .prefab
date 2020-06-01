@@ -1145,10 +1145,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8467471440948399013}
+    - target: {fileID: 4226984223417200153, guid: b70d505895ab58349a67467669ab804f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226984223417200153, guid: b70d505895ab58349a67467669ab804f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8486051187847973258, guid: b70d505895ab58349a67467669ab804f,
         type: 3}
       propertyPath: m_Name
       value: WinScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486051187847973258, guid: b70d505895ab58349a67467669ab804f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8833999502537159008, guid: b70d505895ab58349a67467669ab804f,
         type: 3}

@@ -11,9 +11,13 @@ public class WinScreenAnimation : MonoBehaviour
     public Animator artAnim;
     public Animator HPAnim;
 
+    private bool inWinScreen;
+
     // Start is called before the first frame update
     void Start()
     {
+        inWinScreen = false;
+
         WinScreen.SetActive(false);
 
         fossilsAnim.SetBool("isOpen", false);
@@ -24,11 +28,13 @@ public class WinScreenAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (inWinScreen) { StartCoroutine("CloseWinScreen");  }
     }
 
     public IEnumerator OpenWinScreen()
     {
+        inWinScreen = true;
+
         WinScreen.SetActive(true);
         artAnim.SetBool("isOpen", true);
         yield return new WaitForSeconds(0.3f);
@@ -44,6 +50,8 @@ public class WinScreenAnimation : MonoBehaviour
 
     public IEnumerator CloseWinScreen()
     {
+        inWinScreen = false;
+
         HPAnim.SetBool("isOpen", false);
         yield return new WaitForSeconds(0.3f);
         artAnim.SetBool("isOpen", false);

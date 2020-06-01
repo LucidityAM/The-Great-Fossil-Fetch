@@ -182,9 +182,10 @@ public class TutorialManager : MonoBehaviour
         {
             EndTutorial();
         }
+
         if (battleTutorial != null)
         { 
-            if (EnemyHolder.battleNumber == 0 && playedOnce == false && BattleCount.inBattle == true)
+            if (BattleCount.battleCount == 1  && playedOnce == false &&  BattleCount.inBattle == true)
             {
                 playedOnce = true;
                 StartTutorial(battleTutorial);

@@ -17,6 +17,7 @@ public class FossilAttacks : MonoBehaviour
     private bool skullUsed = false;
     private bool healUsed = false;
     private bool meteorStarted = false;
+    private bool usingSecretPower = false;
 
     public GameObject infoBar;
 
@@ -34,8 +35,10 @@ public class FossilAttacks : MonoBehaviour
                 yield break;
 
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-
-            WeaponStats.fossilDurability[1]--;
+            if (usingSecretPower == false)
+            {
+                WeaponStats.fossilDurability[1]--;
+            }
             futureTurnNumber = EnemyHolder.turnCount + 3;
             meteorStarted = true;
             StartCoroutine("MeteorStrikeAttack");
@@ -67,7 +70,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[13]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[13]--;
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -172,7 +178,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[16]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[16]--;
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -271,7 +280,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[9]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[9]--;
+        }
 
         if (EnemyHolder.enemyAmount == 3)
         {
@@ -645,7 +657,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        WeaponStats.fossilDurability[6]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[6]--;
+        }
 
         StartCoroutine("BurnTimer", 5);
     } //An attack that burns all enemies in battle for a specified number of passovers. Uses KillTimer.
@@ -659,7 +674,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[9]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[9]--;
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -761,7 +779,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[3]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[3]--;
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -863,7 +884,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[0]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[0]--;
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -959,7 +983,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[8]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[8]--;
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -1059,7 +1086,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[2]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[2]--;
+        }
 
         if (skullUsed == false)
         {
@@ -1182,7 +1212,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[5]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[5]--;
+        }
 
         if (EnemyHolder.enemyAmount == 3)
         {
@@ -1437,7 +1470,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[17]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[17]--;
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -1537,7 +1573,10 @@ public class FossilAttacks : MonoBehaviour
 
             BattleSystemFossil.enemyTurnAttack = true;
 
-            WeaponStats.fossilDurability[7]--;
+            if (usingSecretPower == false)
+            {
+                WeaponStats.fossilDurability[7]--;
+            }
 
             ChooseAffinity();
             for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
@@ -1591,7 +1630,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[14]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[14]--;
+        }
 
         if (healUsed == false)
         {
@@ -1639,7 +1681,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[11]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[11]--;
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
@@ -1717,7 +1762,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[4]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[4]--;
+        }
 
         ChooseEnemy();
         if (chosenEnemy > EnemyHolder.enemyAmount)
@@ -1749,63 +1797,79 @@ public class FossilAttacks : MonoBehaviour
 
     public void SecretPower() //Affinity: Special
     {
-        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+        //if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+        //    return;
 
-        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+        //BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        BattleSystemFossil.enemyTurnAttack = true;
+        //BattleSystemFossil.enemyTurnAttack = true;
 
         WeaponStats.fossilDurability[15]--;
 
         ChooseAttack();
+        usingSecretPower = true;
 
         switch (chosenAttack)
         {
             case 0:
                 StartCoroutine(MeteorStrike());
+                usingSecretPower = false;
                 break;
             case 1:
                 StartCoroutine(LowKick());
+                usingSecretPower = false;
                 break;
             case 2:
                 StartCoroutine(TailStab());
+                usingSecretPower = false;
                 break;
             case 3:
                 StartCoroutine(ReverseStrike());
+                usingSecretPower = false;
                 break;
             case 4:
                 BlazingInferno();
+                usingSecretPower = false;
                 break;
             case 5:
                 StartCoroutine(PhantomTalons());
+                usingSecretPower = false;
                 break;
             case 6:
                 StartCoroutine(DarkPulse());
+                usingSecretPower = false;
                 break;
             case 7:
                 StartCoroutine(PitchBlackDarkness());
+                usingSecretPower = false;
                 break;
             case 8:
                 StartCoroutine(CleansingVapors());
+                usingSecretPower = false;
                 break;
             case 9:
                 StartCoroutine(AlbinoSkull());
+                usingSecretPower = false;
                 break;
             case 10:
                 StartCoroutine(EphemeralEssence());
+                usingSecretPower = false;
                 break;
             case 11:
                 StartCoroutine(HolyBoneSpear());
+                usingSecretPower = false;
                 break;
             case 12:
                 StartCoroutine(PurifyArena());
+                usingSecretPower = false;
                 break;
             case 13:
                 StartCoroutine(AncientRelic());
+                usingSecretPower = false;
                 break;
             case 14:
                 StartCoroutine(VampiricFang());
+                usingSecretPower = false;
                 break;
         }
     } //An attack that uses an RNG to select a random attack or skill from the FossilAttacks script to use. If this code can be simplified and not look like shit, please tell me how :3
@@ -1820,7 +1884,10 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        WeaponStats.fossilDurability[12]--;
+        if (usingSecretPower == false)
+        {
+            WeaponStats.fossilDurability[12]--;
+        }
 
         float plrHealth = BattleSystemFossil.playerUnit.currentHP;
 

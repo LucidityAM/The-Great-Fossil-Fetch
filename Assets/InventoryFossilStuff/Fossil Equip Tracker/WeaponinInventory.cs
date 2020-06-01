@@ -12,7 +12,7 @@ public class WeaponinInventory : MonoBehaviour
     public Image legs;
     public Image tail;
 
-    public void Awake()
+    public void Start()
     {
         if (this.gameObject.tag.Contains("skull"))
         {

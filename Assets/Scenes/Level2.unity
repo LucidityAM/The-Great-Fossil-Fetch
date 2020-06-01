@@ -4199,6 +4199,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 137516677}
+    - target: {fileID: 4853032316756404774, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1848124972}
     - target: {fileID: 4853032316756404778, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_Name
@@ -4407,6 +4412,11 @@ PrefabInstance:
     - target: {fileID: 6596488326764414660, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463508158941965757, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7586564376856236995, guid: 157e5bc44db0a1d43906df00d2eba57f,
@@ -22802,6 +22812,7 @@ MonoBehaviour:
   buttons: {fileID: 3532705670069180604}
   infoBar: {fileID: 3532705671300022290}
   downedIcon: {fileID: 0}
+  winScreenAnimation: {fileID: 0}
 --- !u!1 &3532705670977942781
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using System.Net;
 using System.Numerics;
 using System.Runtime.Serialization;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -658,6 +659,7 @@ public class BattleSystemFossil : MonoBehaviour
     {
         if (state == BattleStateFossil.WON)
         {
+
             for (int i = 0; i < currentEnemies.Length; i++)
             {
                 Destroy(currentEnemies[i]);
@@ -695,6 +697,10 @@ public class BattleSystemFossil : MonoBehaviour
             MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
             EnemyHolder.turnCount = 0;
+            EnemyHolder.battleNumber = 0;
+
+            SceneManager.LoadScene("GameOver");
+
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
 
     }//Reads if the player killed the enemy and responds accordingly

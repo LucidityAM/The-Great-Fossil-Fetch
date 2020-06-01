@@ -138,7 +138,7 @@ public class Enemy2 : MonoBehaviour
         {
             if (EnemyHolder.isDowned == false && thisEnemy.GetComponent<UnitStats>().currentHP > thisEnemy.GetComponent<UnitStats>().maxHP / 2)
             {
-                isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
+                isDead = playerStats.TakeDamage(GameObject.FindGameObjectWithTag("Enemy2").GetComponent<UnitStats>().damage / PlayerStats.defendButton);
 
                 battleSystemFossil.playerColor.color = new Color(1, 0, 0); //Sets the player color to red
 
@@ -179,7 +179,7 @@ public class Enemy2 : MonoBehaviour
                     thisEnemy.GetComponent<UnitStats>().currentHP = 26;
                 }
 
-                isDead = playerStats.TakeDamage(25 / PlayerStats.defendButton);
+                isDead = playerStats.TakeDamage((GameObject.FindGameObjectWithTag("Enemy2").GetComponent<UnitStats>().damage * 1.5f) / PlayerStats.defendButton);
                 thisEnemy.GetComponent<UnitStats>().TakeDamage(25);
 
 

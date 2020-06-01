@@ -91,6 +91,8 @@ public class BattleSystemFossil : MonoBehaviour
 
     public void BattleStart()
     {
+        BattleCount.inBattle = true;
+
         BattleCount.battleCount++;
 
         MenuManager.enabled = false;
@@ -176,8 +178,6 @@ public class BattleSystemFossil : MonoBehaviour
         float animSpeed = .4f;
 
         System.Random rnd = new System.Random();
-
-        EnemyHolder.battleNumber++;
 
         switch (EnemyHolder.enemyAmount)
         {
@@ -296,7 +296,6 @@ public class BattleSystemFossil : MonoBehaviour
 
     IEnumerator SetUpBossFight1()
     {
-        EnemyHolder.battleNumber++;
 
         MusicManager.bossBattleMusic = true;
 
@@ -674,6 +673,7 @@ public class BattleSystemFossil : MonoBehaviour
             MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
             EnemyHolder.turnCount = 0;
+            BattleCount.inBattle = false;
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
         else if (state == BattleStateFossil.LOST)
         {
@@ -694,7 +694,8 @@ public class BattleSystemFossil : MonoBehaviour
             MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
             EnemyHolder.turnCount = 0;
-            EnemyHolder.battleNumber = 0;
+            BattleCount.battleCount = 0;
+            BattleCount.inBattle = false;
 
             SceneManager.LoadScene("GameOver");
 

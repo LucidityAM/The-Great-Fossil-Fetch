@@ -46,6 +46,7 @@ public class MusicPlayer : MonoBehaviour
         }
         else if(MusicManager.victoryMusic == true)
         {
+            Debug.Log("yuh");
             normalBattle.time = 0f;
             overWorld.time = 0f;
             bossBattle.time = 0f;

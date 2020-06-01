@@ -801,7 +801,7 @@ public class FossilAttacks : MonoBehaviour
             {
                 if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(20);
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(17);
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
@@ -897,17 +897,17 @@ public class FossilAttacks : MonoBehaviour
             {
                 if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(15);
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(34);
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(18);
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(35);
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(50);
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 0;
 
@@ -999,17 +999,17 @@ public class FossilAttacks : MonoBehaviour
                 {
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(10);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(1);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(5);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(10);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(15);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                         BattleSystemFossil.enemyUnit[i].damage = BattleSystemFossil.enemyUnit[i].damage / 2;
 
@@ -1122,17 +1122,17 @@ public class FossilAttacks : MonoBehaviour
                 {
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(82);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(68);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(95);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
 
                         if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false)
@@ -1198,17 +1198,17 @@ public class FossilAttacks : MonoBehaviour
                 {
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(82);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(68);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(95);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
 
                         if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false)
@@ -1274,17 +1274,17 @@ public class FossilAttacks : MonoBehaviour
                 {
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(37);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(82);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(18);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(68);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(75);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(95);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
 
                         if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false)
@@ -1375,17 +1375,17 @@ public class FossilAttacks : MonoBehaviour
             {
                 if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(10);
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(24);
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(5);
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(15);
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                 }
                 else if (BattleSystemFossil.enemyUnit[i].affinity == 2)
                 {
-                    BattleSystemFossil.enemyUnit[i].TakeDamage(20);
+                    BattleSystemFossil.enemyUnit[i].TakeDamage(30);
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
 
                     if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false)

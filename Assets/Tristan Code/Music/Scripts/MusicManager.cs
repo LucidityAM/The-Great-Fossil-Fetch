@@ -7,4 +7,5 @@ public static class MusicManager
     public static bool overWorldMusic;
     public static bool normalBattleMusic;
     public static bool bossBattleMusic;
+    public static bool victoryMusic;
 }

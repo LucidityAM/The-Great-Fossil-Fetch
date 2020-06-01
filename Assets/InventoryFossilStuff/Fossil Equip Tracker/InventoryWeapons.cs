@@ -7,6 +7,8 @@ public class InventoryWeapons : MonoBehaviour
     public RectTransform[] inventorySpace = new RectTransform[18];
     public GameObject[] InventoryBlocks = new GameObject[18];
 
+    public RectTransform[] librarySpaces = new RectTransform[18];
+
     void Awake()
     {
         for (int i = 0; i < inventorySpace.Length; i++)

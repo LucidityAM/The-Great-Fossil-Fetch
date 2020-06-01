@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1161,6 +1161,7 @@ GameObject:
   - component: {fileID: 1493146172}
   - component: {fileID: 1493146171}
   - component: {fileID: 1493146173}
+  - component: {fileID: 1493146174}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -1205,6 +1206,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72c0a9e269e04a24284d8d48bedac84a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1493146174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493146170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba0bdb50959696429a543c8c0b24097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1538259314
@@ -1276,7 +1289,7 @@ PrefabInstance:
     - target: {fileID: 8417490697712481489, guid: 2d8514c1960ec2b4daee614ac19a7f34,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -20.099976
       objectReference: {fileID: 0}
     - target: {fileID: 8417490697712481489, guid: 2d8514c1960ec2b4daee614ac19a7f34,
         type: 3}
@@ -1286,12 +1299,12 @@ PrefabInstance:
     - target: {fileID: 8417490697712481489, guid: 2d8514c1960ec2b4daee614ac19a7f34,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 40.3
       objectReference: {fileID: 0}
     - target: {fileID: 8417490697712481489, guid: 2d8514c1960ec2b4daee614ac19a7f34,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 48.4
       objectReference: {fileID: 0}
     - target: {fileID: 8417490697712481489, guid: 2d8514c1960ec2b4daee614ac19a7f34,
         type: 3}

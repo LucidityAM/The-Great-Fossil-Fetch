@@ -665,6 +665,8 @@ public class BattleSystemFossil : MonoBehaviour
         {
             winScreenAnimation.StartIEnumerator("OpenWinScreen");
 
+            MusicManager.normalBattleMusic = false;
+            MusicManager.bossBattleMusic = false;
             MusicManager.victoryMusic = true;
 
             yield return new WaitUntil(() => winScreenAnimation.inWinScreen == false);
@@ -687,9 +689,6 @@ public class BattleSystemFossil : MonoBehaviour
             mainCamera.orthographicSize = 12;
             worldPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             enemiesKilled = 0;
-            MusicManager.victoryMusic = false;
-            MusicManager.normalBattleMusic = false;
-            MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
             EnemyHolder.turnCount = 0;
             BattleCount.inBattle = false;

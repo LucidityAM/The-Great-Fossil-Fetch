@@ -654,7 +654,7 @@ Transform:
   - {fileID: 1956153928}
   - {fileID: 1426769011}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &148948477
 GameObject:
@@ -1041,7 +1041,7 @@ Transform:
   - {fileID: 2116592151}
   - {fileID: 839826921}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &184990364
 GameObject:
@@ -9392,7 +9392,7 @@ PrefabInstance:
     - target: {fileID: 2016157124587472801, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2171090804867880226, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
@@ -9595,6 +9595,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 246385863}
+    - target: {fileID: 4853032316756404774, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853032316756404774, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2113653036}
+    - target: {fileID: 4853032316756404774, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 461
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853032316756404774, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4853032316756404778, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_Name
@@ -9643,7 +9663,7 @@ PrefabInstance:
     - target: {fileID: 4853032316756404779, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4853032316756404779, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
@@ -12429,6 +12449,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1533916150 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8467471440948399013, guid: 157e5bc44db0a1d43906df00d2eba57f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1178008869}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87b605780e508744ae8083bdcf2b89c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1560794836 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5993182574625643367, guid: 157e5bc44db0a1d43906df00d2eba57f,
@@ -14966,7 +14998,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 198
+  m_SortingOrder: 926
   m_TargetDisplay: 0
 --- !u!224 &1860722715
 RectTransform:
@@ -14981,7 +15013,7 @@ RectTransform:
   m_Children:
   - {fileID: 8417490697740555059}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17890,7 +17922,7 @@ PrefabInstance:
     - target: {fileID: 3532705671548963727, guid: 97bc51e06d26584409fe27b725bfd7eb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3532705671548963727, guid: 97bc51e06d26584409fe27b725bfd7eb,
         type: 3}
@@ -17932,6 +17964,11 @@ PrefabInstance:
       propertyPath: MenuManager
       value: 
       objectReference: {fileID: 1999064356}
+    - target: {fileID: 3532705672072063198, guid: 97bc51e06d26584409fe27b725bfd7eb,
+        type: 3}
+      propertyPath: winScreenAnimation
+      value: 
+      objectReference: {fileID: 1533916150}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bc51e06d26584409fe27b725bfd7eb, type: 3}
 --- !u!1001 &4224967445480362005

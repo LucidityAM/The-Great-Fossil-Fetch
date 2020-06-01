@@ -43,7 +43,6 @@ public class FossilAttacks : MonoBehaviour
         }
         else if (meteorStarted == true)
         {
-            Debug.Log("A meteor is already on its way.");
             return;
         }
     } //An attack that drops a metor on the battlefield after a specified number of turns.
@@ -1853,10 +1852,29 @@ public class FossilAttacks : MonoBehaviour
     {
         while (futureTurnNumber != EnemyHolder.turnCount)
         {
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(0.1f);
         }
 
-        Debug.Log("Meteor Inbound!");
+        if (EnemyHolder.enemyAmount == 3)
+        {
+            yield return new WaitForSeconds(4.0f);
+            Debug.Log("Meteor Inbound!");
+        }
+        else if (EnemyHolder.enemyAmount == 2)
+        {
+            yield return new WaitForSeconds(3.0f);
+            Debug.Log("Meteor Inbound!");
+        }
+        else if (EnemyHolder.enemyAmount == 1)
+        {
+            yield return new WaitForSeconds(2.0f);
+            Debug.Log("Meteor Inbound!");
+        }
+        else
+        {
+            yield return new WaitForSeconds(1.0f);
+            Debug.Log("Meteor Inbound!");
+        }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {

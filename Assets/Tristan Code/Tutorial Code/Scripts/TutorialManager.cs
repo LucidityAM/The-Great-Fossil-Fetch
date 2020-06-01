@@ -35,9 +35,11 @@ public class TutorialManager : MonoBehaviour
     private bool isActive;
     //checks if the text has ended
     private bool endText;
+    private bool playedOnce;
 
     public static TutorialManager Instance;
     
+    public Tutorial battleTutorial;
 
     //indicator of the current sentence
     private int currentSentence;
@@ -49,6 +51,7 @@ public class TutorialManager : MonoBehaviour
         tutorialImage.SetActive(false);
         endText = false;
         isActive = false;
+        playedOnce = false;
         textBoxAnim = textBox.GetComponent<Animator>();
         backgroundAnim = Background.GetComponent<Animator>();
         Movement = Player.GetComponent<PlayerMovementFinal>();
@@ -178,6 +181,14 @@ public class TutorialManager : MonoBehaviour
         if (isActive == true && Input.GetKeyDown(KeyCode.Escape))
         {
             EndTutorial();
+        }
+        if (battleTutorial != null)
+        { 
+            if (EnemyHolder.battleNumber == 0 && playedOnce == false && BattleCount.inBattle == true)
+            {
+                playedOnce = true;
+                StartTutorial(battleTutorial);
+            }
         }
     }
 }

@@ -226,7 +226,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: XX/XX
+  m_Text: 7/7
 --- !u!1 &7021093232309316266
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +550,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilInfoText: {fileID: 0}
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  BG: {fileID: 0}
+  fossilPart: {fileID: 0}
+  fossilName: {fileID: 0}
+  fossilDurability: {fileID: 0}
 --- !u!1 &8350420468828535725
 GameObject:
   m_ObjectHideFlags: 0

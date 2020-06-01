@@ -179,6 +179,8 @@ public class BattleSystemFossil : MonoBehaviour
 
         System.Random rnd = new System.Random();
 
+        EnemyHolder.battleNumber++;
+
         switch (EnemyHolder.enemyAmount)
         {
             case 0:
@@ -296,6 +298,8 @@ public class BattleSystemFossil : MonoBehaviour
 
     IEnumerator SetUpBossFight1()
     {
+        EnemyHolder.battleNumber++;
+
         MusicManager.bossBattleMusic = true;
 
         MusicManager.normalBattleMusic = false;
@@ -520,6 +524,7 @@ public class BattleSystemFossil : MonoBehaviour
 
     public void EnemyTurn()
     {
+        EnemyHolder.turnCount++;
 
         buttons.SetActive(false);
 
@@ -669,6 +674,7 @@ public class BattleSystemFossil : MonoBehaviour
             MusicManager.normalBattleMusic = false;
             MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
+            EnemyHolder.turnCount = 0;
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
         else if (state == BattleStateFossil.LOST)
         {
@@ -688,6 +694,7 @@ public class BattleSystemFossil : MonoBehaviour
             MusicManager.normalBattleMusic = false;
             MusicManager.bossBattleMusic = false;
             battle.SetActive(false);
+            EnemyHolder.turnCount = 0;
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
 
     }//Reads if the player killed the enemy and responds accordingly

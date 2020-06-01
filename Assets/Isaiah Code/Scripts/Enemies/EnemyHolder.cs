@@ -20,4 +20,7 @@ public static class EnemyHolder
 
     public static int bossNumber;
 
+    public static int battleNumber;
+    public static int turnCount;
+
 }

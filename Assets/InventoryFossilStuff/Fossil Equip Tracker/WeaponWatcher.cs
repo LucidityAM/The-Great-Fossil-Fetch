@@ -25,92 +25,237 @@ public class WeaponWatcher : MonoBehaviour
                 {
                     if (WeaponStats.objectsInSpaces[i].tag == "skull1")
                     {
-                        Instantiate(fossils[0], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[0], inventoryWeapons.inventorySpace[i]); //makes a gameobject called FossilInstantiate based of a specific fossil in the fossil array
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[0], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
+
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "skull2")
                     {
-                        Instantiate(fossils[1], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[1], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[1], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "skull3")
                     {
-                        Instantiate(fossils[2], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[2], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[2], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "neck1")
                     {
-                        Instantiate(fossils[3], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[3], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[3], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "neck2")
                     {
-                        Instantiate(fossils[4], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[4], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[4], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "neck3")
                     {
-                        Instantiate(fossils[5], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[5], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[5], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "ribs1")
                     {
-                        Instantiate(fossils[6], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[6], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[6], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "ribs2")
                     {
-                        Instantiate(fossils[7], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[7], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[7], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "ribs3")
                     {
-                        Instantiate(fossils[8], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[8], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[8], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "arms1")
                     {
-                        Instantiate(fossils[9], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[9], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[9], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "arms2")
                     {
-                        Instantiate(fossils[10], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[10], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[10], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "arms3")
                     {
-                        Instantiate(fossils[11], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[11], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[11], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "legs1")
                     {
-                        Instantiate(fossils[12], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[12], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[12], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "legs2")
                     {
-                        Instantiate(fossils[13], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[13], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[13], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "legs3")
                     {
-                        Instantiate(fossils[14], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[14], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[14], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "tail1")
                     {
-                        Instantiate(fossils[15], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[15], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[15], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "tail2")
                     {
-                        Instantiate(fossils[16], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[16], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[16], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.objectsInSpaces[i].tag == "tail3")
                     {
-                        Instantiate(fossils[17], inventoryWeapons.inventorySpace[i], instantiateInWorldSpace: false);
+                        GameObject FossilInstantiate = Instantiate(fossils[17], inventoryWeapons.inventorySpace[i]);
+                        FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                        GameObject FossilInstantiateLibrary = Instantiate(fossils[17], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                            FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
                 }
@@ -131,6 +276,12 @@ public class WeaponWatcher : MonoBehaviour
                 {
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[0], inventoryWeapons.inventorySpace[i]); //makes a gameobject called FossilInstantiate based of a specific fossil in the fossil array
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[0], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f,
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
@@ -159,6 +310,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[1], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[1], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 1;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[1] = FossilInstantiate;
@@ -177,6 +335,13 @@ public class WeaponWatcher : MonoBehaviour
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[2], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[2], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     WeaponStats.fossilsInSpaces[i] = 2;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
@@ -197,6 +362,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[3], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[3], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 3;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[3] = FossilInstantiate;
@@ -215,6 +387,13 @@ public class WeaponWatcher : MonoBehaviour
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[4], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[4], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     WeaponStats.fossilsInSpaces[i] = 4;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
@@ -235,6 +414,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[5], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[5], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 5;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[5] = FossilInstantiate;
@@ -253,6 +439,13 @@ public class WeaponWatcher : MonoBehaviour
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[6], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[6], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     WeaponStats.fossilsInSpaces[i] = 6;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
@@ -273,6 +466,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[7], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[7], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 7;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[7] = FossilInstantiate;
@@ -291,6 +491,13 @@ public class WeaponWatcher : MonoBehaviour
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[8], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[8], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     WeaponStats.fossilsInSpaces[i] = 8;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
@@ -311,6 +518,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[9], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[9], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 9;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[9] = FossilInstantiate;
@@ -330,6 +544,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[10], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[10], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 10;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[10] = FossilInstantiate;
@@ -348,6 +569,13 @@ public class WeaponWatcher : MonoBehaviour
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[11], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[11], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     WeaponStats.fossilsInSpaces[i] = 11;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
@@ -369,6 +597,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[12], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[12], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 12;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[12] = FossilInstantiate;
@@ -387,6 +622,13 @@ public class WeaponWatcher : MonoBehaviour
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[13], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[13], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     WeaponStats.fossilsInSpaces[i] = 13;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
@@ -407,6 +649,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[14], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[14], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 14;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[14] = FossilInstantiate;
@@ -425,6 +674,13 @@ public class WeaponWatcher : MonoBehaviour
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[15], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[15], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     WeaponStats.fossilsInSpaces[i] = 15;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
@@ -445,6 +701,13 @@ public class WeaponWatcher : MonoBehaviour
                     GameObject FossilInstantiate = Instantiate(fossils[16], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
 
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[16], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
+
                     WeaponStats.fossilsInSpaces[i] = 16;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[16] = FossilInstantiate;
@@ -463,6 +726,13 @@ public class WeaponWatcher : MonoBehaviour
                     //pickup.Play();
                     GameObject FossilInstantiate = Instantiate(fossils[17], inventoryWeapons.inventorySpace[i]);
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
+
+                    GameObject FossilInstantiateLibrary = Instantiate(fossils[17], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
+
+                    FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.x + 444f,
+                        FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                    FossilInstantiateLibrary.name = "Library" + i;
 
                     WeaponStats.fossilsInSpaces[i] = 17;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;

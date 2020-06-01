@@ -1590,22 +1590,22 @@ PrefabInstance:
         type: 3}
       propertyPath: battle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3532705670480822245}
     - target: {fileID: 5643665812671767556, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: mainCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1848124972}
     - target: {fileID: 5643665812671767556, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: battleSystemFossil
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3532705670974905527}
     - target: {fileID: 5643665812671767556, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2099044561}
     - target: {fileID: 5643665812671767564, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_Name
@@ -1654,24 +1654,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 137516676}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &137516678 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 137516676}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &137516679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137516677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9985e1b70dcab441bcb4d036bf009b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &142899243
 GameObject:
   m_ObjectHideFlags: 0
@@ -10964,77 +10946,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &796626773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 796626774}
-  - component: {fileID: 796626775}
-  m_Layer: 0
-  m_Name: Point Light 2D (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &796626774
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796626773}
-  m_LocalRotation: {x: -0, y: -0, z: -0.004475157, w: 0.99999}
-  m_LocalPosition: {x: -0.17000005, y: 0.75, z: 16.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 137516678}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.513}
---- !u!114 &796626775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796626773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.56
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: f7b349709741e84783806e6c6db755b1
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: -5
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 13.14
-  m_PointLightDistance: 3.43
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 4.36
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: 1.5347711, y: -0.5722481, z: -0.0000005134975}
-  - {x: 7.6005106, y: -1.320549, z: -0.0000005134975}
-  - {x: 7.602439, y: 0.84345156, z: -0.0000005134975}
 --- !u!1 &822941478
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ public class FossilAttacks : MonoBehaviour
     private int chosenAttack;
     private int chosenEnemy;
     private int futureTurnNumber;
-    private int turnCount;
 
     private bool purifyUsed = false;
     private bool skullUsed = false;
@@ -27,40 +26,25 @@ public class FossilAttacks : MonoBehaviour
 
     }
     
-    public IEnumerator MeteorStrike() //Affinity: Soma
+    public void MeteorStrike() //Affinity: Soma
     {
         if (meteorStarted == false)
         {
             if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-                yield break;
+                return;
 
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
             WeaponStats.fossilDurability[1]--;
-            futureTurnNumber = turnCount + 3;
+            futureTurnNumber = EnemyHolder.turnCount + 3;
             meteorStarted = true;
-
-            while (turnCount != futureTurnNumber)
-            {
-                yield return new WaitForSeconds(1.0f);
-            }
             StartCoroutine("MeteorStrikeAttack");
+            return;
         }
         else if (meteorStarted == true)
         {
-            infoBar.GetComponent<Animator>().SetBool("isOpen", true);
-
-            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "A meteor is already on its way.";
-
-            yield return new WaitForSeconds(1.5f);
-
-            infoBar.GetComponent<Animator>().SetBool("isOpen", false);
-
-            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
-
-            BattleSystemFossil.enemyTurnAttack = false;
-            BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
-            yield break;
+            Debug.Log("A meteor is already on its way.");
+            return;
         }
     } //An attack that drops a metor on the battlefield after a specified number of turns.
 
@@ -1867,6 +1851,13 @@ public class FossilAttacks : MonoBehaviour
 
     public IEnumerator MeteorStrikeAttack()
     {
+        while (futureTurnNumber != EnemyHolder.turnCount)
+        {
+            yield return new WaitForSeconds(1.0f);
+        }
+
+        Debug.Log("Meteor Inbound!");
+
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if (BattleSystemFossil.enemyUnit[i].affinity == 0)

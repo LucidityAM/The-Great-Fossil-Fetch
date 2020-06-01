@@ -30,13 +30,6 @@ public class Enemy0 : MonoBehaviour
 
     }// Grabs the BattleSystem script and assigns it to the empty variable battleSystemFossil, also sets enemy ID
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(EnemyHolder.coroutinesRunning);
-
-    }
-
     public IEnumerator EnemyTurn0()
     {
         switch (EnemyHolder.coroutinesRunning)

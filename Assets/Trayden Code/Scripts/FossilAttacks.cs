@@ -11,10 +11,13 @@ public class FossilAttacks : MonoBehaviour
     private int chosenAffinity;
     private int chosenAttack;
     private int chosenEnemy;
+    private int futureTurnNumber;
+    private int turnCount;
 
     private bool purifyUsed = false;
     private bool skullUsed = false;
     private bool healUsed = false;
+    private bool meteorStarted = false;
 
     public GameObject infoBar;
 
@@ -24,17 +27,42 @@ public class FossilAttacks : MonoBehaviour
 
     }
     
-    public void MeteorStrike() //Affinity: Soma
+    public IEnumerator MeteorStrike() //Affinity: Soma
     {
-        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-            return;
+        if (meteorStarted == false)
+        {
+            if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+                yield break;
 
-        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
 
-        WeaponStats.fossilDurability[1]--;
+            WeaponStats.fossilDurability[1]--;
+            futureTurnNumber = turnCount + 3;
+            meteorStarted = true;
 
-        StartCoroutine("KillTimer", 10);
-    } //An attack that drops a metor on the battlefield after a specified number of turns. (NOTE: Turn counting has not been implemented yet. Sticking to counting seconds until implemented.)
+            while (turnCount != futureTurnNumber)
+            {
+                yield return new WaitForSeconds(1.0f);
+            }
+            StartCoroutine("MeteorStrikeAttack");
+        }
+        else if (meteorStarted == true)
+        {
+            infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "A meteor is already on its way.";
+
+            yield return new WaitForSeconds(1.5f);
+
+            infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+            BattleSystemFossil.enemyTurnAttack = false;
+            BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
+            yield break;
+        }
+    } //An attack that drops a metor on the battlefield after a specified number of turns.
 
     public IEnumerator LowKick() //Affinity: Soma
     {
@@ -1836,17 +1864,9 @@ public class FossilAttacks : MonoBehaviour
         }
 
     } //An attack that brings you down to 1 HP, but deals damage depending on how much health is lost to the attack, ignoring enemy affinities. 
-    public IEnumerator KillTimer(int timer)
+
+    public IEnumerator MeteorStrikeAttack()
     {
-        while (timer > 0)
-        {
-            timer--;
-            Debug.Log(timer);
-            yield return new WaitForSeconds(1.0f);
-        }
-
-        yield return new WaitForSeconds(1.0f);
-
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if (BattleSystemFossil.enemyUnit[i].affinity == 0)
@@ -1868,6 +1888,8 @@ public class FossilAttacks : MonoBehaviour
             {
                 BattleSystemFossil.enemyUnit[i].TakeDamage(30);
             }
+
+            meteorStarted = false;
 
             if (BattleSystemFossil.currentEnemies[i] != null)
             {
@@ -1925,9 +1947,7 @@ public class FossilAttacks : MonoBehaviour
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
             BattleSystemFossil.EnemyTurn();
         }
-
-        StopCoroutine("KillTimer");
-    } //The kill timer for MetorStrike.
+    } //The attack portion of MeteorStrike
 
     public IEnumerator BurnTimer(int timer)
     {

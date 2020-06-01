@@ -7,6 +7,8 @@ public class MusicPlayer : MonoBehaviour
     public AudioSource overWorld;
     public AudioSource normalBattle;
     public AudioSource bossBattle;
+    public AudioSource victory;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,7 @@ public class MusicPlayer : MonoBehaviour
         MusicManager.overWorldMusic = false;
         MusicManager.normalBattleMusic = false;
         MusicManager.bossBattleMusic = false;
+        MusicManager.victoryMusic = false;
         
     }
 
@@ -25,25 +28,41 @@ public class MusicPlayer : MonoBehaviour
         {
             overWorld.time = 0f;
             bossBattle.time = 0f;
+            victory.time = 0f;
             normalBattle.UnPause();
             overWorld.Pause();
             bossBattle.Pause();
+            victory.Pause();
 
         } else if (MusicManager.bossBattleMusic == true)
         {
             normalBattle.time = 0f;
             overWorld.time = 0f;
+            victory.time = 0f;
             bossBattle.UnPause();
             overWorld.Pause();
             normalBattle.Pause();
+            victory.Pause();
+        }
+        else if(MusicManager.victoryMusic == true)
+        {
+            normalBattle.time = 0f;
+            overWorld.time = 0f;
+            bossBattle.time = 0f;
+            normalBattle.Pause();
+            overWorld.Pause();
+            bossBattle.Pause();
+            victory.UnPause();
         }
         else
         {
             normalBattle.time = 0f;
             bossBattle.time = 0f;
+            victory.time = 0f;
             overWorld.UnPause();
             normalBattle.Pause();
             bossBattle.Pause();
+            victory.Pause();
         }
     }
 }

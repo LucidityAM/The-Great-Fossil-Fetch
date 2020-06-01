@@ -336,6 +336,22 @@ public class FossilAttacks : MonoBehaviour
                         }
                     }
                 }
+                else
+                {
+                    infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+                    infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "The last enemy has already been defeated.";
+
+                    yield return new WaitForSeconds(1.5f);
+
+                    infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+                    infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+                    BattleSystemFossil.enemyTurnAttack = false;
+                    BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
+                    yield break;
+                }
             }
         }
         else if (EnemyHolder.enemyAmount == 2)
@@ -412,6 +428,22 @@ public class FossilAttacks : MonoBehaviour
                         }
                     }
                 }
+                else
+                {
+                    infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+                    infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "The last enemy has already been defeated.";
+
+                    yield return new WaitForSeconds(1.5f);
+
+                    infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+                    infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+                    BattleSystemFossil.enemyTurnAttack = false;
+                    BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
+                    yield break;
+                }
             }
         }
         else if (EnemyHolder.enemyAmount == 1)
@@ -486,6 +518,22 @@ public class FossilAttacks : MonoBehaviour
                             Destroy(BattleSystemFossil.currentEnemies[i]);
                         }
                     }
+                }
+                else
+                {
+                    infoBar.GetComponent<Animator>().SetBool("isOpen", true);
+
+                    infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "The last enemy has already been defeated.";
+
+                    yield return new WaitForSeconds(1.5f);
+
+                    infoBar.GetComponent<Animator>().SetBool("isOpen", false);
+
+                    infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
+
+                    BattleSystemFossil.enemyTurnAttack = false;
+                    BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
+                    yield break;
                 }
             }
         }

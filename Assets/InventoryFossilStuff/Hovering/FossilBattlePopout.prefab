@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 979744131655077867}
   - component: {fileID: 867148231913734177}
   - component: {fileID: 3530830233454127871}
+  - component: {fileID: 9176005377524422650}
   m_Layer: 5
   m_Name: FossilTail
   m_TagString: Untagged
@@ -193,6 +194,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 9176005377524422650}
+          m_MethodName: ToggleInfo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -208,6 +220,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 9176005377524422650}
+          m_MethodName: Delete
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &9176005377524422650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162050994351041613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdb5b0b3ba66aa4386f18226dae8da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fossilBattle: {fileID: 6217028558644053989, guid: 4e8ac4157719de441abd08cc6944ba30,
+    type: 3}
+  instantiatedFossilBattle: {fileID: 0}
+  instantiated: 0
+  spawnLocation: {fileID: 7111214335060658814}
+  flavorText: {fileID: 0}
 --- !u!1 &312407440426554280
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +568,7 @@ GameObject:
   - component: {fileID: 4515347152835796531}
   - component: {fileID: 3753725179318060991}
   - component: {fileID: 1507790725202416951}
+  - component: {fileID: 2856709311133308089}
   m_Layer: 5
   m_Name: FossilNeck
   m_TagString: Untagged
@@ -706,6 +748,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2856709311133308089}
+          m_MethodName: ToggleInfo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -721,6 +774,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2856709311133308089}
+          m_MethodName: Delete
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &2856709311133308089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657140799356258773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdb5b0b3ba66aa4386f18226dae8da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fossilBattle: {fileID: 6217028558644053989, guid: 4e8ac4157719de441abd08cc6944ba30,
+    type: 3}
+  instantiatedFossilBattle: {fileID: 0}
+  instantiated: 0
+  spawnLocation: {fileID: 4322346292539526891}
+  flavorText: {fileID: 0}
 --- !u!1 &827504003146373309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,6 +2019,7 @@ GameObject:
   - component: {fileID: 6847529515724083628}
   - component: {fileID: 4874598820443544659}
   - component: {fileID: 1049329017285457570}
+  - component: {fileID: 6916163854119696361}
   m_Layer: 5
   m_Name: FossilSkull
   m_TagString: Untagged
@@ -2116,6 +2199,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 6916163854119696361}
+          m_MethodName: ToggleInfo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -2131,6 +2225,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 6916163854119696361}
+          m_MethodName: Delete
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &6916163854119696361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683087814244109003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdb5b0b3ba66aa4386f18226dae8da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fossilBattle: {fileID: 6217028558644053989, guid: 4e8ac4157719de441abd08cc6944ba30,
+    type: 3}
+  instantiatedFossilBattle: {fileID: 0}
+  instantiated: 0
+  spawnLocation: {fileID: 3857816456045454533}
+  flavorText: {fileID: 0}
 --- !u!1 &4857443677118542543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,6 +2988,7 @@ GameObject:
   - component: {fileID: 1350773466628369960}
   - component: {fileID: 7424881695982886131}
   - component: {fileID: 3552622839389426377}
+  - component: {fileID: 2107747547108199889}
   m_Layer: 5
   m_Name: FossilLegs
   m_TagString: Untagged
@@ -3044,6 +3168,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2107747547108199889}
+          m_MethodName: ToggleInfo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -3059,6 +3194,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2107747547108199889}
+          m_MethodName: Delete
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &2107747547108199889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6833276293122222091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdb5b0b3ba66aa4386f18226dae8da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fossilBattle: {fileID: 6217028558644053989, guid: 4e8ac4157719de441abd08cc6944ba30,
+    type: 3}
+  instantiatedFossilBattle: {fileID: 0}
+  instantiated: 0
+  spawnLocation: {fileID: 1828692676470676936}
+  flavorText: {fileID: 0}
 --- !u!1 &6878645891192982279
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,6 +3601,7 @@ GameObject:
   - component: {fileID: 1200149812645879665}
   - component: {fileID: 8727210375745569012}
   - component: {fileID: 4047904000834155166}
+  - component: {fileID: 8528833995282681322}
   m_Layer: 5
   m_Name: FossilRibs
   m_TagString: Untagged
@@ -3605,6 +3770,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 8528833995282681322}
+          m_MethodName: ToggleInfo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -3620,6 +3796,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 8528833995282681322}
+          m_MethodName: Delete
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &8528833995282681322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444584177798264419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdb5b0b3ba66aa4386f18226dae8da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fossilBattle: {fileID: 6217028558644053989, guid: 4e8ac4157719de441abd08cc6944ba30,
+    type: 3}
+  instantiatedFossilBattle: {fileID: 0}
+  instantiated: 0
+  spawnLocation: {fileID: 7836854432057566051}
+  flavorText: {fileID: 0}
 --- !u!1 &7565179934840467399
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,6 +3912,7 @@ GameObject:
   - component: {fileID: 1714486074793135647}
   - component: {fileID: 3111042679713984278}
   - component: {fileID: 4812661003579353375}
+  - component: {fileID: 7894596747917728688}
   m_Layer: 5
   m_Name: FossilArms
   m_TagString: Untagged
@@ -3886,6 +4092,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 7894596747917728688}
+          m_MethodName: ToggleInfo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -3901,6 +4118,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 7894596747917728688}
+          m_MethodName: Delete
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &7894596747917728688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643674956708515166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdb5b0b3ba66aa4386f18226dae8da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fossilBattle: {fileID: 6217028558644053989, guid: 4e8ac4157719de441abd08cc6944ba30,
+    type: 3}
+  instantiatedFossilBattle: {fileID: 0}
+  instantiated: 0
+  spawnLocation: {fileID: 6956627141995021199}
+  flavorText: {fileID: 0}
 --- !u!1 &7677278788071141136
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,8 +17,8 @@ public class DialogueManager : MonoBehaviour
     public Animator CharacterFrame;
     public Animator Background;
 
-    
 
+    private int sceneNumber;
     //Queue for names and sentances to know which ones go in order
     private Queue<string> names;
     private Queue<string> sentences;
@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     //Player access for making them stop moving n stuff
     public GameObject Player;
     public PauseScript pauseMenu;
+    public SceneChanger sceneChanger;
 
     public Image CharacterSprite;
     public Image BGSprite;
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour
     private bool endText;
     private bool tutorialTrigger;
     private bool bossTrigger;
+    private bool sceneTransition;
 
     public static DialogueManager Instance;
 
@@ -49,6 +51,7 @@ public class DialogueManager : MonoBehaviour
     {
         endText = false;
         isActive = false;
+        sceneTransition = false;
         names = new Queue<string>();
         sentences = new Queue<string>();
         voices = new Queue<AudioClip>();
@@ -63,9 +66,12 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator StartDialogue(Dialogue dialogue)
     {
         endText = false;
+        sceneNumber = dialogue.sceneNumber;
         tutorialTrigger = dialogue.tutorialTrigger;
         bossTrigger = dialogue.bossTrigger;
         tutorial = dialogue.tutorial;
+        sceneTransition = dialogue.sceneTransition;
+
         if (Player != null)
         {
             Player.GetComponent<PlayerMovementFinal>().enabled = false;
@@ -223,6 +229,7 @@ public class DialogueManager : MonoBehaviour
         {
             FindObjectOfType<TutorialManager>().StartTutorial(tutorial);
         }
+
         //Triggers boss if bossTrigger = true
         if(bossTrigger == true)
         {
@@ -243,6 +250,10 @@ public class DialogueManager : MonoBehaviour
 
         }
 
+        if (sceneTransition == true)
+        {
+            sceneChanger.FadeToLevel(sceneNumber);
+        }
     }
 
     private void Update()

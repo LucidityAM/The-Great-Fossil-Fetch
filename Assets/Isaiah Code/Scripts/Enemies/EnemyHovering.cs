@@ -32,7 +32,7 @@ public class EnemyHovering : MonoBehaviour
             {
                 if (enemyGlowObject == battleSystemFossil.currentEnemies[i])
                 {
-                    if(battleSystemFossil.currentEnemies[i].tag != "Boss1")
+                    if(battleSystemFossil.currentEnemies[i].tag != "Boss1" && battleSystemFossil.currentEnemies[i].tag != "Boss2" && battleSystemFossil.currentEnemies[i].tag != "Boss3")
                     {
                         enemyGlow.material.SetVector("_Color", new Vector4(37, 24, 7, 0));
                     }
@@ -71,7 +71,7 @@ public class EnemyHovering : MonoBehaviour
         {
             if (enemyGlowObject == battleSystemFossil.currentEnemies[i])
             {
-                if(battleSystemFossil.currentEnemies[i].tag != "Boss1")
+                if (battleSystemFossil.currentEnemies[i].tag != "Boss1" && battleSystemFossil.currentEnemies[i].tag != "Boss2" && battleSystemFossil.currentEnemies[i].tag != "Boss3")
                 {
                     battleSystemFossil.currentEnemies[i].GetComponent<Image>().enabled = true;
                     enemyGlow.material.SetVector("_Color", new Vector4(37, 24, 7, 0));

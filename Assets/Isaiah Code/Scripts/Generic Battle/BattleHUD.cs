@@ -106,6 +106,23 @@ public class BattleHUD : MonoBehaviour
                         }
 
                     }//Sets Panama's affinity to cursed and moves the health bar
+                    else if (battleSystemFossil.currentEnemies[i].CompareTag("Boss2"))
+                    {
+                        hp.transform.position = new Vector3(hp.transform.position.x + 1f, hp.transform.position.y + 2f, hp.transform.position.z);
+                        switch (battleSystemFossil.enemyUnit[i].affinity)
+                        {
+                            case 0:
+                                affinity.sprite = blessed;
+                                break;
+                            case 1:
+                                affinity.sprite = soma;
+                                break;
+                            case 2:
+                                affinity.sprite = cursed;
+                                break;
+                        }
+
+                    }//Sets Index's affinity to cursed and moves the health bar
 
                 }
                 else

@@ -46,6 +46,7 @@ TagManager:
   - Boss1
   - Boss2
   - Boss3
+  - FossilBattleHover
   layers:
   - Default
   - TransparentFX

@@ -2273,6 +2273,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &363177068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5122234000143524009, guid: 157e5bc44db0a1d43906df00d2eba57f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1178008869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &363177069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363177068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca2018631405f848a0ae7b79e645360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fossilDurabilitys: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  fossilDurabilitySkull: {fileID: 0}
+  fossilDurabilityNeck: {fileID: 0}
+  fossilDurabilityRibs: {fileID: 0}
+  fossilDurabilityArms: {fileID: 0}
+  fossilDurabilityLegs: {fileID: 0}
+  fossilDurabilityTail: {fileID: 0}
 --- !u!1 &363720127
 GameObject:
   m_ObjectHideFlags: 0
@@ -9540,18 +9565,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1204982259 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2043061393177502828, guid: 97bc51e06d26584409fe27b725bfd7eb,
-    type: 3}
-  m_PrefabInstance: {fileID: 3532705670204559121}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf64cb7811704d346b203c871e47e946, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1207534015
 GameObject:
   m_ObjectHideFlags: 0
@@ -17063,11 +17076,6 @@ PrefabInstance:
       propertyPath: winScreenAnimation
       value: 
       objectReference: {fileID: 1533916150}
-    - target: {fileID: 3532705672072063198, guid: 97bc51e06d26584409fe27b725bfd7eb,
-        type: 3}
-      propertyPath: playerUnit
-      value: 
-      objectReference: {fileID: 1204982259}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bc51e06d26584409fe27b725bfd7eb, type: 3}
 --- !u!1001 &5643665812582475979

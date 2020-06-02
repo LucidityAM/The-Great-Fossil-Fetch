@@ -9119,7 +9119,7 @@ PrefabInstance:
     - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
       propertyPath: images.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 44deb58018bc5a74380af9db8784af1e,
+      objectReference: {fileID: 21300000, guid: b1d029b0676400e4f91f3f9bf81abae6,
         type: 3}
     - target: {fileID: 1629655700, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
       propertyPath: battleSystemFossil

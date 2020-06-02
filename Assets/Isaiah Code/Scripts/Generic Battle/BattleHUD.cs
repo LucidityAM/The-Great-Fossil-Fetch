@@ -91,7 +91,7 @@ public class BattleHUD : MonoBehaviour
                     }//Sets the scarab affinity to blessed and moves the health bar
                     else if (battleSystemFossil.currentEnemies[i].CompareTag("Boss1"))
                     {
-                        hp.transform.position = new Vector3(hp.transform.position.x + 1f, hp.transform.position.y + 2f, hp.transform.position.z);
+                        hp.transform.position = new Vector3(hp.transform.position.x + 1.3f, hp.transform.position.y + 1f, hp.transform.position.z);
                         switch (battleSystemFossil.enemyUnit[i].affinity)
                         {
                             case 0:
@@ -105,7 +105,7 @@ public class BattleHUD : MonoBehaviour
                                 break;
                         }
 
-                    }//Sets Panama's affinity to cursed and moves the health bar
+                    }//Sets Index's affinity to cursed and moves the health bar
                     else if (battleSystemFossil.currentEnemies[i].CompareTag("Boss2"))
                     {
                         hp.transform.position = new Vector3(hp.transform.position.x + 1f, hp.transform.position.y + 2f, hp.transform.position.z);
@@ -122,7 +122,7 @@ public class BattleHUD : MonoBehaviour
                                 break;
                         }
 
-                    }//Sets Index's affinity to cursed and moves the health bar
+                    }//Sets Panama's affinity to cursed and moves the health bar
                     else if (battleSystemFossil.currentEnemies[i].CompareTag("Boss3"))
                     {
                         hp.transform.position = new Vector3(hp.transform.position.x - 2f, hp.transform.position.y - 5.5f, hp.transform.position.z);

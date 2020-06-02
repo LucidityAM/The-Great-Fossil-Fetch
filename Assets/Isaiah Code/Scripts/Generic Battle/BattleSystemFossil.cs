@@ -102,7 +102,6 @@ public class BattleSystemFossil : MonoBehaviour
 
     public void BattleStart()
     {
-        DialogueVariables.endBoss = false;
 
         itemDrop = worldPlayer.GetComponent<ItemDrop>();
 

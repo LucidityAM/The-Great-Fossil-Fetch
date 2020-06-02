@@ -38,14 +38,40 @@ public class StatusDurability : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < WeaponStats.fossilsOutOfSpaces.Length; i++)
-        {
-            if (gameObject.tag.Contains("skull"))
-            {
-                fossilDurabilitySkull.text = WeaponStats.fossilDurability[i] + "/" + fossilDurabilitys[i];
+        if (WeaponStats.skull == 1) { fossilDurabilitySkull.text = WeaponStats.fossilDurability[0] + "/" + fossilDurabilitys[0]; }
 
-                //Sets the durability text of the fossil in the inventory
-            }
-        }
+        if (WeaponStats.skull == 2) { fossilDurabilitySkull.text = WeaponStats.fossilDurability[1] + "/" + fossilDurabilitys[1]; }
+
+        if (WeaponStats.skull == 3) { fossilDurabilitySkull.text = WeaponStats.fossilDurability[2] + "/" + fossilDurabilitys[2]; }
+
+        if (WeaponStats.neck == 1) { fossilDurabilityNeck.text = WeaponStats.fossilDurability[3] + "/" + fossilDurabilitys[3]; }
+
+        if (WeaponStats.neck == 2) { fossilDurabilityNeck.text = WeaponStats.fossilDurability[4] + "/" + fossilDurabilitys[4]; }
+
+        if (WeaponStats.neck == 3) { fossilDurabilityNeck.text = WeaponStats.fossilDurability[5] + "/" + fossilDurabilitys[5]; }
+
+        if (WeaponStats.ribs == 1) { fossilDurabilityRibs.text = WeaponStats.fossilDurability[6] + "/" + fossilDurabilitys[6]; }
+
+        if (WeaponStats.ribs == 2) { fossilDurabilityRibs.text = WeaponStats.fossilDurability[7] + "/" + fossilDurabilitys[7]; }
+
+        if (WeaponStats.ribs == 3) { fossilDurabilityRibs.text = WeaponStats.fossilDurability[8] + "/" + fossilDurabilitys[8]; }
+
+        if (WeaponStats.arms == 1) { fossilDurabilityArms.text = WeaponStats.fossilDurability[9] + "/" + fossilDurabilitys[9]; }
+
+        if (WeaponStats.arms == 2) { fossilDurabilityArms.text = WeaponStats.fossilDurability[10] + "/" + fossilDurabilitys[10]; }
+
+        if (WeaponStats.arms == 3) { fossilDurabilityArms.text = WeaponStats.fossilDurability[11] + "/" + fossilDurabilitys[11]; }
+
+        if (WeaponStats.legs == 1) { fossilDurabilityLegs.text = WeaponStats.fossilDurability[12] + "/" + fossilDurabilitys[12]; }
+
+        if (WeaponStats.legs == 2) { fossilDurabilityLegs.text = WeaponStats.fossilDurability[13] + "/" + fossilDurabilitys[13]; }
+
+        if (WeaponStats.legs == 3) { fossilDurabilityLegs.text = WeaponStats.fossilDurability[14] + "/" + fossilDurabilitys[14]; }
+
+        if (WeaponStats.tail == 1) { fossilDurabilityTail.text = WeaponStats.fossilDurability[15] + "/" + fossilDurabilitys[15]; }
+
+        if (WeaponStats.tail == 2) { fossilDurabilityTail.text = WeaponStats.fossilDurability[16] + "/" + fossilDurabilitys[16]; }
+
+        if (WeaponStats.tail == 3) { fossilDurabilityTail.text = WeaponStats.fossilDurability[17] + "/" + fossilDurabilitys[17]; }
     }
 }

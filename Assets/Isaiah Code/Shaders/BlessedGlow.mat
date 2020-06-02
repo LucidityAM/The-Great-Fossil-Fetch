@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FossilpartsGlow
+  m_Name: BlessedGlow
   m_Shader: {fileID: -6465566751694194690, guid: 39f2a2f579c5321458c942d0479b3493,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -30,4 +30,4 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_154E75D2: {r: 4.047059, g: 2.447059, b: 5.992157, a: 1}
+    - Color_154E75D2: {r: 0.73385864, g: 3.0513072, b: 5.6777487, a: 1}

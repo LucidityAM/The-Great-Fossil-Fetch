@@ -4,15 +4,43 @@ using UnityEngine;
 
 public class ItemDrop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] fossilPickups = new GameObject[18];
 
-    // Update is called once per frame
-    void Update()
+    public int fossilGenerated;
+
+    public int[] fossilsGenerated = new int[18];
+
+    public bool[] isTaken = new bool[18];
+
+    public Transform spawnLocation;
+
+    public bool isGenerated = false;
+
+    public void GenerateFossil()
     {
         
+        fossilGenerated = Random.Range(0, 17);
+
+        isGenerated = false;
+
+        while(isGenerated == false)
+        {
+            for (int i = 0; i <= fossilsGenerated.Length; i++)
+            {
+                if (isTaken[i] == false && fossilsGenerated[i] != fossilGenerated)
+                {
+                    fossilsGenerated[i] = fossilGenerated;
+                    Instantiate(fossilPickups[i], spawnLocation);
+                    isGenerated = true;
+                    isTaken[i] = true;
+                }
+                else if (fossilGenerated == fossilsGenerated[i])
+                {
+                    fossilGenerated = Random.Range(0, 17);
+
+                }
+            }
+        }
     }
+   
 }

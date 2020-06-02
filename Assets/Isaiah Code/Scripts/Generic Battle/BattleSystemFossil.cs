@@ -99,6 +99,8 @@ public class BattleSystemFossil : MonoBehaviour
 
     public void BattleStart()
     {
+        DialogueVariables.endBoss = false;
+
         itemDrop = worldPlayer.GetComponent<ItemDrop>();
 
         BattleCount.inBattle = true;
@@ -775,6 +777,8 @@ public class BattleSystemFossil : MonoBehaviour
     {
         if (state == BattleStateFossil.WON)
         {
+            itemDrop.GenerateFossil();
+
             winScreenAnimation.StartIEnumerator("OpenWinScreen");
 
             MusicManager.normalBattleMusic = false;
@@ -794,8 +798,6 @@ public class BattleSystemFossil : MonoBehaviour
                 Destroy(currentEnemies[i]);
             }
 
-            itemDrop.GenerateFossil();
-
             buttons.SetActive(true);
             enemyTurnAttack = false;
             Array.Clear(currentEnemies,0,currentEnemies.Length);
@@ -804,11 +806,18 @@ public class BattleSystemFossil : MonoBehaviour
             mainCamera.orthographicSize = 12;
             worldPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             enemiesKilled = 0;
-            battle.SetActive(false);
+
+            if(EnemyHolder.bossNumber != 0)
+            {
+                DialogueVariables.endBoss = true;
+            }
+
             EnemyHolder.turnCount = 0;
             MusicManager.victoryMusic = false;
             BattleCount.inBattle = false;
             MenuManager.enabled = true;
+            battle.SetActive(false);
+
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
         else if (state == BattleStateFossil.LOST)
         {
@@ -827,11 +836,11 @@ public class BattleSystemFossil : MonoBehaviour
             enemiesKilled = 0;
             MusicManager.normalBattleMusic = false;
             MusicManager.bossBattleMusic = false;
-            battle.SetActive(false);
+            MusicManager.victoryMusic = false;
             EnemyHolder.turnCount = 0;
             BattleCount.battleCount = 0;
             BattleCount.inBattle = false;
-
+            battle.SetActive(false);
             SceneManager.LoadScene("GameOver");
 
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values

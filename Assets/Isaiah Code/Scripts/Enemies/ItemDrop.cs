@@ -7,8 +7,6 @@ public class ItemDrop : MonoBehaviour
 {
     public GameObject[] fossilPickups = new GameObject[18];
 
-    public int fossilGenerated;
-
     public int[] fossilsGenerated = new int[18];
 
     public bool[] isTaken = new bool[18];
@@ -22,7 +20,7 @@ public class ItemDrop : MonoBehaviour
     public void GenerateFossil()
     {
         
-        fossilGenerated = Random.Range(0, 17);
+        WeaponStats.fossilGenerated = Random.Range(0, 17);
 
         isGenerated = false;
 
@@ -30,10 +28,10 @@ public class ItemDrop : MonoBehaviour
         {
             for (int i = 0; i <= fossilsGenerated.Length; i++)
             {
-                if (isTaken[i] == false && fossilsGenerated[i] != fossilGenerated)
+                if (isTaken[i] == false && fossilsGenerated[i] != WeaponStats.fossilGenerated)
                 {
-                    fossilsGenerated[i] = fossilGenerated;
-                    GameObject fossil = Instantiate(fossilPickups[fossilGenerated], playerSpawn);
+                    fossilsGenerated[i] = WeaponStats.fossilGenerated;
+                    GameObject fossil = Instantiate(fossilPickups[WeaponStats.fossilGenerated], playerSpawn);
 
                     spawnLocation.transform.position = playerSpawn.position;
 
@@ -43,9 +41,9 @@ public class ItemDrop : MonoBehaviour
                     isTaken[i] = true;
                     break;
                 }
-                else if (fossilGenerated == fossilsGenerated[i])
+                else if (WeaponStats.fossilGenerated == fossilsGenerated[i])
                 {
-                    fossilGenerated = Random.Range(0, 17);
+                    WeaponStats.fossilGenerated = Random.Range(0, 17);
 
                 }
             }

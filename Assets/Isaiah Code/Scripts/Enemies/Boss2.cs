@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Boss1 : MonoBehaviour
+public class Boss2 : MonoBehaviour
 {
     public BattleSystemFossil battleSystemFossil;
     public UnitStats playerStats;
@@ -46,11 +46,11 @@ public class Boss1 : MonoBehaviour
             battleSystemFossil.enemyLightingEffects[0].SetActive(true);
             battleSystemFossil.currentEnemies[0].GetComponent<Image>().enabled = false;
         }
-        //Sets all the lighting effects for Index
+        //Sets all lighting effects for Panama
 
-        if (battleSystemFossil.bossUnit[0].GetComponent<UnitStats>().currentHP < battleSystemFossil.bossUnit[0].GetComponent<UnitStats>().maxHP / 2)
+        if (battleSystemFossil.bossUnit[1].GetComponent<UnitStats>().currentHP < battleSystemFossil.bossUnit[1].GetComponent<UnitStats>().maxHP / 2)
         {
-            isDead = playerStats.TakeDamage(battleSystemFossil.playerUnit.currentHP / 2 / PlayerStats.defendButton);
+            isDead = playerStats.TakeDamage(battleSystemFossil.bossUnit[1].damage * 2);
 
             battleSystemFossil.playerColor.color = new Color(1, 0, 0);
 
@@ -74,7 +74,7 @@ public class Boss1 : MonoBehaviour
         }
         else
         {
-            isDead = playerStats.TakeDamage(10 / PlayerStats.defendButton);
+            isDead = playerStats.TakeDamage(battleSystemFossil.bossUnit[1].damage / PlayerStats.defendButton);
 
             battleSystemFossil.playerColor.color = new Color(1, 0, 0);
 
@@ -95,6 +95,7 @@ public class Boss1 : MonoBehaviour
             battleSystemFossil.enemyLightingEffects[0].SetActive(false);
 
             yield return new WaitForSeconds(.55f);
+
         }
 
         EnemyHolder.coroutinesRunning--;

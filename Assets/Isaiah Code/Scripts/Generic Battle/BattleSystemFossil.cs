@@ -524,7 +524,7 @@ public class BattleSystemFossil : MonoBehaviour
         {
             if(enemyParticles[i] != null)
             {
-                if (enemy == currentEnemies[i])
+                if (enemy == currentEnemies[i] || enemy == bosses[i])
                 {
                     enemyParticles[i].Play();
                 }

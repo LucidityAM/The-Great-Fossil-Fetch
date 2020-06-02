@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1173,44 +1173,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &191020369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6022705609757026489, guid: 157e5bc44db0a1d43906df00d2eba57f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1178008869}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &191020371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191020369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db2581f1db325247a1bbec8f4714024, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sentences:
-  - When you enter into a battle, you will be presented with three actions. You can
-    either use a basic ATTACK, use a special FOSSIL attack, or DEFEND.
-  - When you use your basic attack, you will be prompted to select a specific enemy
-    to target. You can cancel your attack by pressing ESC.
-  - Defending causes you to take half the damage you would normally recieve when not
-    defending.
-  - The bottom right displays the affinity system. Attacking enemies with attacks
-    that are strong against their affinity will cause them to take greater damage.
-    For example, purple "Cursed" attacks are strong against green "Soma" enemies.
-  - When you win a battle, a random fossil will appear on the ground where you encountered
-    the enemies in the cave.
-  headerText: BATTLE
-  hasPictures: 0001010100
-  images:
-  - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
-  - {fileID: 21300000, guid: c2d22a6e1f26f4b45bd8ea67ff4bcaa5, type: 3}
-  - {fileID: 21300000, guid: c2d22a6e1f26f4b45bd8ea67ff4bcaa5, type: 3}
-  - {fileID: 21300000, guid: b1d029b0676400e4f91f3f9bf81abae6, type: 3}
-  - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
 --- !u!114 &184990369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,6 +1209,120 @@ MonoBehaviour:
   isTaken: 000000000000000000000000000000000000
   spawnLocation: {fileID: 0}
   isGenerated: 0
+--- !u!1 &187403537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187403538}
+  - component: {fileID: 187403539}
+  m_Layer: 0
+  m_Name: Boss Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &187403538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187403537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50.093765, y: -25.842262, z: -4648.6714}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1731720127}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187403539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187403537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743803223c808b7418946ac1cd7cc8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences: []
+    names: []
+    sprites: []
+    voices: []
+    BGsprites: []
+    bossTrigger: 0
+    sceneTransition: 0
+    tutorialTrigger: 0
+    sceneNumber: 0
+    tutorial: {fileID: 0}
+  bossDialogue:
+    sentences:
+    - "Alright, alright, laddie, I get the picture! I-I didn\u2019t want those good
+      for nothin\u2019 bones anyway. All these \u201Cmagickal fossils\u201D are just
+      a buncha witchcraft!"
+    - I have more scholarly projects demanding my attention anywho! *grumble *grumble*
+    - "\u2026 "
+    names:
+    - Index
+    - Index
+    - Dimitri
+    sprites:
+    - {fileID: 21300000, guid: e4b62ae35478aee488452bbcc992f6f6, type: 3}
+    - {fileID: 21300000, guid: e4b62ae35478aee488452bbcc992f6f6, type: 3}
+    - {fileID: 21300000, guid: c9edf86024ac2a84fa48b0fe7748b830, type: 3}
+    voices: []
+    BGsprites: []
+    bossTrigger: 0
+    sceneTransition: 1
+    tutorialTrigger: 0
+    sceneNumber: 2
+    tutorial: {fileID: 0}
+--- !u!1 &191020369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6022705609757026489, guid: 157e5bc44db0a1d43906df00d2eba57f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1178008869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &191020371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191020369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db2581f1db325247a1bbec8f4714024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - When you enter into a battle, you will be presented with three actions. You can
+    either use a basic ATTACK, use a special FOSSIL attack, or DEFEND.
+  - When you use your basic attack, you will be prompted to select a specific enemy
+    to target. You can cancel your attack by pressing ESC.
+  - Defending causes you to take half the damage you would normally recieve when
+    not defending.
+  - The bottom right displays the affinity system. Attacking enemies with attacks
+    that are strong against their affinity will cause them to take greater damage.
+    For example, purple "Cursed" attacks are strong against green "Soma" enemies.
+  - When you win a battle, a random fossil will appear on the ground where you encountered
+    the enemies in the cave.
+  headerText: BATTLE
+  hasPictures: 0001010100
+  images:
+  - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
+  - {fileID: 21300000, guid: c2d22a6e1f26f4b45bd8ea67ff4bcaa5, type: 3}
+  - {fileID: 21300000, guid: c2d22a6e1f26f4b45bd8ea67ff4bcaa5, type: 3}
+  - {fileID: 21300000, guid: b1d029b0676400e4f91f3f9bf81abae6, type: 3}
+  - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
 --- !u!1 &194866584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2194,7 @@ RectTransform:
   m_Children:
   - {fileID: 391457902}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6002,7 +6078,19 @@ MonoBehaviour:
     bossTrigger: 0
     sceneTransition: 0
     tutorialTrigger: 1
+    sceneNumber: 0
     tutorial: {fileID: 860815694}
+  bossDialogue:
+    sentences: []
+    names: []
+    sprites: []
+    voices: []
+    BGsprites: []
+    bossTrigger: 0
+    sceneTransition: 0
+    tutorialTrigger: 0
+    sceneNumber: 0
+    tutorial: {fileID: 0}
 --- !u!61 &860815692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9235,8 +9323,8 @@ PrefabInstance:
       propertyPath: battleSystemFossil
       value: 
       objectReference: {fileID: 2136074191}
-    m_RemovedComponents: [{fileID: 1231785964942328920, guid: 157e5bc44db0a1d43906df00d2eba57f,
-        type: 3}]
+    m_RemovedComponents:
+    - {fileID: 1231785964942328920, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
 --- !u!1 &1183506208
 GameObject:
@@ -12936,6 +13024,18 @@ MonoBehaviour:
     bossTrigger: 0
     sceneTransition: 0
     tutorialTrigger: 0
+    sceneNumber: 0
+    tutorial: {fileID: 0}
+  bossDialogue:
+    sentences: []
+    names: []
+    sprites: []
+    voices: []
+    BGsprites: []
+    bossTrigger: 0
+    sceneTransition: 0
+    tutorialTrigger: 0
+    sceneNumber: 0
     tutorial: {fileID: 0}
 --- !u!61 &1705300217
 BoxCollider2D:
@@ -13480,6 +13580,7 @@ Transform:
   - {fileID: 860815690}
   - {fileID: 1705300215}
   - {fileID: 1945661672}
+  - {fileID: 187403538}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14782,8 +14883,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
-      finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
+      together, finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:
@@ -14809,6 +14910,18 @@ MonoBehaviour:
     bossTrigger: 1
     sceneTransition: 0
     tutorialTrigger: 0
+    sceneNumber: 0
+    tutorial: {fileID: 0}
+  bossDialogue:
+    sentences: []
+    names: []
+    sprites: []
+    voices: []
+    BGsprites: []
+    bossTrigger: 0
+    sceneTransition: 0
+    tutorialTrigger: 0
+    sceneNumber: 0
     tutorial: {fileID: 0}
 --- !u!61 &1945661674
 BoxCollider2D:

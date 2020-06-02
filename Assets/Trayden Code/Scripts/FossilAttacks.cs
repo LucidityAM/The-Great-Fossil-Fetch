@@ -26,27 +26,19 @@ public class FossilAttacks : MonoBehaviour
 
     }
     
+    void Update()
+    {
+        Debug.Log(meteorStarted);
+    }
+
     public IEnumerator MeteorStrike() //Affinity: Soma
     {
-        if (meteorStarted == false)
-        {
-            if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-                yield break;
-
-            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-
-            WeaponStats.fossilDurability[1]--;
-            futureTurnNumber = EnemyHolder.turnCount + 3;
-            meteorStarted = true;
-            StartCoroutine("MeteorStrikeAttack");
-            yield break;
-        }
-        else if (meteorStarted == true)
+        if(meteorStarted == true)
         {
 
             infoBar.GetComponent<Animator>().SetBool("isOpen", true);
 
-            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "You have already summoned a meteor";
+            infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "You have summoned a meteor";
 
             yield return new WaitForSeconds(1.5f);
 
@@ -56,6 +48,28 @@ public class FossilAttacks : MonoBehaviour
 
             yield break;
         }
+        else if (meteorStarted == false)
+        {
+            if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+                yield break;
+
+            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+            BattleSystemFossil.enemyTurnAttack = true;
+
+            WeaponStats.fossilDurability[1]--;
+
+            futureTurnNumber = EnemyHolder.turnCount + 3;
+
+            StartCoroutine(MeteorStrikeAttack());
+
+            BattleSystemFossil.EnemyTurn();
+
+            meteorStarted = true;
+
+            yield break;
+        }
+        
     } //An attack that drops a metor on the battlefield after a specified number of turns.
 
     public IEnumerator LowKick() //Affinity: Soma
@@ -1911,7 +1925,7 @@ public class FossilAttacks : MonoBehaviour
     {
         while (futureTurnNumber != EnemyHolder.turnCount)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return null;
         }
 
         if (EnemyHolder.enemyAmount == 3)
@@ -2011,9 +2025,9 @@ public class FossilAttacks : MonoBehaviour
         }
         else
         {
-            BattleSystemFossil.enemyTurnAttack = true;
-            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            BattleSystemFossil.enemyTurnAttack = false;
+            BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
+            BattleSystemFossil.StartCoroutine("PlayerTurn");
         }
     } //The attack portion of MeteorStrike
 

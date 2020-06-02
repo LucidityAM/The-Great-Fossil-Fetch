@@ -13,6 +13,8 @@ public class WinScreenAnimation : MonoBehaviour
 
     public bool inWinScreen;
 
+    public int fossilGenerated;
+
     // Start is called before the first frame update
     void Start()
     {

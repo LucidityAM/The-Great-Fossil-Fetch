@@ -113,6 +113,7 @@ public class DialogueManager : MonoBehaviour
         //    BGSprites.Enqueue(BGSprite);
         //}
 
+        textBox.SetBool("isOpen", true);
         DisplayNextSentence();
 
         //Enabling all visual components

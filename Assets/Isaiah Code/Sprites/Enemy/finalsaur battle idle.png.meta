@@ -124,7 +124,7 @@ TextureImporter:
         width: 1000
         height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -140,12 +140,12 @@ TextureImporter:
       name: finalsaur battle idle_1
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 1004
         y: 0
-        width: 1000
+        width: 996
         height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,12 +161,12 @@ TextureImporter:
       name: finalsaur battle idle_2
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 2007
         y: 0
-        width: 1000
+        width: 997
         height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,12 +182,12 @@ TextureImporter:
       name: finalsaur battle idle_3
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 3005
         y: 0
-        width: 1000
+        width: 995
         height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: finalsaur battle idle_4
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 4007
         y: 0
-        width: 1000
+        width: 995
         height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: finalsaur battle idle_5
       rect:
         serializedVersion: 2
-        x: 5000
+        x: 5005
         y: 0
-        width: 1000
+        width: 995
         height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,7 +250,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 9544787f7a434294dbeff90002f8b681, type: 3}
+      name: Finalsaur_Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

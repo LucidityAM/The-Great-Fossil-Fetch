@@ -168,7 +168,10 @@ public class BattleSystemFossil : MonoBehaviour
         {
             for(int i = 0; i < 4; i++)
             {
-                enemyUnit[i].currentHP = 0;
+                if(enemyUnit[i] != null)
+                {
+                    enemyUnit[i].currentHP = 0;
+                }
             }
 
             state = BattleStateFossil.WON;
@@ -774,7 +777,10 @@ public class BattleSystemFossil : MonoBehaviour
     {
         if (state == BattleStateFossil.WON)
         {
-            itemDrop.GenerateFossil();
+            if(EnemyHolder.bossNumber == 0)
+            {
+                itemDrop.GenerateFossil();
+            }
 
             winScreenAnimation.StartIEnumerator("OpenWinScreen");
 

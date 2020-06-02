@@ -123,6 +123,23 @@ public class BattleHUD : MonoBehaviour
                         }
 
                     }//Sets Index's affinity to cursed and moves the health bar
+                    else if (battleSystemFossil.currentEnemies[i].CompareTag("Boss3"))
+                    {
+                        hp.transform.position = new Vector3(hp.transform.position.x - 2f, hp.transform.position.y - 5.5f, hp.transform.position.z);
+                        switch (battleSystemFossil.enemyUnit[i].affinity)
+                        {
+                            case 0:
+                                affinity.sprite = blessed;
+                                break;
+                            case 1:
+                                affinity.sprite = soma;
+                                break;
+                            case 2:
+                                affinity.sprite = cursed;
+                                break;
+                        }
+
+                    }//Sets Dimitrisaurus's affinity to cursed and moves the health bar
 
                 }
                 else

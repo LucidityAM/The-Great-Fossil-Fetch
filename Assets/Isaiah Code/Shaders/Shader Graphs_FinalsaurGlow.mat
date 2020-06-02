@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_PlayerBattleGlow
-  m_Shader: {fileID: -6465566751694194690, guid: 83e06ef50f29a0a4085712a6e46f0b4e,
+  m_Name: Shader Graphs_FinalsaurGlow
+  m_Shader: {fileID: -6465566751694194690, guid: f0752612963045247ba59c1c532b149e,
     type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,13 +21,13 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Emission:
-        m_Texture: {fileID: 2800000, guid: 6807bb49576dcbb49a1950089b6f844e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9544787f7a434294dbeff90002f8b681, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8c1c833606ba7b04a9c800ff206de56d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 12d8a51e3f360e84fb57b312514d002d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_154E75D2: {r: 9.734288, g: 7.491834, b: 2.8030672, a: 1}
+    - _Color: {r: 15, g: 8, b: 5, a: 0}

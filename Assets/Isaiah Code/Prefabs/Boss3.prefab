@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2694944273251903172}
   m_Layer: 0
   m_Name: Enemy0 (1)
-  m_TagString: Enemy0
+  m_TagString: Boss3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 8db1f39e7be6aa1459ac230268e9652d, type: 2}
+  m_Material: {fileID: 2100000, guid: bf056e7109aea884fb3163e77f78f9fa, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -85,7 +85,7 @@ Animator:
   m_GameObject: {fileID: 627677515510059910}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eafbdba6b695aa942a7aa24ccab1a247, type: 2}
+  m_Controller: {fileID: 9100000, guid: c2ec139487c448c4ba71a635708663ff, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -486,7 +486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1225}
+  m_AnchoredPosition: {x: 874, y: 903}
   m_SizeDelta: {x: 3263, y: 3530}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8858606624634407476
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7260547686550556518}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -579,7 +579,7 @@ Animator:
   m_GameObject: {fileID: 7260547686550556518}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eafbdba6b695aa942a7aa24ccab1a247, type: 2}
+  m_Controller: {fileID: 9100000, guid: c2ec139487c448c4ba71a635708663ff, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

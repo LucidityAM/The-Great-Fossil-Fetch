@@ -320,6 +320,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
+      propertyPath: bossDialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
       propertyPath: bosses.Array.data[3]
       value: 
       objectReference: {fileID: 7260547686550556518, guid: 078e2ee73902f6f4db3b7a0f2011e232,
@@ -344,6 +359,96 @@ PrefabInstance:
       propertyPath: winScreenAnimation
       value: 
       objectReference: {fileID: 739425794}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sceneNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[0]
+      value: "Are you dead yet?? Or, erm, second dead? Magic dead?\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[1]
+      value: "GRRAAAAAAAWWW\u2026..\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[2]
+      value: "I\u2019ll take that as a yes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[3]
+      value: "Now, how am I gonna carry you out of here\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[4]
+      value: My Brilliant DIMITRISAURUS!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[0]
+      value: Dimitri
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[1]
+      value: Fossil
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[2]
+      value: Dimitri
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[3]
+      value: Dimitri
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[4]
+      value: Dimitri
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sceneTransition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: c9edf86024ac2a84fa48b0fe7748b830,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 07ed68d1a78a5484088836be07fe0f88,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 227e99663b2d66c4c8abee2832347f5c,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 227e99663b2d66c4c8abee2832347f5c,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: e668775a08dce8d4b9d6baa7ef34d103,
+        type: 3}
     - target: {fileID: 4740170223865710855, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1822,7 +1927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &560738570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,6 +2355,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1790946974}
+    - target: {fileID: 169850427172340316, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: sceneChanger
+      value: 
+      objectReference: {fileID: 1200739704}
     - target: {fileID: 209581428711342456, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_AnchorMin.y

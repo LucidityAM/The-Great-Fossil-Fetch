@@ -88,10 +88,10 @@ public class TutorialManager : MonoBehaviour
         {
             images[k] = tutorial.images[k];
         }
+
         headerText = tutorial.headerText;
         header.text = headerText;
 
-        tutorialImageAnim.SetBool("isOpen", true);
         DisplayNextSentence();
 
         //Enabling all visual components
@@ -143,7 +143,7 @@ public class TutorialManager : MonoBehaviour
     }
 
     IEnumerator TypeSentence(string sentence, string name)
-    { 
+    {
         pageNum.text = currentSentence + 1 + "      " + "/" + "     " + sentences.Length;
         //Typing letter by letter
         foreach (char letter in sentence.ToCharArray())
@@ -170,6 +170,7 @@ public class TutorialManager : MonoBehaviour
         endText = true;
         backgroundAnim.SetBool("isOpen", false);
         textBoxAnim.SetBool("isOpen", false);
+        tutorialImageAnim.SetBool("isOpen", false);
         Background.SetActive(false);
         textBox.SetActive(false);
 

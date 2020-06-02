@@ -21,5 +21,7 @@ public static class WeaponStats
     public static GameObject[] fossilsOutOfSpaces = new GameObject[18]; //The instantiated fossils so that components can be grabbed from specific fossils
 
     public static bool isSet;
+
+    public static int fossilGenerated;
 }
 

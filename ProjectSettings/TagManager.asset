@@ -95,6 +95,9 @@ TagManager:
   - name: WorldEnemy
     uniqueID: 3912030561
     locked: 0
+  - name: Fossils
+    uniqueID: 4283163943
+    locked: 0
   - name: Background
     uniqueID: 3816960739
     locked: 0

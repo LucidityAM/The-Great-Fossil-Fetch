@@ -24,12 +24,6 @@ public class FossilAttacks : MonoBehaviour
     void Start()
     {
         BattleSystemFossil = GameObject.FindGameObjectWithTag("BattleSystem").GetComponent<BattleSystemFossil>();
-
-    }
-    
-    void Update()
-    {
-        Debug.Log(meteorStarted);
     }
 
     public IEnumerator MeteorStrike() //Affinity: Soma
@@ -179,7 +173,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
     } //An attack that deals decent damage to the front two enemies in a battle.
 
@@ -281,7 +290,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
     } //An attack that hits all enemies for even damage.
 
@@ -660,7 +684,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
     } //An attack that deals massive damage to the last enemy.
 
@@ -779,7 +818,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
     } //An attack that deals massive damage to the frontmost enemy.
@@ -884,7 +938,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
     } //An attack that deals decent damage to all enemies then inverts all enemy affinities.
@@ -984,7 +1053,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
     } //An attack that deals decent damage to all enemies.
 
@@ -1086,7 +1170,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
     } //An attack that deals decent damage to all enemies in battle then switches any "Cursed" affinity to "Blessed".
@@ -1211,7 +1310,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
     } //An attack that deals low damage to all enemies in battle and halves the damage output of all enemies of the "Cursed" affinity.
@@ -1470,7 +1584,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
     } //An attack that deals massive damage to the middle two enemies.
@@ -1571,7 +1700,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
     } //An attack that deals poor damage to all enemies.
@@ -1630,7 +1774,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
     } //A special skill that runs an RNG (froms 0-2) then switches all enemy affinities to the number picked. Disables after one use.
       //Debug messages will be removed in the final build.
@@ -1681,7 +1840,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
     } //A special skill that heals the player for full health. Disables after one use.
@@ -1763,7 +1937,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
     } //A special attack that steals half of the frontmost enemy's health and gives it to the player. The amount of health gained will diminish due to the nature of the attack, preventing attack spam.
 
@@ -1805,7 +1994,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
     } //An attack that swaps the player's health with a random enemy's health.
 
@@ -1979,7 +2183,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
     } //An attack that brings you down to 1 HP, but deals damage depending on how much health is lost to the attack, ignoring enemy affinities. 
@@ -2088,9 +2307,24 @@ public class FossilAttacks : MonoBehaviour
         }
         else
         {
-            BattleSystemFossil.enemyTurnAttack = false;
-            BattleSystemFossil.state = BattleStateFossil.PLAYERTURN;
-            BattleSystemFossil.StartCoroutine("PlayerTurn");
+            BattleSystemFossil.enemyTurnAttack = true;
+            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
     } //The attack portion of MeteorStrike
 
@@ -2185,7 +2419,22 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.enemyTurnAttack = true;
             BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            BattleSystemFossil.EnemyTurn();
+            if (EnemyHolder.bossNumber == 0)
+            {
+                BattleSystemFossil.EnemyTurn();
+            }
+            else if (EnemyHolder.bossNumber == 1)
+            {
+                BattleSystemFossil.Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                BattleSystemFossil.Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                BattleSystemFossil.Boss3Turn();
+            }
         }
 
         StopCoroutine("BurnTimer");

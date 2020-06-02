@@ -17,7 +17,6 @@ public class SceneChanger : MonoBehaviour
 
     public void FadeToLevel (int levelIndex)
     {
-        Debug.Log("test");
         levelToLoad = levelIndex;
         anim.SetTrigger("FadeOut");
     }

@@ -809,7 +809,7 @@ public class BattleSystemFossil : MonoBehaviour
             mainCamera.orthographicSize = 12;
             worldPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             enemiesKilled = 0;
-
+            
             if(EnemyHolder.bossNumber != 0)
             {
                 StartCoroutine(FindObjectOfType<DialogueManager>().StartDialogue(bossDialogue));
@@ -819,6 +819,7 @@ public class BattleSystemFossil : MonoBehaviour
             MusicManager.victoryMusic = false;
             BattleCount.inBattle = false;
             MenuManager.enabled = true;
+            EnemyHolder.bossNumber = 0;
             battle.SetActive(false);
 
         }//Turns on the world player, disabled the battle, destroys all the enemies, and clears the current enemy array to reset all values
@@ -837,6 +838,7 @@ public class BattleSystemFossil : MonoBehaviour
             worldPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             MenuManager.enabled = true;
             enemiesKilled = 0;
+            EnemyHolder.bossNumber = 0;
             MusicManager.normalBattleMusic = false;
             MusicManager.bossBattleMusic = false;
             MusicManager.victoryMusic = false;

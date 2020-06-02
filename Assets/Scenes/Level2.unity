@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -700,22 +700,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1580609745272088415, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+    - target: {fileID: 1425805743723682418, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1580609745272088415, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+    - target: {fileID: 1425805743723682418, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1425805743723682418, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+    - target: {fileID: 1580609745272088415, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1425805743723682418, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+    - target: {fileID: 1580609745272088415, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -803,13 +803,14 @@ PrefabInstance:
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bossDialogue.sentences.Array.data[2]
-      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk away."
+      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk
+        away."
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bossDialogue.sentences.Array.data[3]
-      value: To be honest, I was a little frightened about traveling deeper into these
-        caves, anyway.
+      value: To be honest, I was a little frightened about traveling deeper into
+        these caves, anyway.
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
@@ -1070,22 +1071,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8285247065012507987, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+    - target: {fileID: 7459536941882702614, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8285247065012507987, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+    - target: {fileID: 7459536941882702614, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7459536941882702614, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+    - target: {fileID: 8285247065012507987, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7459536941882702614, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+    - target: {fileID: 8285247065012507987, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1972,6 +1973,54 @@ PrefabInstance:
       propertyPath: spawnLocation
       value: 
       objectReference: {fileID: 1624594778}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[1]
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[2]
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[3]
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[4]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[5]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: playerSpawn
+      value: 
+      objectReference: {fileID: 137516678}
     - target: {fileID: 1489208264645787969, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
@@ -2262,6 +2311,12 @@ PrefabInstance:
 --- !u!1 &137516677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5643665812671767564, guid: e1a235b2c062d84499dd36f441fd81b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 137516676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &137516678 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1329860766103445141, guid: e1a235b2c062d84499dd36f441fd81b3,
     type: 3}
   m_PrefabInstance: {fileID: 137516676}
   m_PrefabAsset: {fileID: 0}
@@ -16681,8 +16736,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
-      finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
+      together, finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:

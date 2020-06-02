@@ -13296,7 +13296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1712636605
 Transform:
   m_ObjectHideFlags: 0
@@ -17187,6 +17187,50 @@ PrefabInstance:
       propertyPath: spawnLocation
       value: 
       objectReference: {fileID: 1829013428}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[1]
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[2]
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[3]
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[4]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: fossilsGenerated.Array.data[5]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: isTaken.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_LocalPosition.x

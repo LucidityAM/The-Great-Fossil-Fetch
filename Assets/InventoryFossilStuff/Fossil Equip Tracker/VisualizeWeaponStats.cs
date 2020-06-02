@@ -305,7 +305,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.fossilName = "Low Kick";
             StatString.durability = WeaponStats.fossilDurability[13] + "/7";
             StatString.fossilPart = "Leg";
-            StatString.flavorText = "An attack that deals decent damage to the front two enemies";
+            StatString.flavorText = "An attack that deals decent damage to the front two enemies.";
             StatString.affinity = "soma";
         }
         else if (this.gameObject.CompareTag("legs3"))

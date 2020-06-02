@@ -9058,10 +9058,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
+      propertyPath: sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
+      propertyPath: hasPictures.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
+      propertyPath: images.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1629655700, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
       propertyPath: battleSystemFossil
       value: 
       objectReference: {fileID: 2136074191}
+    - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
+      propertyPath: sentences.Array.data[4]
+      value: When you win a battle, a random fossil will appear on the ground where
+        you encountered the enemies in the cave.
+      objectReference: {fileID: 0}
+    - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: Defending causes you to take half the damage you would normally recieve
+        when not defending.
+      objectReference: {fileID: 0}
+    - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
+      propertyPath: hasPictures.Array.data[4]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
+      propertyPath: images.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480,
+        type: 3}
     - target: {fileID: 169850427172340316, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: Player
@@ -14655,8 +14686,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
-      together, finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
+      finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:
@@ -16837,7 +16868,7 @@ PrefabInstance:
     - target: {fileID: 2043061393177502828, guid: 97bc51e06d26584409fe27b725bfd7eb,
         type: 3}
       propertyPath: damage
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3532705670178786087, guid: 97bc51e06d26584409fe27b725bfd7eb,
         type: 3}

@@ -36,8 +36,6 @@ public class FossilAttacks : MonoBehaviour
     {
         if(meteorStarted == true)
         {
-
-<<<<<<< HEAD
             infoBar.GetComponent<Animator>().SetBool("isOpen", true);
 
             infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "You have summoned a meteor";
@@ -48,16 +46,6 @@ public class FossilAttacks : MonoBehaviour
 
             infoBar.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Select an enemy";
 
-=======
-            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            if (usingSecretPower == false)
-            {
-                WeaponStats.fossilDurability[1]--;
-            }
-            futureTurnNumber = EnemyHolder.turnCount + 3;
-            meteorStarted = true;
-            StartCoroutine("MeteorStrikeAttack");
->>>>>>> 218f55675956aa4600ce3fce8ddecb0a92ebb55a
             yield break;
         }
         else if (meteorStarted == false)
@@ -69,7 +57,10 @@ public class FossilAttacks : MonoBehaviour
 
             BattleSystemFossil.enemyTurnAttack = true;
 
-            WeaponStats.fossilDurability[1]--;
+            if (usingSecretPower == false)
+            {
+                WeaponStats.fossilDurability[1]--;
+            }
 
             futureTurnNumber = EnemyHolder.turnCount + 3;
 

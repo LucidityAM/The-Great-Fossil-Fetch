@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9115,6 +9115,11 @@ PrefabInstance:
       propertyPath: images.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: c2d22a6e1f26f4b45bd8ea67ff4bcaa5,
+        type: 3}
+    - target: {fileID: 704938135, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
+      propertyPath: images.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 44deb58018bc5a74380af9db8784af1e,
         type: 3}
     - target: {fileID: 1629655700, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
       propertyPath: battleSystemFossil

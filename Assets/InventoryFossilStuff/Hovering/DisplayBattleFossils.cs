@@ -61,7 +61,7 @@ public class DisplayBattleFossils : MonoBehaviour
                     name.text = "Meteor Strike";
                     affinity.sprite = soma;
                     durability.text = WeaponStats.fossilDurability[1] + "/3";
-                    btn.onClick.AddListener(delegate { fossilAttacks.MeteorStrike(); });
+                    btn.onClick.AddListener(delegate { fossilAttacks.StartCoroutine("MeteorStrike"); });
                     if (WeaponStats.fossilDurability[1] <= 0)
                     {
                         WeaponStats.skull = 0;

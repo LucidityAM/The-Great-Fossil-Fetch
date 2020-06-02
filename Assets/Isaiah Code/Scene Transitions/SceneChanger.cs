@@ -26,4 +26,5 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(levelToLoad);
     }
+
 }

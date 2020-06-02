@@ -8,6 +8,7 @@ public class DialogueTrigger : MonoBehaviour
     //bool to determine if you already triggered this
     private bool hasCollided;
     public Dialogue dialogue;
+    public Dialogue bossDialogue;
 
     //starts dialogue
     public void TriggerDialogue()
@@ -34,6 +35,17 @@ public class DialogueTrigger : MonoBehaviour
             {
                 hasCollided = true;
                 TriggerDialogue();
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (DialogueVariables.endBoss == true)
+        {
+            if (bossDialogue != null)
+            { 
+                StartCoroutine(FindObjectOfType<DialogueManager>().StartDialogue(bossDialogue));
             }
         }
     }

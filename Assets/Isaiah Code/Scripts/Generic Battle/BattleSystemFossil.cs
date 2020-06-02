@@ -97,6 +97,9 @@ public class BattleSystemFossil : MonoBehaviour
     //Fossil generation
     ItemDrop itemDrop;
 
+    //Dialogue
+    public Dialogue bossDialogue;
+
     public void BattleStart()
     {
         DialogueVariables.endBoss = false;
@@ -809,7 +812,7 @@ public class BattleSystemFossil : MonoBehaviour
 
             if(EnemyHolder.bossNumber != 0)
             {
-                DialogueVariables.endBoss = true;
+                StartCoroutine(FindObjectOfType<DialogueManager>().StartDialogue(bossDialogue));
             }
 
             EnemyHolder.turnCount = 0;

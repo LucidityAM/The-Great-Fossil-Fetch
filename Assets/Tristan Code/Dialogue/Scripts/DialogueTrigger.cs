@@ -9,6 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     private bool hasCollided;
     public Dialogue dialogue;
     public Dialogue bossDialogue;
+    private bool played;
 
     //starts dialogue
     public void TriggerDialogue()
@@ -25,6 +26,7 @@ public class DialogueTrigger : MonoBehaviour
         }
 
         hasCollided = false;
+        played = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,10 +43,11 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueVariables.endBoss == true)
+        if (DialogueVariables.endBoss == true && played == false)
         {
             if (bossDialogue != null)
-            { 
+            {
+                played = true;
                 StartCoroutine(FindObjectOfType<DialogueManager>().StartDialogue(bossDialogue));
             }
         }

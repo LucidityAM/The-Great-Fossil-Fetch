@@ -4825,6 +4825,36 @@ MonoBehaviour:
   - {x: 1.5347711, y: -0.5722481, z: -0.0000005134975}
   - {x: 7.6005106, y: -1.320549, z: -0.0000005134975}
   - {x: 7.602439, y: 0.84345156, z: -0.0000005134975}
+--- !u!1 &5131088132171624114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329860766103445141}
+  m_Layer: 0
+  m_Name: SpawnLoc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1329860766103445141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131088132171624114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.79, y: -0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5643665812671767553}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5643665812285928167
 GameObject:
   m_ObjectHideFlags: 0
@@ -4873,6 +4903,7 @@ GameObject:
   - component: {fileID: 5643665812671767556}
   - component: {fileID: 5643665812671767579}
   - component: {fileID: 246385873}
+  - component: {fileID: 246385874}
   m_Layer: 0
   m_Name: WorldPlayer
   m_TagString: player
@@ -4894,6 +4925,7 @@ Transform:
   - {fileID: 5643665812285928166}
   - {fileID: 97303717}
   - {fileID: 1580424279}
+  - {fileID: 1329860766103445141}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5193,3 +5225,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9985e1b70dcab441bcb4d036bf009b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &246385874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5643665812671767564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3371ea96b8d20340a354ce1b2edeb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fossilPickups:
+  - {fileID: 7094301613579838848, guid: 07755a93e8b124e4bb72a4df3dedea39, type: 3}
+  - {fileID: 7094301613579838848, guid: 8d3f2efc0c10838419c8d093dae23958, type: 3}
+  - {fileID: 7094301613579838848, guid: 5496640881233ba49b1fd4d998fe0e2a, type: 3}
+  - {fileID: 7094301613579838848, guid: 4f84b28bbbddb584d933cb7086a1f18a, type: 3}
+  - {fileID: 7094301613579838848, guid: 77f978891454fde43af341ff5cfceb9b, type: 3}
+  - {fileID: 7094301613579838848, guid: 69c1af7b75540b5489cabc2f46700448, type: 3}
+  - {fileID: 7094301613579838848, guid: 09aad6f35139b5645a8e1b8a6167edeb, type: 3}
+  - {fileID: 7094301613579838848, guid: d825c029a9d71cf46864cae4b9315e76, type: 3}
+  - {fileID: 7094301613579838848, guid: 34dc39708839fbc4cab4011e25330a35, type: 3}
+  - {fileID: 7094301613579838848, guid: 650f51741b3a31a4eb5bb55a2a07cf89, type: 3}
+  - {fileID: 7094301613579838848, guid: a3c1c98dd2240c042a7b98876df47e33, type: 3}
+  - {fileID: 7094301613579838848, guid: 21f7ab3d4be1de8408389c8d535bb7f6, type: 3}
+  - {fileID: 7094301613579838848, guid: 309a14a5624ff124cbe4e603298cec77, type: 3}
+  - {fileID: 7094301613579838848, guid: 9d95a50e2626a704f831e7bd490770f9, type: 3}
+  - {fileID: 7094301613579838848, guid: f86b1e7dfb0db0a4fb852eb9276d33b7, type: 3}
+  - {fileID: 7094301613579838848, guid: 2ff51f0f4a54d734ea1a7a10206d9d20, type: 3}
+  - {fileID: 7094301613579838848, guid: c44b9cbd11d25084fbc5f2151457f812, type: 3}
+  - {fileID: 7094301613579838848, guid: e689daad92eeadb4185014a8d8821c24, type: 3}
+  fossilGenerated: 0
+  fossilsGenerated: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  isTaken: 000000000000000000000000000000000000
+  spawnLocation: {fileID: 0}
+  playerSpawn: {fileID: 1329860766103445141}
+  isGenerated: 0

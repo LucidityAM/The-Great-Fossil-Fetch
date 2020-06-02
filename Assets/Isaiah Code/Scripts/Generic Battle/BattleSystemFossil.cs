@@ -57,6 +57,8 @@ public class BattleSystemFossil : MonoBehaviour
     Enemy1 enemy1Attack;
     Enemy2 enemy2Attack;
     Boss1 boss1Attack;
+    Boss2 boss2Attack;
+    Boss3 boss3Attack;
 
     //All shaders to be edited (outer glow)
     public GameObject[] enemyLightingEffects = new GameObject[4];
@@ -92,8 +94,13 @@ public class BattleSystemFossil : MonoBehaviour
     //Win screen
     public WinScreenAnimation winScreenAnimation;
 
+    //Fossil generation
+    ItemDrop itemDrop;
+
     public void BattleStart()
     {
+        itemDrop = worldPlayer.GetComponent<ItemDrop>();
+
         BattleCount.inBattle = true;
 
         BattleCount.battleCount++;
@@ -318,8 +325,9 @@ public class BattleSystemFossil : MonoBehaviour
         currentEnemies[0] = enemyGO; //Assigns Panama to the first space in the enemy array
 
         enemyUnit[0] = enemyGO.GetComponent<UnitStats>(); //Grabs the enemy's stats
+        bossUnit[0] = enemyGO.GetComponent<UnitStats>();
 
-        enemyUnit[0].affinity = 1; //Sets Panama's affinity to Soma
+        enemyUnit[0].affinity = 1; //Sets Index's affinity to Soma
 
         enemyColor[0] = enemyGO.GetComponent<Image>(); // Grabs the color of the enemy so it can be changed
 
@@ -350,12 +358,95 @@ public class BattleSystemFossil : MonoBehaviour
 
     IEnumerator SetUpBossFight2()
     {
-        yield return new WaitForSeconds(1f);
+        MusicManager.bossBattleMusic = true;
+
+        MusicManager.normalBattleMusic = false;
+
+        EnemyHolder.enemyAmount = 0;
+
+        GameObject enemyGO = Instantiate(bosses[1], enemyBattleStations[1]); //Instantiates enemy
+
+        enemyGO.name = "boss" + 1; //Gives it a name and number
+
+        currentEnemies[0] = enemyGO; //Assigns Panama to the first space in the enemy array
+
+        enemyUnit[0] = enemyGO.GetComponent<UnitStats>(); //Grabs the enemy's stats
+        bossUnit[1] = enemyGO.GetComponent<UnitStats>();
+
+        enemyUnit[0].affinity = 1; //Sets Panama's affinity to Soma
+
+        enemyColor[0] = enemyGO.GetComponent<Image>(); // Grabs the color of the enemy so it can be changed
+
+        enemyHUDs[0].SetHUD(enemyUnit[0]); //Sets the hud with the enemy stats
+
+        enemyLightingEffects[0] = enemyGO.transform.GetChild(0).gameObject; //Assigns the lighting effects from Panama
+
+        enemyLightingEffects[0].SetActive(false); //Turns off the lighting effect
+
+        #region InitialSetup
+
+        playerUnit = playerPrefab.GetComponent<UnitStats>();
+        playerColor = playerPrefab.GetComponent<Image>();
+
+        playerHUD.SetHUD(playerUnit);
+
+        buttons.SetActive(true);
+
+        boss2Attack = GameObject.FindGameObjectWithTag("EnemyStuff").GetComponent<Boss2>();
+
+        #endregion InitialSetup
+
+        yield return new WaitForSeconds(.5f);
+
+        state = BattleStateFossil.PLAYERTURN;
+        PlayerTurn();
     }
 
     IEnumerator SetUpBossFight3()
     {
-        yield return new WaitForSeconds(1f);
+        MusicManager.bossBattleMusic = true;
+
+        MusicManager.normalBattleMusic = false;
+
+        EnemyHolder.enemyAmount = 0;
+
+        GameObject enemyGO = Instantiate(bosses[2], enemyBattleStations[1]); //Instantiates enemy
+
+        enemyGO.name = "boss" + 1; //Gives it a name and number
+
+        currentEnemies[0] = enemyGO; //Assigns Panama to the first space in the enemy array
+
+        enemyUnit[0] = enemyGO.GetComponent<UnitStats>(); //Grabs the enemy's stats
+
+        bossUnit[2] = enemyGO.GetComponent<UnitStats>();
+
+        enemyUnit[0].affinity = 1; //Sets Finalsaur's affinity to Soma
+
+        enemyColor[0] = enemyGO.GetComponent<Image>(); // Grabs the color of the enemy so it can be changed
+
+        enemyHUDs[0].SetHUD(enemyUnit[0]); //Sets the hud with the enemy stats
+
+        enemyLightingEffects[0] = enemyGO.transform.GetChild(0).gameObject; //Assigns the lighting effects from Panama
+
+        enemyLightingEffects[0].SetActive(false); //Turns off the lighting effect
+
+        #region InitialSetup
+
+        playerUnit = playerPrefab.GetComponent<UnitStats>();
+        playerColor = playerPrefab.GetComponent<Image>();
+
+        playerHUD.SetHUD(playerUnit);
+
+        buttons.SetActive(true);
+
+        boss3Attack = GameObject.FindGameObjectWithTag("EnemyStuff").GetComponent<Boss3>();
+
+        #endregion InitialSetup
+
+        yield return new WaitForSeconds(.5f);
+
+        state = BattleStateFossil.PLAYERTURN;
+        PlayerTurn();
     }
 
     public void OnAttackButton()
@@ -410,7 +501,7 @@ public class BattleSystemFossil : MonoBehaviour
             }
         }//Sets the health of all the huds
 
-        if(enemy.tag != "Boss1")
+        if(enemy.tag != "Boss1" || enemy.tag != "Boss2" || enemy.tag != "Boss3")
         {
             enemy.transform.GetChild(0).gameObject.SetActive(false); //Set the lighting to false
         }
@@ -422,7 +513,7 @@ public class BattleSystemFossil : MonoBehaviour
             cameraShake.shake = enemy;
             EnemyHolder.shakeEnemy = true;
             
-            if(enemy.tag != "Boss1")
+            if(enemy.tag != "Boss1" || enemy.tag != "Boss2" || enemy.tag != "Boss3")
             {
                 enemy.transform.GetChild(0).gameObject.SetActive(true);
                 enemy.GetComponent<Image>().enabled = false;
@@ -448,7 +539,7 @@ public class BattleSystemFossil : MonoBehaviour
             EnemyHolder.shakeEnemy = false;
 
             enemy.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
-            if(enemy.tag != "Boss1")
+            if(enemy.tag != "Boss1" || enemy.tag != "Boss2" || enemy.tag != "Boss3")
             {
                 enemy.transform.GetChild(0).gameObject.SetActive(false);
                 enemy.GetComponent<Image>().enabled = true;
@@ -486,6 +577,16 @@ public class BattleSystemFossil : MonoBehaviour
             {
                 state = BattleStateFossil.ENEMYTURN;
                 Boss1Turn();
+            }
+            else if (EnemyHolder.bossNumber == 2)
+            {
+                state = BattleStateFossil.ENEMYTURN;
+                Boss2Turn();
+            }
+            else if (EnemyHolder.bossNumber == 3)
+            {
+                state = BattleStateFossil.ENEMYTURN;
+                Boss3Turn();
             }
         }
         //Change state based on what happened
@@ -634,6 +735,42 @@ public class BattleSystemFossil : MonoBehaviour
         enemyTurnAttack = false;
     } //Basic enemy turn that will look at which enemy the player is fighting, and start seperate scripts depending on the enemy.
 
+    public void Boss2Turn()
+    {
+        buttons.SetActive(false);
+
+        enemyTurnAttack = true;
+
+        boss2Attack.StartCoroutine("BossTurn2");
+        EnemyHolder.coroutinesRunning++;
+
+        if (playerUnit.currentHP <= 0)
+        {
+            state = BattleStateFossil.LOST;
+            StartCoroutine(EndBattle());
+        }
+        enemyTurnAttack = false;
+    } //Basic enemy turn that will look at which enemy the player is fighting, and start seperate scripts depending on the enemy.
+
+
+    public void Boss3Turn()
+    {
+        buttons.SetActive(false);
+
+        enemyTurnAttack = true;
+
+        boss3Attack.StartCoroutine("BossTurn3");
+        EnemyHolder.coroutinesRunning++;
+
+        if (playerUnit.currentHP <= 0)
+        {
+            state = BattleStateFossil.LOST;
+            StartCoroutine(EndBattle());
+        }
+        enemyTurnAttack = false;
+    } //Basic enemy turn that will look at which enemy the player is fighting, and start seperate scripts depending on the enemy.
+
+
     public IEnumerator EndBattle()
     {
         if (state == BattleStateFossil.WON)
@@ -656,6 +793,9 @@ public class BattleSystemFossil : MonoBehaviour
             {
                 Destroy(currentEnemies[i]);
             }
+
+            itemDrop.GenerateFossil();
+
             buttons.SetActive(true);
             enemyTurnAttack = false;
             Array.Clear(currentEnemies,0,currentEnemies.Length);

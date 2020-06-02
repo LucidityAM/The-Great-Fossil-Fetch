@@ -5061,9 +5061,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Dimitri
-  maxHP: 1000
-  currentHP: 1000
-  damage: 50
+  maxHP: 425
+  currentHP: 425
+  damage: 35
   affinity: 0
   isDowned: 0
 --- !u!114 &5045798511789059101
@@ -10010,8 +10010,8 @@ MonoBehaviour:
   - {fileID: 7260547686550556518, guid: 36e65555bcd9f304197628da2b428048, type: 3}
   bosses:
   - {fileID: 7260547686550556518, guid: 9ad07bb088587384fb392b61cf23a281, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7260547686550556518, guid: 96192fb2f3d973943ade1719d967603e, type: 3}
+  - {fileID: 7260547686550556518, guid: 078e2ee73902f6f4db3b7a0f2011e232, type: 3}
   enemyBattleStations:
   - {fileID: 3532705672068401418}
   - {fileID: 3532705671603820769}
@@ -10068,6 +10068,7 @@ MonoBehaviour:
   buttons: {fileID: 3532705671165258965}
   infoBar: {fileID: 3532705670202913915}
   downedIcon: {fileID: 0}
+  winScreenAnimation: {fileID: 0}
 --- !u!1 &3532705672075972598
 GameObject:
   m_ObjectHideFlags: 0

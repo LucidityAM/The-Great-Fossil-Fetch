@@ -654,7 +654,7 @@ Transform:
   - {fileID: 1956153928}
   - {fileID: 1426769011}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &148948477
 GameObject:
@@ -773,7 +773,7 @@ Transform:
   - {fileID: 443690331}
   - {fileID: 881546643}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158870997
 GameObject:
@@ -1041,7 +1041,7 @@ Transform:
   - {fileID: 2116592151}
   - {fileID: 839826921}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &184990364
 GameObject:
@@ -1173,44 +1173,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &191020369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6022705609757026489, guid: 157e5bc44db0a1d43906df00d2eba57f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1178008869}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &191020371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191020369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db2581f1db325247a1bbec8f4714024, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sentences:
-  - When you enter into a battle, you will be presented with three actions. You can
-    either use a basic ATTACK, use a special FOSSIL attack, or DEFEND.
-  - When you use your basic attack, you will be prompted to select a specific enemy
-    to target. You can cancel your attack by pressing ESC.
-  - Defending causes you to take half the damage you would normally recieve when not
-    defending.
-  - The bottom right displays the affinity system. Attacking enemies with attacks
-    that are strong against their affinity will cause them to take greater damage.
-    For example, purple "Cursed" attacks are strong against green "Soma" enemies.
-  - When you win a battle, a random fossil will appear on the ground where you encountered
-    the enemies in the cave.
-  headerText: BATTLE
-  hasPictures: 0001010100
-  images:
-  - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
-  - {fileID: 21300000, guid: c2d22a6e1f26f4b45bd8ea67ff4bcaa5, type: 3}
-  - {fileID: 21300000, guid: c2d22a6e1f26f4b45bd8ea67ff4bcaa5, type: 3}
-  - {fileID: 21300000, guid: b1d029b0676400e4f91f3f9bf81abae6, type: 3}
-  - {fileID: 21300000, guid: 7c56a0000e02f134fbf47c6074e1e480, type: 3}
 --- !u!114 &184990369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,28 +1186,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilPickups:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7094301613579838848, guid: 07755a93e8b124e4bb72a4df3dedea39, type: 3}
+  - {fileID: 7094301613579838848, guid: 8d3f2efc0c10838419c8d093dae23958, type: 3}
+  - {fileID: 7094301613579838848, guid: 5496640881233ba49b1fd4d998fe0e2a, type: 3}
+  - {fileID: 7094301613579838848, guid: 4f84b28bbbddb584d933cb7086a1f18a, type: 3}
+  - {fileID: 7094301613579838848, guid: 77f978891454fde43af341ff5cfceb9b, type: 3}
+  - {fileID: 7094301613579838848, guid: 69c1af7b75540b5489cabc2f46700448, type: 3}
+  - {fileID: 7094301613579838848, guid: 09aad6f35139b5645a8e1b8a6167edeb, type: 3}
+  - {fileID: 7094301613579838848, guid: d825c029a9d71cf46864cae4b9315e76, type: 3}
+  - {fileID: 7094301613579838848, guid: 34dc39708839fbc4cab4011e25330a35, type: 3}
+  - {fileID: 7094301613579838848, guid: 650f51741b3a31a4eb5bb55a2a07cf89, type: 3}
+  - {fileID: 7094301613579838848, guid: a3c1c98dd2240c042a7b98876df47e33, type: 3}
+  - {fileID: 7094301613579838848, guid: 21f7ab3d4be1de8408389c8d535bb7f6, type: 3}
+  - {fileID: 7094301613579838848, guid: 309a14a5624ff124cbe4e603298cec77, type: 3}
+  - {fileID: 7094301613579838848, guid: 9d95a50e2626a704f831e7bd490770f9, type: 3}
+  - {fileID: 7094301613579838848, guid: f86b1e7dfb0db0a4fb852eb9276d33b7, type: 3}
+  - {fileID: 7094301613579838848, guid: 2ff51f0f4a54d734ea1a7a10206d9d20, type: 3}
+  - {fileID: 7094301613579838848, guid: c44b9cbd11d25084fbc5f2151457f812, type: 3}
+  - {fileID: 7094301613579838848, guid: e689daad92eeadb4185014a8d8821c24, type: 3}
   fossilGenerated: 0
   fossilsGenerated: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   isTaken: 000000000000000000000000000000000000
-  spawnLocation: {fileID: 0}
+  spawnLocation: {fileID: 5643665812582475980}
+  playerSpawn: {fileID: 0}
   isGenerated: 0
 --- !u!1 &194866584
 GameObject:
@@ -1530,7 +1493,7 @@ Transform:
   - {fileID: 1152141411}
   - {fileID: 2085814500}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &246385863 stripped
 GameObject:
@@ -4585,7 +4548,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &716648990
 GameObject:
@@ -7182,28 +7145,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilPickups:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7094301613579838848, guid: 07755a93e8b124e4bb72a4df3dedea39, type: 3}
+  - {fileID: 7094301613579838848, guid: 8d3f2efc0c10838419c8d093dae23958, type: 3}
+  - {fileID: 7094301613579838848, guid: 5496640881233ba49b1fd4d998fe0e2a, type: 3}
+  - {fileID: 7094301613579838848, guid: 4f84b28bbbddb584d933cb7086a1f18a, type: 3}
+  - {fileID: 7094301613579838848, guid: 77f978891454fde43af341ff5cfceb9b, type: 3}
+  - {fileID: 7094301613579838848, guid: 69c1af7b75540b5489cabc2f46700448, type: 3}
+  - {fileID: 7094301613579838848, guid: 09aad6f35139b5645a8e1b8a6167edeb, type: 3}
+  - {fileID: 7094301613579838848, guid: d825c029a9d71cf46864cae4b9315e76, type: 3}
+  - {fileID: 7094301613579838848, guid: 34dc39708839fbc4cab4011e25330a35, type: 3}
+  - {fileID: 7094301613579838848, guid: 650f51741b3a31a4eb5bb55a2a07cf89, type: 3}
+  - {fileID: 7094301613579838848, guid: a3c1c98dd2240c042a7b98876df47e33, type: 3}
+  - {fileID: 7094301613579838848, guid: 21f7ab3d4be1de8408389c8d535bb7f6, type: 3}
+  - {fileID: 7094301613579838848, guid: 309a14a5624ff124cbe4e603298cec77, type: 3}
+  - {fileID: 7094301613579838848, guid: 9d95a50e2626a704f831e7bd490770f9, type: 3}
+  - {fileID: 7094301613579838848, guid: f86b1e7dfb0db0a4fb852eb9276d33b7, type: 3}
+  - {fileID: 7094301613579838848, guid: 2ff51f0f4a54d734ea1a7a10206d9d20, type: 3}
+  - {fileID: 7094301613579838848, guid: c44b9cbd11d25084fbc5f2151457f812, type: 3}
+  - {fileID: 7094301613579838848, guid: e689daad92eeadb4185014a8d8821c24, type: 3}
   fossilGenerated: 0
   fossilsGenerated: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   isTaken: 000000000000000000000000000000000000
-  spawnLocation: {fileID: 0}
+  spawnLocation: {fileID: 5643665812582475980}
+  playerSpawn: {fileID: 0}
   isGenerated: 0
 --- !u!1 &945245036
 GameObject:
@@ -8730,28 +8694,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilPickups:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7094301613579838848, guid: 07755a93e8b124e4bb72a4df3dedea39, type: 3}
+  - {fileID: 7094301613579838848, guid: 8d3f2efc0c10838419c8d093dae23958, type: 3}
+  - {fileID: 7094301613579838848, guid: 5496640881233ba49b1fd4d998fe0e2a, type: 3}
+  - {fileID: 7094301613579838848, guid: 4f84b28bbbddb584d933cb7086a1f18a, type: 3}
+  - {fileID: 7094301613579838848, guid: 77f978891454fde43af341ff5cfceb9b, type: 3}
+  - {fileID: 7094301613579838848, guid: 69c1af7b75540b5489cabc2f46700448, type: 3}
+  - {fileID: 7094301613579838848, guid: 09aad6f35139b5645a8e1b8a6167edeb, type: 3}
+  - {fileID: 7094301613579838848, guid: d825c029a9d71cf46864cae4b9315e76, type: 3}
+  - {fileID: 7094301613579838848, guid: 34dc39708839fbc4cab4011e25330a35, type: 3}
+  - {fileID: 7094301613579838848, guid: 650f51741b3a31a4eb5bb55a2a07cf89, type: 3}
+  - {fileID: 7094301613579838848, guid: a3c1c98dd2240c042a7b98876df47e33, type: 3}
+  - {fileID: 7094301613579838848, guid: 21f7ab3d4be1de8408389c8d535bb7f6, type: 3}
+  - {fileID: 7094301613579838848, guid: 309a14a5624ff124cbe4e603298cec77, type: 3}
+  - {fileID: 7094301613579838848, guid: 9d95a50e2626a704f831e7bd490770f9, type: 3}
+  - {fileID: 7094301613579838848, guid: f86b1e7dfb0db0a4fb852eb9276d33b7, type: 3}
+  - {fileID: 7094301613579838848, guid: 2ff51f0f4a54d734ea1a7a10206d9d20, type: 3}
+  - {fileID: 7094301613579838848, guid: c44b9cbd11d25084fbc5f2151457f812, type: 3}
+  - {fileID: 7094301613579838848, guid: e689daad92eeadb4185014a8d8821c24, type: 3}
   fossilGenerated: 0
   fossilsGenerated: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   isTaken: 000000000000000000000000000000000000
-  spawnLocation: {fileID: 0}
+  spawnLocation: {fileID: 5643665812582475980}
+  playerSpawn: {fileID: 0}
   isGenerated: 0
 --- !u!1 &1166246877
 GameObject:
@@ -9052,7 +9017,7 @@ Transform:
   - {fileID: 162478361}
   - {fileID: 921674359}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1178008869
 PrefabInstance:
@@ -9075,11 +9040,6 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 246385863}
-    - target: {fileID: 4337990356009869957, guid: 157e5bc44db0a1d43906df00d2eba57f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4853032315056085947, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: playerMovement
@@ -9143,7 +9103,7 @@ PrefabInstance:
     - target: {fileID: 4853032316756404779, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4853032316756404779, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
@@ -9210,33 +9170,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4985665938696501777, guid: 157e5bc44db0a1d43906df00d2eba57f,
-        type: 3}
-      propertyPath: tutorial
-      value: 
-      objectReference: {fileID: 191020371}
     - target: {fileID: 8177295154547377828, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 391457903}
-    - target: {fileID: 8177295154547377828, guid: 157e5bc44db0a1d43906df00d2eba57f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FadeToLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177295154547377828, guid: 157e5bc44db0a1d43906df00d2eba57f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8972645468034867883, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: battleSystemFossil
       value: 
       objectReference: {fileID: 2136074191}
-    m_RemovedComponents: [{fileID: 1231785964942328920, guid: 157e5bc44db0a1d43906df00d2eba57f,
-        type: 3}]
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 157e5bc44db0a1d43906df00d2eba57f, type: 3}
 --- !u!1 &1183506208
 GameObject:
@@ -10458,6 +10402,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Transition
       objectReference: {fileID: 0}
+    - target: {fileID: 8417490697712481490, guid: 2d8514c1960ec2b4daee614ac19a7f34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1895120278, guid: 2d8514c1960ec2b4daee614ac19a7f34, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d8514c1960ec2b4daee614ac19a7f34, type: 3}
@@ -10853,28 +10802,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilPickups:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7094301613579838848, guid: 07755a93e8b124e4bb72a4df3dedea39, type: 3}
+  - {fileID: 7094301613579838848, guid: 8d3f2efc0c10838419c8d093dae23958, type: 3}
+  - {fileID: 7094301613579838848, guid: 5496640881233ba49b1fd4d998fe0e2a, type: 3}
+  - {fileID: 7094301613579838848, guid: 4f84b28bbbddb584d933cb7086a1f18a, type: 3}
+  - {fileID: 7094301613579838848, guid: 77f978891454fde43af341ff5cfceb9b, type: 3}
+  - {fileID: 7094301613579838848, guid: 69c1af7b75540b5489cabc2f46700448, type: 3}
+  - {fileID: 7094301613579838848, guid: 09aad6f35139b5645a8e1b8a6167edeb, type: 3}
+  - {fileID: 7094301613579838848, guid: d825c029a9d71cf46864cae4b9315e76, type: 3}
+  - {fileID: 7094301613579838848, guid: 34dc39708839fbc4cab4011e25330a35, type: 3}
+  - {fileID: 7094301613579838848, guid: 650f51741b3a31a4eb5bb55a2a07cf89, type: 3}
+  - {fileID: 7094301613579838848, guid: a3c1c98dd2240c042a7b98876df47e33, type: 3}
+  - {fileID: 7094301613579838848, guid: 21f7ab3d4be1de8408389c8d535bb7f6, type: 3}
+  - {fileID: 7094301613579838848, guid: 309a14a5624ff124cbe4e603298cec77, type: 3}
+  - {fileID: 7094301613579838848, guid: 9d95a50e2626a704f831e7bd490770f9, type: 3}
+  - {fileID: 7094301613579838848, guid: f86b1e7dfb0db0a4fb852eb9276d33b7, type: 3}
+  - {fileID: 7094301613579838848, guid: 2ff51f0f4a54d734ea1a7a10206d9d20, type: 3}
+  - {fileID: 7094301613579838848, guid: c44b9cbd11d25084fbc5f2151457f812, type: 3}
+  - {fileID: 7094301613579838848, guid: e689daad92eeadb4185014a8d8821c24, type: 3}
   fossilGenerated: 0
   fossilsGenerated: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   isTaken: 000000000000000000000000000000000000
-  spawnLocation: {fileID: 0}
+  spawnLocation: {fileID: 5643665812582475980}
+  playerSpawn: {fileID: 0}
   isGenerated: 0
 --- !u!1 &1426769010
 GameObject:
@@ -12566,28 +12516,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilPickups:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7094301613579838848, guid: 07755a93e8b124e4bb72a4df3dedea39, type: 3}
+  - {fileID: 7094301613579838848, guid: 8d3f2efc0c10838419c8d093dae23958, type: 3}
+  - {fileID: 7094301613579838848, guid: 5496640881233ba49b1fd4d998fe0e2a, type: 3}
+  - {fileID: 7094301613579838848, guid: 4f84b28bbbddb584d933cb7086a1f18a, type: 3}
+  - {fileID: 7094301613579838848, guid: 77f978891454fde43af341ff5cfceb9b, type: 3}
+  - {fileID: 7094301613579838848, guid: 69c1af7b75540b5489cabc2f46700448, type: 3}
+  - {fileID: 7094301613579838848, guid: 09aad6f35139b5645a8e1b8a6167edeb, type: 3}
+  - {fileID: 7094301613579838848, guid: d825c029a9d71cf46864cae4b9315e76, type: 3}
+  - {fileID: 7094301613579838848, guid: 34dc39708839fbc4cab4011e25330a35, type: 3}
+  - {fileID: 7094301613579838848, guid: 650f51741b3a31a4eb5bb55a2a07cf89, type: 3}
+  - {fileID: 7094301613579838848, guid: a3c1c98dd2240c042a7b98876df47e33, type: 3}
+  - {fileID: 7094301613579838848, guid: 21f7ab3d4be1de8408389c8d535bb7f6, type: 3}
+  - {fileID: 7094301613579838848, guid: 309a14a5624ff124cbe4e603298cec77, type: 3}
+  - {fileID: 7094301613579838848, guid: 9d95a50e2626a704f831e7bd490770f9, type: 3}
+  - {fileID: 7094301613579838848, guid: f86b1e7dfb0db0a4fb852eb9276d33b7, type: 3}
+  - {fileID: 7094301613579838848, guid: 2ff51f0f4a54d734ea1a7a10206d9d20, type: 3}
+  - {fileID: 7094301613579838848, guid: c44b9cbd11d25084fbc5f2151457f812, type: 3}
+  - {fileID: 7094301613579838848, guid: e689daad92eeadb4185014a8d8821c24, type: 3}
   fossilGenerated: 0
   fossilsGenerated: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   isTaken: 000000000000000000000000000000000000
-  spawnLocation: {fileID: 0}
+  spawnLocation: {fileID: 5643665812582475980}
+  playerSpawn: {fileID: 0}
   isGenerated: 0
 --- !u!1 &1648180215
 GameObject:
@@ -12620,7 +12571,7 @@ Transform:
   - {fileID: 12262324}
   - {fileID: 807139480}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676603675
 GameObject:
@@ -13193,7 +13144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1712636605
 Transform:
   m_ObjectHideFlags: 0
@@ -13224,7 +13175,7 @@ Transform:
   - {fileID: 594519007}
   - {fileID: 1183506209}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1722082608
 GameObject:
@@ -13481,7 +13432,7 @@ Transform:
   - {fileID: 1705300215}
   - {fileID: 1945661672}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761650455
 GameObject:
@@ -13610,7 +13561,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1809495498
 GameObject:
@@ -13965,6 +13916,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1829013427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1829013428}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1829013428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829013427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.6, y: 6.9, z: -8.376435}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1829214426
 GameObject:
   m_ObjectHideFlags: 0
@@ -14165,7 +14146,7 @@ RectTransform:
   m_Children:
   - {fileID: 8417490697740555059}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14782,8 +14763,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
-      finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
+      together, finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:
@@ -15973,7 +15954,7 @@ Transform:
   - {fileID: 2044031181}
   - {fileID: 549965482}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044031180
 GameObject:
@@ -16523,7 +16504,7 @@ Animator:
   m_GameObject: {fileID: 2085814499}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 609961ddaffa7e846be145e94ddb0f48, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4a0dbaf937174c6428ada769fc2b5388, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -16549,7 +16530,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3, y: 3.4}
+    oldSize: {x: 3, y: 2.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16597,7 +16578,7 @@ SpriteRenderer:
   m_SortingLayerID: -382936735
   m_SortingLayer: -5
   m_SortingOrder: 12
-  m_Sprite: {fileID: 1151094802659176081, guid: 3ba6246a8ec283f4c9e193efe8b12bc3,
+  m_Sprite: {fileID: -8549790540447159572, guid: fca682b52d9d3ff4faabcf4fd5227934,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16847,21 +16828,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2043061393177502828, guid: 97bc51e06d26584409fe27b725bfd7eb,
-        type: 3}
-      propertyPath: maxHP
-      value: 425
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043061393177502828, guid: 97bc51e06d26584409fe27b725bfd7eb,
-        type: 3}
-      propertyPath: currentHP
-      value: 425
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043061393177502828, guid: 97bc51e06d26584409fe27b725bfd7eb,
-        type: 3}
-      propertyPath: damage
-      value: 35
-      objectReference: {fileID: 0}
     - target: {fileID: 3532705670178786087, guid: 97bc51e06d26584409fe27b725bfd7eb,
         type: 3}
       propertyPath: m_Camera
@@ -16935,7 +16901,7 @@ PrefabInstance:
     - target: {fileID: 3532705671548963727, guid: 97bc51e06d26584409fe27b725bfd7eb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3532705671548963727, guid: 97bc51e06d26584409fe27b725bfd7eb,
         type: 3}
@@ -16991,6 +16957,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 246385874, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+      propertyPath: spawnLocation
+      value: 
+      objectReference: {fileID: 1829013428}
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17029,7 +16999,7 @@ PrefabInstance:
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5643665812671767553, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
@@ -17078,6 +17048,12 @@ PrefabInstance:
       objectReference: {fileID: 3066154}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1a235b2c062d84499dd36f441fd81b3, type: 3}
+--- !u!4 &5643665812582475980 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1329860766103445141, guid: e1a235b2c062d84499dd36f441fd81b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5643665812582475979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7094301611760232918
 PrefabInstance:
   m_ObjectHideFlags: 0

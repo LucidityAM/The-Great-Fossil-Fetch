@@ -14943,35 +14943,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - 'Oh, no, not another one. '
-    - "Ah, I\u2019m assuming you had a run-in with the \u201CProfessor\u201D, too?"
-    - "Yeah\u2026*Ahem.*"
-    - "Right...Well, in any case, I\u2019m willing to bet you\u2019re sniffing around
-      down here for those famed fossils, aren\u2019t you?"
-    - 'You got it, and those babies are mine. If I were you, I would just turn around
-      and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
-      together, finding those bones would be easier."
-    - "We could both have our names in the papers, and split the profit\u2026"
-    - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
+    - H-Hey! How did you get down here?
+    - Huh? I can hardly hear you, laddie, speak up!
+    - Uh...HEY! HOW DID YOU GET DOWN HERE, GRAMPS?
+    - "I beg your pardon, sonny? I\u2019ll have you know I am THE Professor Index,
+      and I cannot believe the GALL of youngsters these days and--"
+    - "Look, Prof, I\u2019m here to dig up a mystery dinosaur, not to have a conversation
+      with one. Waddle your way out of here, I think it\u2019s past your bedtime."
+    - "Why I oughta--I\u2019ll make you eat those words, you germ! Those bones are
+      mine!"
     names:
     - Dimitri
-    - Panama
+    - Index
     - Dimitri
-    - Panama
+    - Index
     - Dimitri
-    - Panama
-    - Panama
-    - Dimitri
+    - Index
     sprites:
-    - {fileID: 21300000, guid: c9edf86024ac2a84fa48b0fe7748b830, type: 3}
-    - {fileID: 21300000, guid: 51fedb0e30da384458a903ece75374ae, type: 3}
     - {fileID: 21300000, guid: 227e99663b2d66c4c8abee2832347f5c, type: 3}
-    - {fileID: 21300000, guid: f4775da090698d043ae0945871f94d9d, type: 3}
-    - {fileID: 21300000, guid: 227e99663b2d66c4c8abee2832347f5c, type: 3}
-    - {fileID: 21300000, guid: f4775da090698d043ae0945871f94d9d, type: 3}
-    - {fileID: 21300000, guid: 51fedb0e30da384458a903ece75374ae, type: 3}
+    - {fileID: 21300000, guid: e4b62ae35478aee488452bbcc992f6f6, type: 3}
     - {fileID: 21300000, guid: c9edf86024ac2a84fa48b0fe7748b830, type: 3}
+    - {fileID: 21300000, guid: 73c7253163fca394090e2b8df14d26c1, type: 3}
+    - {fileID: 21300000, guid: c9edf86024ac2a84fa48b0fe7748b830, type: 3}
+    - {fileID: 21300000, guid: e4b62ae35478aee488452bbcc992f6f6, type: 3}
     voices: []
     BGsprites: []
     bossTrigger: 1

@@ -24,7 +24,6 @@ public class DialogueTrigger : MonoBehaviour
         }
 
         hasCollided = false;
-        played = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

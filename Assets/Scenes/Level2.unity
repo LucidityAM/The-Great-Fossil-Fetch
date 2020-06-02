@@ -710,6 +710,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425805743723682418, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425805743723682418, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580609745272088415, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580609745272088415, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1594889309644042770, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: m_Camera
@@ -724,6 +744,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887393374850882, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
@@ -750,6 +790,114 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1848124972}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[0]
+      value: "Heh\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[1]
+      value: Do you finally give up?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[2]
+      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk away."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[3]
+      value: To be honest, I was a little frightened about traveling deeper into these
+        caves, anyway.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[4]
+      value: "I\u2019ll keep an eye out for the papers--I\u2019m curious to see if
+        I\u2019ll find your name. Hopefully, not in the obituaries\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sentences.Array.data[5]
+      value: Gee, thanks. Now high-tail it out of here, miss. Mind how you go.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[0]
+      value: Panama
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[1]
+      value: Dimitri
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[2]
+      value: Panama
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[3]
+      value: Panama
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[4]
+      value: Panama
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.names.Array.data[5]
+      value: Dimitri
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sceneTransition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51fedb0e30da384458a903ece75374ae,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 227e99663b2d66c4c8abee2832347f5c,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51fedb0e30da384458a903ece75374ae,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: f4775da090698d043ae0945871f94d9d,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: f4775da090698d043ae0945871f94d9d,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: c9edf86024ac2a84fa48b0fe7748b830,
+        type: 3}
+    - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: bossDialogue.sceneNumber
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bosses.Array.data[3]
@@ -805,6 +953,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HoverExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740170223865710855, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740170223865710855, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740170223865710855, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
@@ -901,6 +1059,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459536941882702614, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459536941882702614, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285247065012507987, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285247065012507987, guid: c2eef674c48713f4eb9ec5e37764d7e5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7459536941882702614, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
@@ -4314,7 +4492,17 @@ PrefabInstance:
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 137516677}
+    - target: {fileID: 169850427172340316, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: loadBattle
+      value: 
+      objectReference: {fileID: 137516680}
+    - target: {fileID: 169850427172340316, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: sceneChanger
+      value: 
+      objectReference: {fileID: 2076582420}
     - target: {fileID: 191807010536390165, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -5944,7 +6132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &590814841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16493,8 +16681,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
-      together, finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
+      finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:

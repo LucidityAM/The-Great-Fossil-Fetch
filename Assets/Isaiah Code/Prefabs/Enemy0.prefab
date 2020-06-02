@@ -5406,7 +5406,7 @@ MonoBehaviour:
   unitName: Enemy
   maxHP: 100
   currentHP: 100
-  damage: 6
+  damage: 3
   affinity: 0
   isDowned: 0
 --- !u!114 &1993336951963997919

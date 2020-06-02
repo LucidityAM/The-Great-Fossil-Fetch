@@ -94,6 +94,18 @@ public class WinScreenAnimation : MonoBehaviour
     }
 
 
+    public void LateUpdate()
+    {
+        if(EnemyHolder.bossNumber == 1)
+        {
+            fossilName.text = "All Out Attack";
+        }
+        else if(EnemyHolder.bossNumber == 2)
+        {
+            fossilName.text = "Secret Power";
+        }
+    }
+
     public IEnumerator OpenWinScreen()
     {
         inWinScreen = true;

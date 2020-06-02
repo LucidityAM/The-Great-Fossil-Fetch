@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -853,7 +853,7 @@ MonoBehaviour:
         m_MethodName: OpenCredits
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 7e2d8c72e85cb404f82d2fbfeb516342,
+          m_ObjectArgument: {fileID: 21300000, guid: 37b8146d226d96048980e025fd7f728a,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 1
@@ -1326,6 +1326,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e4575c26cc3f9f64e92301b701d2e342,
         type: 3}
+    - target: {fileID: 901895337494174251, guid: c2dace2e4f5a41c4d93508c463f49d6a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901895337494174251, guid: c2dace2e4f5a41c4d93508c463f49d6a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901895337494174251, guid: c2dace2e4f5a41c4d93508c463f49d6a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2945081581372809763, guid: c2dace2e4f5a41c4d93508c463f49d6a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

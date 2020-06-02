@@ -17,6 +17,7 @@ public class Dialogue
     public bool bossTrigger;
     public bool sceneTransition;
     public bool tutorialTrigger;
+    public int sceneNumber;
     public Tutorial tutorial;
 
 

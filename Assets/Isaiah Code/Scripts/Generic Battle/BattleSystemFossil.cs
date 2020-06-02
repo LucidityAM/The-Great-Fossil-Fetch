@@ -145,7 +145,7 @@ public class BattleSystemFossil : MonoBehaviour
 
         if (currentEnemies[0] != null)
         {
-            if (currentEnemies[0].gameObject.CompareTag("Boss1"))
+            if (currentEnemies[0].gameObject.CompareTag("Boss1") || currentEnemies[0].gameObject.CompareTag("Boss2") || currentEnemies[0].gameObject.CompareTag("Boss3"))
             {
                 enemyLightingEffects[0].SetActive(true);
             }
@@ -340,8 +340,6 @@ public class BattleSystemFossil : MonoBehaviour
 
         enemyLightingEffects[0] = enemyGO.transform.GetChild(0).gameObject; //Assigns the lighting effects from Panama
 
-        enemyLightingEffects[0].SetActive(false); //Turns off the lighting effect
-
         #region InitialSetup
 
         playerUnit = playerPrefab.GetComponent<UnitStats>();
@@ -385,8 +383,6 @@ public class BattleSystemFossil : MonoBehaviour
         enemyHUDs[0].SetHUD(enemyUnit[0]); //Sets the hud with the enemy stats
 
         enemyLightingEffects[0] = enemyGO.transform.GetChild(0).gameObject; //Assigns the lighting effects from Panama
-
-        enemyLightingEffects[0].SetActive(false); //Turns off the lighting effect
 
         #region InitialSetup
 
@@ -432,8 +428,6 @@ public class BattleSystemFossil : MonoBehaviour
         enemyHUDs[0].SetHUD(enemyUnit[0]); //Sets the hud with the enemy stats
 
         enemyLightingEffects[0] = enemyGO.transform.GetChild(0).gameObject; //Assigns the lighting effects from Panama
-
-        enemyLightingEffects[0].SetActive(false); //Turns off the lighting effect
 
         #region InitialSetup
 
@@ -506,7 +500,7 @@ public class BattleSystemFossil : MonoBehaviour
             }
         }//Sets the health of all the huds
 
-        if(enemy.tag != "Boss1" || enemy.tag != "Boss2" || enemy.tag != "Boss3")
+        if(enemy.tag != "Boss1" && enemy.tag != "Boss2" && enemy.tag != "Boss3")
         {
             enemy.transform.GetChild(0).gameObject.SetActive(false); //Set the lighting to false
         }
@@ -518,7 +512,7 @@ public class BattleSystemFossil : MonoBehaviour
             cameraShake.shake = enemy;
             EnemyHolder.shakeEnemy = true;
             
-            if(enemy.tag != "Boss1" || enemy.tag != "Boss2" || enemy.tag != "Boss3")
+            if(enemy.tag != "Boss1" && enemy.tag != "Boss2" && enemy.tag != "Boss3")
             {
                 enemy.transform.GetChild(0).gameObject.SetActive(true);
                 enemy.GetComponent<Image>().enabled = false;
@@ -544,7 +538,7 @@ public class BattleSystemFossil : MonoBehaviour
             EnemyHolder.shakeEnemy = false;
 
             enemy.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
-            if(enemy.tag != "Boss1" || enemy.tag != "Boss2" || enemy.tag != "Boss3")
+            if(enemy.tag != "Boss1" && enemy.tag != "Boss2" && enemy.tag != "Boss3")
             {
                 enemy.transform.GetChild(0).gameObject.SetActive(false);
                 enemy.GetComponent<Image>().enabled = true;

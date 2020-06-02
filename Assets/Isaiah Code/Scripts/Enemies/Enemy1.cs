@@ -206,6 +206,9 @@ public class Enemy1 : MonoBehaviour
                         }
                     }
                     //Depending on how many enemies you are fighting, turns off respecitve lights
+
+                    isCharging = false;
+
                 }
                 else if (isCharging == false)
                 {

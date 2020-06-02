@@ -6,6 +6,7 @@ using System.Net;
 using System.Numerics;
 using System.Runtime.Serialization;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -115,7 +116,7 @@ public class BattleSystemFossil : MonoBehaviour
 
         System.Random rnd = new System.Random();
 
-        EnemyHolder.enemyAmount = 3;
+        EnemyHolder.enemyAmount = rnd.Next(0, 4);
         //finds out the amount of enemies the player will be fighting
 
 
@@ -356,6 +357,11 @@ public class BattleSystemFossil : MonoBehaviour
         #endregion InitialSetup
 
         yield return new WaitForSeconds(.5f);
+
+        if(GameObject.FindGameObjectsWithTag("Boss1").Length > 2)
+        {
+            Destroy(GameObject.Find("boss1"));
+        }
 
         state = BattleStateFossil.PLAYERTURN;
         PlayerTurn();

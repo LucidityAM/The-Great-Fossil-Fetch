@@ -1835,6 +1835,7 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
             BattleSystemFossil.StartCoroutine("EndBattle");
+            healUsed = false;
         }
         else
         {

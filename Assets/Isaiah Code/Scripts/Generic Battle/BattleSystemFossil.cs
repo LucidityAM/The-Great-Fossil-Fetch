@@ -106,7 +106,7 @@ public class BattleSystemFossil : MonoBehaviour
 
     public void BattleStart()
     {
-        fossilAttack = worldPlayer.GetComponent<FossilAttacks>();
+        fossilAttacks = playerPrefab.GetComponent<FossilAttacks>();
 
         itemDrop = worldPlayer.GetComponent<ItemDrop>();
 
@@ -824,7 +824,9 @@ public class BattleSystemFossil : MonoBehaviour
                 StartCoroutine(FindObjectOfType<DialogueManager>().StartDialogue(bossDialogue));
             }
 
-            //fossilAttacks.
+            fossilAttacks.purifyUsed = false;
+            fossilAttacks.skullUsed = false;
+            fossilAttacks.healUsed = false;
 
             EnemyHolder.turnCount = 0;
             MusicManager.victoryMusic = false;
@@ -849,6 +851,9 @@ public class BattleSystemFossil : MonoBehaviour
             worldPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             MenuManager.enabled = true;
             enemiesKilled = 0;
+            fossilAttacks.purifyUsed = false;
+            fossilAttacks.skullUsed = false;
+            fossilAttacks.healUsed = false;
             EnemyHolder.bossNumber = 0;
             MusicManager.normalBattleMusic = false;
             MusicManager.bossBattleMusic = false;

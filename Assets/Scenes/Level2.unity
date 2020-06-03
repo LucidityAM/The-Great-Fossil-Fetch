@@ -803,13 +803,14 @@ PrefabInstance:
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bossDialogue.sentences.Array.data[2]
-      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk away."
+      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk
+        away."
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bossDialogue.sentences.Array.data[3]
-      value: To be honest, I was a little frightened about traveling deeper into these
-        caves, anyway.
+      value: To be honest, I was a little frightened about traveling deeper into
+        these caves, anyway.
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
@@ -5255,6 +5256,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4008647819392228167, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 98242807}
+    - target: {fileID: 4008647819392228167, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4008647819392228167, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4227762484420712452, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -6805,7 +6821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &590814841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19383,8 +19399,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
-      finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
+      together, finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:

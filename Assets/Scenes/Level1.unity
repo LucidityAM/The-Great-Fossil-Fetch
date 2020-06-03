@@ -10228,6 +10228,26 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 246385863}
+    - target: {fileID: 4008647819392228167, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1045778320}
+    - target: {fileID: 4008647819392228167, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4008647819392228167, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: M
+      objectReference: {fileID: 0}
+    - target: {fileID: 4008647819392228167, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4853032315056085947, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: playerMovement
@@ -10368,6 +10388,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 391457903}
+    - target: {fileID: 8177295154547377828, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeToLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177295154547377828, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177295154547377828, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177295154547377828, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8972645468034867883, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: battleSystemFossil

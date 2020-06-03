@@ -147,6 +147,18 @@ public class BattleSystemFossil : MonoBehaviour
     void Update()
     {
 
+        if(SafeMode.safeMode == true)
+        {
+            if(playerUnit != null)
+            {
+                playerUnit.currentHP = playerUnit.maxHP;
+            }
+        }
+        else
+        {
+            return;
+        }
+
         if (currentEnemies[0] != null)
         {
             if (currentEnemies[0].gameObject.CompareTag("Boss1") || currentEnemies[0].gameObject.CompareTag("Boss2") || currentEnemies[0].gameObject.CompareTag("Boss3"))

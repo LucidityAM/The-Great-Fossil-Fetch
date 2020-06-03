@@ -156,7 +156,7 @@ public class BattleSystemFossil : MonoBehaviour
         }
         else
         {
-            return;
+            
         }
 
         if (currentEnemies[0] != null)

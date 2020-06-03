@@ -117,7 +117,7 @@ public class FossilBattleHover : MonoBehaviour
             }
             else if (this.gameObject.name.Contains("Tail"))
             {
-                switch (WeaponStats.legs)
+                switch (WeaponStats.tail)
                 {
                     case 1:
                         flavorText.text = "An attack that uses an RNG to select a random attack to use.";

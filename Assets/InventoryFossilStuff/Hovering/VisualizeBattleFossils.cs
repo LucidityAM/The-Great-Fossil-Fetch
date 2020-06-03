@@ -15,10 +15,6 @@ public class VisualizeBattleFossils : MonoBehaviour
     public BattleSystemFossil battleSystemFossil;
     public void Awake()
     {
-        if (spawnLocation == null)
-        {
-            spawnLocation = fossilBattle.transform;
-        }
     }
 
     public void Update()

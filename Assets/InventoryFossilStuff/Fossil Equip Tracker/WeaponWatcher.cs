@@ -17,7 +17,7 @@ public class WeaponWatcher : MonoBehaviour
     {
         for(int i = 0; i <= 17; i++)
         {
-            Debug.Log(WeaponStats.objectsInSpaces[i]);
+            Debug.Log(WeaponStats.fossilsInSpaces[i]);
         }
     }
 
@@ -29,11 +29,14 @@ public class WeaponWatcher : MonoBehaviour
 
         if(scene.name == "Level2" || scene.name == "Level3")
         {
+
+            Debug.Log(scene.name);
+
             for(int i = 0; i < 18; i++)
             {
-                if (WeaponStats.objectsInSpaces[i] != null)
+                if (WeaponStats.fossilsInSpaces[i] != 0)
                 {
-                    if (WeaponStats.objectsInSpaces[i].tag == "skull1")
+                    if (WeaponStats.fossilsInSpaces[i] == 1)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[0], inventoryWeapons.inventorySpace[i]); //makes a gameobject called FossilInstantiate based of a specific fossil in the fossil array
                         GameObject FossilInstantiateLibrary = Instantiate(fossils[0], inventoryWeapons.librarySpaces[i]); //Instantiates the fossils into the library too
@@ -47,7 +50,7 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "skull2")
+                    else if (WeaponStats.fossilsInSpaces[i] == 2)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[1], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -60,7 +63,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "skull3")
+                    else if (WeaponStats.fossilsInSpaces[i] == 3)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[2], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -73,7 +76,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "neck1")
+                    else if (WeaponStats.fossilsInSpaces[i] == 4)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[3], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -86,7 +89,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "neck2")
+                    else if (WeaponStats.fossilsInSpaces[i] == 5)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[4], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -99,7 +102,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "neck3")
+                    else if (WeaponStats.fossilsInSpaces[i] == 6)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[5], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -112,7 +115,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "ribs1")
+                    else if (WeaponStats.fossilsInSpaces[i] == 7)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[6], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -125,7 +128,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "ribs2")
+                    else if (WeaponStats.fossilsInSpaces[i] == 8)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[7], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -138,7 +141,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "ribs3")
+                    else if (WeaponStats.fossilsInSpaces[i] == 9)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[8], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -151,7 +154,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "arms1")
+                    else if (WeaponStats.fossilsInSpaces[i] == 10)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[9], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -164,7 +167,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "arms2")
+                    else if (WeaponStats.fossilsInSpaces[i] == 11)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[10], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -177,7 +180,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "arms3")
+                    else if (WeaponStats.fossilsInSpaces[i] == 12)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[11], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -190,7 +193,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "legs1")
+                    else if (WeaponStats.fossilsInSpaces[i] == 13)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[12], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -203,7 +206,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "legs2")
+                    else if (WeaponStats.fossilsInSpaces[i] == 14)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[13], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -216,7 +219,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "legs3")
+                    else if (WeaponStats.fossilsInSpaces[i] == 15)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[14], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -229,7 +232,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "tail1")
+                    else if (WeaponStats.fossilsInSpaces[i] == 16)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[15], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -242,7 +245,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "tail2")
+                    else if (WeaponStats.fossilsInSpaces[i] == 17)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[16], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -255,7 +258,7 @@ public class WeaponWatcher : MonoBehaviour
                         FossilInstantiateLibrary.name = "Library" + i;
                         isFilled[i] = true;
                     }
-                    else if (WeaponStats.objectsInSpaces[i].tag == "tail3")
+                    else if (WeaponStats.fossilsInSpaces[i] == 18)
                     {
                         GameObject FossilInstantiate = Instantiate(fossils[17], inventoryWeapons.inventorySpace[i]);
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f, FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y);
@@ -296,7 +299,7 @@ public class WeaponWatcher : MonoBehaviour
                     FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f,
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
-                    WeaponStats.fossilsInSpaces[i] = 0;
+                    WeaponStats.fossilsInSpaces[i] = 1;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[0] = FossilInstantiate;
                     //Take the instantiated object and populate some arrays with it for future use
@@ -327,7 +330,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 1;
+                    WeaponStats.fossilsInSpaces[i] = 2;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[1] = FossilInstantiate;
                     isFilled[i] = true;
@@ -353,7 +356,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 2;
+                    WeaponStats.fossilsInSpaces[i] = 3;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[2] = FossilInstantiate;
                     isFilled[i] = true;
@@ -379,7 +382,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 3;
+                    WeaponStats.fossilsInSpaces[i] = 4;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[3] = FossilInstantiate;
                     isFilled[i] = true;
@@ -405,7 +408,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 4;
+                    WeaponStats.fossilsInSpaces[i] = 5;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[4] = FossilInstantiate;
                     isFilled[i] = true;
@@ -431,7 +434,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 5;
+                    WeaponStats.fossilsInSpaces[i] = 6;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[5] = FossilInstantiate;
                     isFilled[i] = true;
@@ -457,7 +460,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 6;
+                    WeaponStats.fossilsInSpaces[i] = 7;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[6] = FossilInstantiate;
                     isFilled[i] = true;
@@ -483,7 +486,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 7;
+                    WeaponStats.fossilsInSpaces[i] = 8;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[7] = FossilInstantiate;
                     isFilled[i] = true;
@@ -509,7 +512,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 8;
+                    WeaponStats.fossilsInSpaces[i] = 9;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[8] = FossilInstantiate;
                     isFilled[i] = true;
@@ -535,7 +538,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 9;
+                    WeaponStats.fossilsInSpaces[i] = 10;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[9] = FossilInstantiate;
                     isFilled[i] = true;
@@ -561,7 +564,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 10;
+                    WeaponStats.fossilsInSpaces[i] = 11;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[10] = FossilInstantiate;
                     isFilled[i] = true;
@@ -587,7 +590,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 11;
+                    WeaponStats.fossilsInSpaces[i] = 12;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[11] = FossilInstantiate;
                     isFilled[i] = true;
@@ -614,7 +617,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 12;
+                    WeaponStats.fossilsInSpaces[i] = 13;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[12] = FossilInstantiate;
                     isFilled[i] = true;
@@ -640,7 +643,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 13;
+                    WeaponStats.fossilsInSpaces[i] = 14;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[13] = FossilInstantiate;
                     isFilled[i] = true;
@@ -666,7 +669,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 14;
+                    WeaponStats.fossilsInSpaces[i] = 15;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[14] = FossilInstantiate;
                     isFilled[i] = true;
@@ -692,7 +695,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 15;
+                    WeaponStats.fossilsInSpaces[i] = 16;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[15] = FossilInstantiate;
                     isFilled[i] = true;
@@ -718,7 +721,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 16;
+                    WeaponStats.fossilsInSpaces[i] = 17;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[16] = FossilInstantiate;
                     isFilled[i] = true;
@@ -744,7 +747,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     FossilInstantiateLibrary.name = "Library" + i;
 
-                    WeaponStats.fossilsInSpaces[i] = 17;
+                    WeaponStats.fossilsInSpaces[i] = 18;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                     WeaponStats.fossilsOutOfSpaces[17] = FossilInstantiate;
                     isFilled[i] = true;

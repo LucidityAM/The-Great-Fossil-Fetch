@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoadBattle : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class LoadBattle : MonoBehaviour
     public BattleSystemFossil battleSystemFossil;
 
     public Animator anim;
+    public GameObject sceneTransition;
 
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -29,6 +31,7 @@ public class LoadBattle : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
         anim.enabled = true;// Fades the battle in
+        sceneTransition.SetActive(true);
 
         anim.SetBool("FadeOut", true);
 
@@ -47,12 +50,14 @@ public class LoadBattle : MonoBehaviour
         anim.SetBool("FadeOut", false);
 
         anim.enabled = false;// turns the anim off
+        sceneTransition.SetActive(false);
 
     }
 
     public IEnumerator EndBattleTransition()
     {
         anim.enabled = true;
+        sceneTransition.SetActive(true);
 
         anim.SetBool("FadeOut", true);
 
@@ -61,6 +66,7 @@ public class LoadBattle : MonoBehaviour
         anim.SetBool("FadeOut", false);
 
         anim.enabled = false;
+        sceneTransition.SetActive(false);
     }
 
 

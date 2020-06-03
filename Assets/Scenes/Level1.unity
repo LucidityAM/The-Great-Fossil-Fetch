@@ -10162,6 +10162,11 @@ PrefabInstance:
       propertyPath: loadBattle
       value: 
       objectReference: {fileID: 246385871}
+    - target: {fileID: 1387851577300421396, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1332377799}
     - target: {fileID: 3841614625927624934, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: Player
@@ -10186,6 +10191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337990356009869957, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4853032315056085947, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
@@ -11749,6 +11759,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1324247952}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1332377799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1801129549072953306, guid: 157e5bc44db0a1d43906df00d2eba57f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1178008869}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c8142241b72524cb837eb914150a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1341350055
 GameObject:
   m_ObjectHideFlags: 0

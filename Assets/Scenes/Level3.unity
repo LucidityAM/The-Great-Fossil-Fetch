@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2907,6 +2907,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1387851577300421396, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 739425797}
+    - target: {fileID: 1387851577300421396, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SafeOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387851577300421396, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1450385841164770840, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
       propertyPath: m_IsActive
@@ -3433,6 +3448,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2455d333b1c3cdd46a679e166212f62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &739425797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1801129549072953306, guid: 157e5bc44db0a1d43906df00d2eba57f,
+    type: 3}
+  m_PrefabInstance: {fileID: 739425793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c8142241b72524cb837eb914150a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &769568041

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -803,13 +803,14 @@ PrefabInstance:
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bossDialogue.sentences.Array.data[2]
-      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk away."
+      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk
+        away."
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bossDialogue.sentences.Array.data[3]
-      value: To be honest, I was a little frightened about traveling deeper into these
-        caves, anyway.
+      value: To be honest, I was a little frightened about traveling deeper into
+        these caves, anyway.
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
@@ -5048,6 +5049,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387851577300421396, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2022449012}
+    - target: {fileID: 1387851577300421396, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SafeOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387851577300421396, guid: 157e5bc44db0a1d43906df00d2eba57f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1450385841164770840, guid: 157e5bc44db0a1d43906df00d2eba57f,
         type: 3}
@@ -19001,6 +19017,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2022449012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1801129549072953306, guid: 157e5bc44db0a1d43906df00d2eba57f,
+    type: 3}
+  m_PrefabInstance: {fileID: 505497829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c8142241b72524cb837eb914150a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2031110294 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2102887392108649850, guid: c2eef674c48713f4eb9ec5e37764d7e5,
@@ -19398,8 +19426,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
-      finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
+      together, finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:

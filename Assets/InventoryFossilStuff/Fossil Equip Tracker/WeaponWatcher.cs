@@ -13,15 +13,6 @@ public class WeaponWatcher : MonoBehaviour
 
     public AudioSource pickup;
 
-    void Update()
-    {
-        for(int i = 0; i <= 17; i++)
-        {
-            Debug.Log(WeaponStats.fossilsInSpaces[i]);
-        }
-    }
-
-
     private void Start()
     {
 

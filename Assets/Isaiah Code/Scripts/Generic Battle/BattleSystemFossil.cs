@@ -101,8 +101,12 @@ public class BattleSystemFossil : MonoBehaviour
     //Dialogue
     public Dialogue bossDialogue;
 
+    //FossilAttacks
+    public FossilAttacks fossilAttacks;
+
     public void BattleStart()
     {
+        fossilAttack = worldPlayer.GetComponent<FossilAttacks>();
 
         itemDrop = worldPlayer.GetComponent<ItemDrop>();
 
@@ -819,6 +823,8 @@ public class BattleSystemFossil : MonoBehaviour
             {
                 StartCoroutine(FindObjectOfType<DialogueManager>().StartDialogue(bossDialogue));
             }
+
+            //fossilAttacks.
 
             EnemyHolder.turnCount = 0;
             MusicManager.victoryMusic = false;

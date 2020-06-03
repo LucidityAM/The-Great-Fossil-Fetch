@@ -13,10 +13,20 @@ public class WeaponWatcher : MonoBehaviour
 
     public AudioSource pickup;
 
+    void Update()
+    {
+        for(int i = 0; i <= 17; i++)
+        {
+            Debug.Log(WeaponStats.objectsInSpaces[i]);
+        }
+    }
+
+
     private void Start()
     {
 
         Scene scene = SceneManager.GetActiveScene();
+
         if(scene.name == "Level2" || scene.name == "Level3")
         {
             for(int i = 0; i < 18; i++)

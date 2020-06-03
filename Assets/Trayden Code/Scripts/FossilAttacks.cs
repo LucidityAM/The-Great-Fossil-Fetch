@@ -2216,22 +2216,18 @@ public class FossilAttacks : MonoBehaviour
         if (EnemyHolder.enemyAmount == 3)
         {
             yield return new WaitForSeconds(4.0f);
-            Debug.Log("Meteor Inbound!");
         }
         else if (EnemyHolder.enemyAmount == 2)
         {
             yield return new WaitForSeconds(3.0f);
-            Debug.Log("Meteor Inbound!");
         }
         else if (EnemyHolder.enemyAmount == 1)
         {
             yield return new WaitForSeconds(2.0f);
-            Debug.Log("Meteor Inbound!");
         }
         else
         {
             yield return new WaitForSeconds(1.0f);
-            Debug.Log("Meteor Inbound!");
         }
 
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
@@ -2307,27 +2303,6 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
             BattleSystemFossil.StartCoroutine("EndBattle");
-        }
-        else
-        {
-            BattleSystemFossil.enemyTurnAttack = true;
-            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-            if (EnemyHolder.bossNumber == 0)
-            {
-                BattleSystemFossil.EnemyTurn();
-            }
-            else if (EnemyHolder.bossNumber == 1)
-            {
-                BattleSystemFossil.Boss1Turn();
-            }
-            else if (EnemyHolder.bossNumber == 2)
-            {
-                BattleSystemFossil.Boss2Turn();
-            }
-            else if (EnemyHolder.bossNumber == 3)
-            {
-                BattleSystemFossil.Boss3Turn();
-            }
         }
     } //The attack portion of MeteorStrike
 

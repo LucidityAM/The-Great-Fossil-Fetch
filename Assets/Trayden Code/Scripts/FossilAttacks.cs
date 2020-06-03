@@ -13,9 +13,9 @@ public class FossilAttacks : MonoBehaviour
     private int chosenEnemy;
     private int futureTurnNumber;
 
-    private bool purifyUsed = false;
-    private bool skullUsed = false;
-    private bool healUsed = false;
+    public bool purifyUsed = false;
+    public bool skullUsed = false;
+    public bool healUsed = false;
     private bool meteorStarted = false;
     private bool usingSecretPower = false;
 
@@ -1199,13 +1199,13 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        if (usingSecretPower == false)
-        {
-            WeaponStats.fossilDurability[2]--;
-        }
-
         if (skullUsed == false)
         {
+            if (usingSecretPower == false)
+            {
+                WeaponStats.fossilDurability[2]--;
+            }
+
             for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
             {
                 if (BattleSystemFossil.currentEnemies[i] != null)
@@ -1305,6 +1305,7 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
             BattleSystemFossil.StartCoroutine("EndBattle");
+            skullUsed = false;
         }
         else
         {
@@ -1722,14 +1723,15 @@ public class FossilAttacks : MonoBehaviour
 
     public IEnumerator PurifyArena() //Affinity: Support
     {
+        if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
+            yield break;
+
+        BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
+
+        BattleSystemFossil.enemyTurnAttack = true;
+
         if (purifyUsed == false)
         {
-            if (BattleSystemFossil.state != BattleStateFossil.PLAYERTURN)
-                yield break;
-
-            BattleSystemFossil.state = BattleStateFossil.ENEMYTURN;
-
-            BattleSystemFossil.enemyTurnAttack = true;
 
             if (usingSecretPower == false)
             {
@@ -1769,6 +1771,7 @@ public class FossilAttacks : MonoBehaviour
         {
             BattleSystemFossil.state = BattleStateFossil.WON;
             BattleSystemFossil.StartCoroutine("EndBattle");
+            purifyUsed = false;
         }
         else
         {
@@ -1803,13 +1806,12 @@ public class FossilAttacks : MonoBehaviour
 
         BattleSystemFossil.enemyTurnAttack = true;
 
-        if (usingSecretPower == false)
-        {
-            WeaponStats.fossilDurability[14]--;
-        }
-
         if (healUsed == false)
         {
+            if (usingSecretPower == false)
+            {
+                WeaponStats.fossilDurability[14]--;
+            }
             BattleSystemFossil.playerUnit.currentHP = BattleSystemFossil.playerUnit.maxHP;
             BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
             healUsed = true;
@@ -1833,9 +1835,9 @@ public class FossilAttacks : MonoBehaviour
 
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)
         {
+            healUsed = false;
             BattleSystemFossil.state = BattleStateFossil.WON;
             BattleSystemFossil.StartCoroutine("EndBattle");
-            healUsed = false;
         }
         else
         {

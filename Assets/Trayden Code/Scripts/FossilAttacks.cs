@@ -1974,7 +1974,7 @@ public class FossilAttacks : MonoBehaviour
         }
 
         ChooseEnemy();
-        if (chosenEnemy > EnemyHolder.enemyAmount)
+        if (chosenEnemy > EnemyHolder.enemyAmount || BattleSystemFossil.enemyUnit[chosenEnemy].currentHP <= 25)
         {
             ChooseEnemy();
         }

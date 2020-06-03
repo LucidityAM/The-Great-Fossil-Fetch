@@ -32,7 +32,7 @@ public class Boss2 : MonoBehaviour
     void LateUpdate()
     {
         //Debug.Log(EnemyHolder.coroutinesRunning);
-        if(EnemyHolder.bossNumber == 2)
+        if (EnemyHolder.bossNumber == 2 && battleSystemFossil.enemyLightingEffects[0] != null)
         {
             battleSystemFossil.enemyLightingEffects[0].SetActive(true);
         }

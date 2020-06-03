@@ -748,7 +748,7 @@ public class FossilAttacks : MonoBehaviour
                         BattleSystemFossil.enemyUnit[i].TakeDamage(85);
                         BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
 
-                        if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false)
+                        if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false && BattleSystemFossil.currentEnemies[i].tag != "Boss1" && BattleSystemFossil.currentEnemies[i].tag != "Boss2" && BattleSystemFossil.currentEnemies[i].tag != "Boss3")
                         {
                             EnemyHolder.enemyDowned[i] = BattleSystemFossil.currentEnemies[i];
                             EnemyHolder.enemyDowned[i].GetComponent<UnitStats>().isDowned = true;
@@ -868,7 +868,7 @@ public class FossilAttacks : MonoBehaviour
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
                     BattleSystemFossil.enemyUnit[i].affinity = 2;
 
-                    if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false)
+                    if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false && BattleSystemFossil.currentEnemies[i].tag != "Boss1" && BattleSystemFossil.currentEnemies[i].tag != "Boss2" && BattleSystemFossil.currentEnemies[i].tag != "Boss3")
                     {
                         EnemyHolder.enemyDowned[i] = BattleSystemFossil.currentEnemies[i];
                         EnemyHolder.enemyDowned[i].GetComponent<UnitStats>().isDowned = true;
@@ -986,7 +986,7 @@ public class FossilAttacks : MonoBehaviour
                     BattleSystemFossil.enemyUnit[i].TakeDamage(45);
                     BattleSystemFossil.enemyHUDs[i].SetHP(BattleSystemFossil.enemyUnit[i].currentHP);
 
-                    if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false)
+                    if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false && BattleSystemFossil.currentEnemies[i].tag != "Boss1" && BattleSystemFossil.currentEnemies[i].tag != "Boss2" && BattleSystemFossil.currentEnemies[i].tag != "Boss3")
                     {
                         EnemyHolder.enemyDowned[i] = BattleSystemFossil.currentEnemies[i];
                         EnemyHolder.enemyDowned[i].GetComponent<UnitStats>().isDowned = true;
@@ -2347,12 +2347,12 @@ public class FossilAttacks : MonoBehaviour
                 {
                     if (BattleSystemFossil.enemyUnit[i].affinity == 0)
                     {
-                        BattleSystemFossil.enemyUnit[i].TakeDamage(2);
+                        BattleSystemFossil.enemyUnit[i].TakeDamage(3);
                     }
                     else if (BattleSystemFossil.enemyUnit[i].affinity == 1)
                     {
                         BattleSystemFossil.enemyUnit[i].TakeDamage(10);
-                        if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false)
+                        if (BattleSystemFossil.currentEnemies[i].GetComponent<UnitStats>().isDowned == false && BattleSystemFossil.currentEnemies[i].tag != "Boss1" && BattleSystemFossil.currentEnemies[i].tag != "Boss2" && BattleSystemFossil.currentEnemies[i].tag != "Boss3")
                         {
                             EnemyHolder.enemyDowned[i] = BattleSystemFossil.currentEnemies[i];
                             EnemyHolder.enemyDowned[i].GetComponent<UnitStats>().isDowned = true;

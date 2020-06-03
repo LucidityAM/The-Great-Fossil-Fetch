@@ -803,14 +803,13 @@ PrefabInstance:
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bossDialogue.sentences.Array.data[2]
-      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk
-        away."
+      value: "I wouldn\u2019t call it giving up, but rather knowing when to walk away."
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
       propertyPath: bossDialogue.sentences.Array.data[3]
-      value: To be honest, I was a little frightened about traveling deeper into
-        these caves, anyway.
+      value: To be honest, I was a little frightened about traveling deeper into these
+        caves, anyway.
       objectReference: {fileID: 0}
     - target: {fileID: 2102887394028203024, guid: c2eef674c48713f4eb9ec5e37764d7e5,
         type: 3}
@@ -2452,6 +2451,11 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1505641802}
+    - target: {fileID: 5643665812671767556, guid: e1a235b2c062d84499dd36f441fd81b3,
+        type: 3}
+      propertyPath: sceneTransition
+      value: 
+      objectReference: {fileID: 1505641800}
     - target: {fileID: 5643665812671767564, guid: e1a235b2c062d84499dd36f441fd81b3,
         type: 3}
       propertyPath: m_Name
@@ -19387,8 +19391,8 @@ MonoBehaviour:
       down here for those famed fossils, aren\u2019t you?"
     - 'You got it, and those babies are mine. If I were you, I would just turn around
       and find yourself a camel back home. '
-    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked
-      together, finding those bones would be easier."
+    - "Should I? You know, It\u2019s dangerous down here, and maybe if we worked together,
+      finding those bones would be easier."
     - "We could both have our names in the papers, and split the profit\u2026"
     - "Sorry, dollface. The only thing that should \u201Csplit\u201D here is you! "
     names:

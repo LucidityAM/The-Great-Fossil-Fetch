@@ -1976,7 +1976,17 @@ public class FossilAttacks : MonoBehaviour
         ChooseEnemy();
         if (chosenEnemy > EnemyHolder.enemyAmount || BattleSystemFossil.enemyUnit[chosenEnemy].currentHP <= 25)
         {
-            ChooseEnemy();
+            VitalitySwap();
+        }
+        else if (BattleSystemFossil.enemyUnit[chosenEnemy].tag == "Boss1" || BattleSystemFossil.enemyUnit[chosenEnemy].tag == "Boss2" || BattleSystemFossil.enemyUnit[chosenEnemy].tag == "Boss3")
+        {
+            float plrHealth = BattleSystemFossil.playerUnit.currentHP;
+            float enemyHealth = BattleSystemFossil.enemyUnit[chosenEnemy].currentHP;
+
+            BattleSystemFossil.playerUnit.currentHP = enemyHealth;
+            BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
+            BattleSystemFossil.enemyUnit[chosenEnemy].currentHP = plrHealth;
+            BattleSystemFossil.enemyHUDs[chosenEnemy].SetHP(BattleSystemFossil.enemyUnit[chosenEnemy].currentHP);
         }
         else
         {
@@ -1986,6 +1996,7 @@ public class FossilAttacks : MonoBehaviour
             BattleSystemFossil.playerUnit.currentHP = enemyHealth;
             BattleSystemFossil.playerHUD.SetHP(BattleSystemFossil.playerUnit.currentHP);
             BattleSystemFossil.enemyUnit[chosenEnemy].currentHP = plrHealth;
+            BattleSystemFossil.enemyHUDs[chosenEnemy].SetHP(BattleSystemFossil.enemyUnit[chosenEnemy].currentHP);
         }
 
         if (BattleSystemFossil.enemiesKilled >= EnemyHolder.enemyAmount + 1)

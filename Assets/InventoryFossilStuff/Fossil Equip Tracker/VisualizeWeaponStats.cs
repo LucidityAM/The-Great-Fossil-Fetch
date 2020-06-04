@@ -294,7 +294,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             StatString.fossilName = "All Out Attack";
             StatString.durability = WeaponStats.fossilDurability[12] + "/5";
             StatString.fossilPart = "Leg";
-            StatString.flavorText = "An attack that brings you down to 1 HP, but deals damage depending on how much health is lost to the attack, ignoring enemy affinities.";
+            StatString.flavorText = "An attack that brings you down to 1 HP, but deals damage depending on how much health is lost to the attack.";
             StatString.affinity = "cursed";
 
         }

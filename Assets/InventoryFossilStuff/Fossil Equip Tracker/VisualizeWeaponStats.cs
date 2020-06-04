@@ -38,7 +38,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             WeaponStats.fossilDurability[14] = 5;
             WeaponStats.fossilDurability[15] = 20;
             WeaponStats.fossilDurability[16] = 15;
-            WeaponStats.fossilDurability[17] = 1;
+            WeaponStats.fossilDurability[17] = 15;
 
             WeaponStats.isSet = true;
         }

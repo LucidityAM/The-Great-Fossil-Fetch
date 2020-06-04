@@ -180,20 +180,6 @@ public class BattleSystemFossil : MonoBehaviour
             StartCoroutine(PlayerTurn());
         }//Checks if there are no enemies attacking and re enables attack buttons and player turn
 
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                if (enemyUnit[i] != null)
-                {
-                    enemyUnit[i].currentHP = 0;
-                }
-            }
-
-            state = BattleStateFossil.WON;
-            StartCoroutine(EndBattle());
-        }
-
         for (int i = 0; i <= EnemyHolder.enemyAmount; i++)
         {
             if(currentEnemies[i] != null)

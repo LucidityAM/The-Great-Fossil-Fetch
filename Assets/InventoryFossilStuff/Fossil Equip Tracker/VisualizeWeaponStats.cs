@@ -38,7 +38,7 @@ public class VisualizeWeaponStats : MonoBehaviour
             WeaponStats.fossilDurability[14] = 5;
             WeaponStats.fossilDurability[15] = 20;
             WeaponStats.fossilDurability[16] = 15;
-            WeaponStats.fossilDurability[17] = 15;
+            WeaponStats.fossilDurability[17] = 1;
 
             WeaponStats.isSet = true;
         }
@@ -138,14 +138,12 @@ public class VisualizeWeaponStats : MonoBehaviour
 
             for (int i = 0; i < WeaponStats.fossilsOutOfSpaces.Length; i++)
             {
-
                 if (WeaponStats.fossilsOutOfSpaces[i] != null)
                 {
                     for(int j = 0; j < WeaponStats.fossilsOutOfSpaces.Length; j++)
                     {
                         if (gameObject.tag.ToString() == WeaponStats.fossilsOutOfSpaces[j])
                         {
-
                             if (WeaponStats.fossilDurability[j] > 0)
                             {
                                 fossilDurability.text = WeaponStats.fossilDurability[j] + "/" + fossilDurabilitys[j];
@@ -159,41 +157,16 @@ public class VisualizeWeaponStats : MonoBehaviour
 
                                 for (int k = 0; k < WeaponStats.objectsInSpaces.Length; k++)
                                 {
-                                    if(WeaponStats.objectsInSpaces[k] != null && WeaponStats.fossilsOutOfSpaces[k] != null)
+                                    if(WeaponStats.fossilsOutOfSpaces[k] != null)
                                     {
-                                        if (WeaponStats.fossilsOutOfSpaces[k] == WeaponStats.objectsInSpaces[k].tag)
+                                        if (WeaponStats.fossilsOutOfSpaces[k] == gameObject.tag.ToString())
                                         {
-                                            if(WeaponStats.fossilDurability[k] < 0)
+                                            if(WeaponStats.fossilDurability[k] <= 0)
                                             {
-                                                WeaponStats.objectsInSpaces[k].GetComponent<Button>().enabled = false;
+                                                gameObject.GetComponent<Button>().enabled = false;
                                             }
                                         }
                                     }
-                                }
-
-                                if (WeaponStats.fossilsOutOfSpaces[j].Contains("skull"))
-                                {
-                                    WeaponStats.skull = 0;
-                                }
-                                else if (WeaponStats.fossilsOutOfSpaces[j].Contains("neck"))
-                                {
-                                    WeaponStats.neck = 0;
-                                }
-                                else if (WeaponStats.fossilsOutOfSpaces[j].Contains("ribs"))
-                                {
-                                    WeaponStats.ribs = 0;
-                                }
-                                else if (WeaponStats.fossilsOutOfSpaces[j].Contains("arms"))
-                                {
-                                    WeaponStats.arms = 0;
-                                }
-                                else if (WeaponStats.fossilsOutOfSpaces[j].Contains("legs"))
-                                {
-                                    WeaponStats.legs = 0;
-                                }
-                                else if (WeaponStats.fossilsOutOfSpaces[j].Contains("tail"))
-                                {
-                                    WeaponStats.tail = 0;
                                 }
                                 //If the durability of a specific fossil is less than 0, indicate that it's broken
                             }
@@ -203,6 +176,8 @@ public class VisualizeWeaponStats : MonoBehaviour
             }
         }
     }
+
+
     public void InstantiateInfo()
     {
         fossilInfoText.SetActive(true);

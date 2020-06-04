@@ -39,6 +39,8 @@ public class WeaponWatcher : MonoBehaviour
 
                         FossilInstantiate.GetComponent<RectTransform>().anchoredPosition = new Vector2(FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.x + 444f,
                             FossilInstantiate.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 2)
@@ -52,6 +54,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 3)
@@ -65,6 +69,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 4)
@@ -78,6 +84,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 5)
@@ -91,6 +99,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 6)
@@ -104,6 +114,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 7)
@@ -117,6 +129,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 8)
@@ -130,6 +144,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 9)
@@ -143,6 +159,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 10)
@@ -156,6 +174,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 11)
@@ -169,6 +189,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 12)
@@ -182,6 +204,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 13)
@@ -195,6 +219,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 14)
@@ -208,6 +234,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 15)
@@ -221,6 +249,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 16)
@@ -234,6 +264,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 17)
@@ -247,6 +279,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+                        WeaponStats.objectsInSpaces[i] = FossilInstantiate;
                         isFilled[i] = true;
                     }
                     else if (WeaponStats.fossilsInSpaces[i] == 18)
@@ -260,6 +294,8 @@ public class WeaponWatcher : MonoBehaviour
                             FossilInstantiateLibrary.GetComponent<RectTransform>().anchoredPosition.y); //Moves the instantiated fossil in the inventory over 444 units to account for some wacky positioning
 
                         FossilInstantiateLibrary.name = "Library" + i;
+
+
                         isFilled[i] = true;
                     }
                 }
@@ -292,7 +328,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 1;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[0] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[0] = "skull1";
                     //Take the instantiated object and populate some arrays with it for future use
 
                     isFilled[i] = true; //Sets the space to full so the next time the script instantiates an object, it is in the next space
@@ -323,7 +359,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 2;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[1] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[1] = "skull2";
                     isFilled[i] = true;
                     break;
                 }
@@ -349,7 +385,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 3;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[2] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[2] = "skull3";
                     isFilled[i] = true;
                     break;
                 }
@@ -375,7 +411,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 4;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[3] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[3] = "neck1";
                     isFilled[i] = true;
                     break;
                 }
@@ -401,7 +437,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 5;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[4] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[4] = "neck2";
                     isFilled[i] = true;
                     break;
                 }
@@ -427,7 +463,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 6;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[5] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[5] = "neck3";
                     isFilled[i] = true;
                     break;
                 }
@@ -453,7 +489,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 7;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[6] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[6] = "ribs1";
                     isFilled[i] = true;
                     break;
                 }
@@ -479,7 +515,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 8;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[7] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[7] = "ribs2";
                     isFilled[i] = true;
                     break;
                 }
@@ -505,7 +541,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 9;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[8] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[8] = "ribs3";
                     isFilled[i] = true;
                     break;
                 }
@@ -531,7 +567,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 10;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[9] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[9] = "arms1";
                     isFilled[i] = true;
                     break;
                 }
@@ -557,7 +593,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 11;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[10] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[10] = "arms2";
                     isFilled[i] = true;
                     break;
                 }
@@ -583,7 +619,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 12;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[11] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[11] = "arms3";
                     isFilled[i] = true;
                     break;
                 }
@@ -610,7 +646,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 13;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[12] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[12] = "legs1";
                     isFilled[i] = true;
                     break;
                 }
@@ -636,7 +672,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 14;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[13] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[13] = "legs2";
                     isFilled[i] = true;
                     break;
                 }
@@ -662,7 +698,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 15;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[14] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[14] = "legs3";
                     isFilled[i] = true;
                     break;
                 }
@@ -688,7 +724,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 16;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[15] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[15] = "tail1";
                     isFilled[i] = true;
                     break;
                 }
@@ -714,7 +750,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 17;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[16] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[16] = "tail2";
                     isFilled[i] = true;
                     break;
                 }
@@ -740,7 +776,7 @@ public class WeaponWatcher : MonoBehaviour
 
                     WeaponStats.fossilsInSpaces[i] = 18;
                     WeaponStats.objectsInSpaces[i] = FossilInstantiate;
-                    WeaponStats.fossilsOutOfSpaces[17] = FossilInstantiate;
+                    WeaponStats.fossilsOutOfSpaces[17] = "tail3";
                     isFilled[i] = true;
                     break;
                 }

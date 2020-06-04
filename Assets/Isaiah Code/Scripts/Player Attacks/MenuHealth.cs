@@ -13,5 +13,7 @@ public class MenuHealth : MonoBehaviour
     void Update()
     {
         hpSlider.value = battleSystemFossil.playerUnit.currentHP;
+
+        hpSlider.maxValue = battleSystemFossil.playerUnit.maxHP;
     }
 }

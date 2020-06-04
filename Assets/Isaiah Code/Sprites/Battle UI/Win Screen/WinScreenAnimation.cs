@@ -39,7 +39,7 @@ public class WinScreenAnimation : MonoBehaviour
                 fossilName.text = "Pitch Black Darkness";
                 break;
             case 1:
-                fossilName.text = "MeteorStrike";
+                fossilName.text = "Meteor Strike";
                 break;
             case 2:
                 fossilName.text = "Albino Skull";

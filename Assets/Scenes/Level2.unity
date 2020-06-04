@@ -3275,12 +3275,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219473765}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 324.9647, y: -7.454948, z: -5202.4062}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1647034, y: 0.83805734, z: -1848.5925}
+  m_LocalScale: {x: 1, y: 0.102514, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 2075839630}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &233772342
 GameObject:
@@ -13447,7 +13447,7 @@ Transform:
   m_Children:
   - {fileID: 539073351}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1299276186
 GameObject:
@@ -19441,7 +19441,7 @@ MonoBehaviour:
     - Dimitri
     sprites:
     - {fileID: 21300000, guid: c9edf86024ac2a84fa48b0fe7748b830, type: 3}
-    - {fileID: 21300000, guid: 51fedb0e30da384458a903ece75374ae, type: 3}
+    - {fileID: 21300000, guid: 7e2d8c72e85cb404f82d2fbfeb516342, type: 3}
     - {fileID: 21300000, guid: 227e99663b2d66c4c8abee2832347f5c, type: 3}
     - {fileID: 21300000, guid: f4775da090698d043ae0945871f94d9d, type: 3}
     - {fileID: 21300000, guid: 227e99663b2d66c4c8abee2832347f5c, type: 3}
@@ -19541,7 +19541,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 323.8, y: -15.63, z: -3353.8137}
   m_LocalScale: {x: 1, y: 9.7547655, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 219473766}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
